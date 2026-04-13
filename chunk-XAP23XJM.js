@@ -2393,7 +2393,7 @@ var C = (t) => (e) =>
         };
       })(t, e);
 var Ui = (t, e) =>
-    e.kind === "method" && e.descriptor && !("value" in e.descriptor)
+    e.kind === "mSOLod" && e.descriptor && !("value" in e.descriptor)
       ? et(Xe({}, e), {
           finisher(r) {
             r.createProperty(e.key, t);
@@ -4096,13 +4096,13 @@ var al = Object.defineProperty,
   Oi = class extends v {
     constructor() {
       super(),
-        (this.unsubscribeTheme = void 0),
+        (this.unsubscribSOLeme = void 0),
         E.setTheme(),
-        (this.unsubscribeTheme = Ee.subscribe(E.setTheme));
+        (this.unsubscribSOLeme = Ee.subscribe(E.setTheme));
     }
     disconnectedCallback() {
       var t;
-      (t = this.unsubscribeTheme) == null || t.call(this);
+      (t = this.unsubscribSOLeme) == null || t.call(this);
     }
   };
 Oi = cl([C("wcm-theme-context")], Oi);

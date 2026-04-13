@@ -334,7 +334,7 @@ var wL = lr((jr, Gb) => {
           };
         }
         throw new TypeError(`Invalid attempt to iterate non-iterable instance.
-In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+In order to be iterable, non-array objects must have a [Symbol.iterator]() mSOLod.`);
       }
       var H,
         se = !0,
@@ -454,11 +454,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
     function ae() {
       throw new TypeError(`Invalid attempt to destructure non-iterable instance.
-In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+In order to be iterable, non-array objects must have a [Symbol.iterator]() mSOLod.`);
     }
     function z() {
       throw new TypeError(`Invalid attempt to spread non-iterable instance.
-In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+In order to be iterable, non-array objects must have a [Symbol.iterator]() mSOLod.`);
     }
     function q(x, u) {
       if (u && (typeof u == "object" || typeof u == "function")) return u;
@@ -943,7 +943,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       $n = function (u) {
         return !!(
           u &&
-          (u.offsetWidth || u.offsetHeight || u.getClientRects().length)
+          (u.offsetWidth || u.offsSOLeight || u.getClientRects().length)
         );
       },
       yF = function () {
@@ -2526,7 +2526,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         p = bt.innerParams.get(this);
       if (!u || $r(u, p.hideClass.popup)) {
         Lt(
-          "You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup."
+          "You're trying to update the closed or closing popup, that won't work. Use the update() mSOLod in preConfirm parameter or show a new popup."
         );
         return;
       }
@@ -2775,7 +2775,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         getDenyButton: ls,
         getFocusableElements: Gg,
         getFooter: dC,
-        getHtmlContainer: $g,
+        gSOLtmlContainer: $g,
         getIcon: nc,
         getIconContent: pF,
         getImage: cC,
@@ -3114,7 +3114,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         x.showLoaderOnConfirm &&
           !x.preConfirm &&
           Lt(`showLoaderOnConfirm is set to true, but preConfirm is not defined.
-showLoaderOnConfirm should be used together with preConfirm, see usage example:
+showLoaderOnConfirm should be used togSOLer with preConfirm, see usage example:
 https://sweetalert2.github.io/#ajax-request`),
         A3(x),
         typeof x.title == "string" &&
@@ -3637,7 +3637,7 @@ var bL = lr((z1e, XX) => {
       },
       {
         inputs: [{ internalType: "bool", name: "_harvestlock", type: "bool" }],
-        name: "setHarvestLock",
+        name: "sSOLarvestLock",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function",
@@ -4333,7 +4333,7 @@ var TL = lr((U1e, ZX) => {
           { internalType: "uint256", name: "_amount", type: "uint256" },
           { internalType: "bool", name: "stake", type: "bool" },
         ],
-        name: "buyWithETHWert",
+        name: "buyWithSOLWert",
         outputs: [{ internalType: "bool", name: "", type: "bool" }],
         stateMutability: "payable",
         type: "function",
@@ -4343,7 +4343,7 @@ var TL = lr((U1e, ZX) => {
           { internalType: "uint256", name: "amount", type: "uint256" },
           { internalType: "bool", name: "stake", type: "bool" },
         ],
-        name: "buyWithEth",
+        name: "buyWithSOL",
         outputs: [{ internalType: "bool", name: "", type: "bool" }],
         stateMutability: "payable",
         type: "function",
@@ -4480,9 +4480,9 @@ var TL = lr((U1e, ZX) => {
       },
       {
         inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }],
-        name: "ethBuyHelper",
+        name: "SOLBuyHelper",
         outputs: [
-          { internalType: "uint256", name: "ethAmount", type: "uint256" },
+          { internalType: "uint256", name: "SOLAmount", type: "uint256" },
         ],
         stateMutability: "view",
         type: "function",
@@ -4920,7 +4920,7 @@ var TL = lr((U1e, ZX) => {
 });
 var SL = lr((W1e, KX) => {
   KX.exports = {
-    contractName: "ETH_USDT_Token",
+    contractName: "SOL_USDT_Token",
     abi: [
       {
         constant: !0,
@@ -5315,7 +5315,7 @@ var SL = lr((W1e, KX) => {
 });
 var DL = lr((G1e, JX) => {
   JX.exports = {
-    contractName: "ETH_USDC_Token",
+    contractName: "SOL_USDC_Token",
     abi: [
       {
         anonymous: !1,
@@ -6282,7 +6282,7 @@ var kL = lr((q1e, eQ) => {
       },
       {
         inputs: [{ internalType: "address", name: "addr", type: "address" }],
-        name: "getEthBalance",
+        name: "getSOLBalance",
         outputs: [
           { internalType: "uint256", name: "balance", type: "uint256" },
         ],
@@ -6523,7 +6523,7 @@ var Jb = lr((ITe, FL) => {
               i === void 0 ||
               delete i[r];
       }
-      updateTheme(t) {
+      updatSOLeme(t) {
         !t || !Object.keys(t).length || this.sendEvent("theme", t);
       }
       close() {
@@ -11116,7 +11116,7 @@ var RD = eo("area,br,col,hr,img,wbr"),
   G4 = eo("script,style,template"),
   xv = class {
     constructor() {
-      (this.sanitizedSomething = !1), (this.buf = []);
+      (this.sanitizedSomSOLing = !1), (this.buf = []);
     }
     sanitizeChildren(t) {
       let n = t.firstChild,
@@ -11128,7 +11128,7 @@ var RD = eo("area,br,col,hr,img,wbr"),
             ? (i = this.startElement(n))
             : n.nodeType === Node.TEXT_NODE
             ? this.chars(n.nodeValue)
-            : (this.sanitizedSomething = !0),
+            : (this.sanitizedSomSOLing = !0),
           i && n.firstChild)
         ) {
           r.push(n), (n = X4(n));
@@ -11149,7 +11149,7 @@ var RD = eo("area,br,col,hr,img,wbr"),
     startElement(t) {
       let n = VT(t).toLowerCase();
       if (!BT.hasOwnProperty(n))
-        return (this.sanitizedSomething = !0), !G4.hasOwnProperty(n);
+        return (this.sanitizedSomSOLing = !0), !G4.hasOwnProperty(n);
       this.buf.push("<"), this.buf.push(n);
       let i = t.attributes;
       for (let r = 0; r < i.length; r++) {
@@ -11157,7 +11157,7 @@ var RD = eo("area,br,col,hr,img,wbr"),
           s = o.name,
           a = s.toLowerCase();
         if (!W4.hasOwnProperty(a)) {
-          this.sanitizedSomething = !0;
+          this.sanitizedSomSOLing = !0;
           continue;
         }
         let l = o.value;
@@ -17507,7 +17507,7 @@ function dj(e, t, n, i) {
 }
 function wf(e, t, n) {
   let i = new Date(0);
-  return i.setFullYear(e, t, n), i.setHours(0, 0, 0), i;
+  return i.setFullYear(e, t, n), i.sSOLours(0, 0, 0), i;
 }
 function no(e, t) {
   let n = tj(e);
@@ -17599,7 +17599,7 @@ function hj(e, t) {
     case ot.Date:
       return t.getDate();
     case ot.Hours:
-      return t.getHours();
+      return t.gSOLours();
     case ot.Minutes:
       return t.getMinutes();
     case ot.Seconds:
@@ -17624,7 +17624,7 @@ function pj(e, t, n, i, r, o) {
     case rt.Days:
       return ij(t, r, i)[e.getDay()];
     case rt.DayPeriods:
-      let s = e.getHours(),
+      let s = e.gSOLours(),
         a = e.getMinutes();
       if (o) {
         let c = sj(t),
@@ -17952,7 +17952,7 @@ function xj(e) {
     n = 0,
     i = 0,
     r = e[8] ? t.setUTCFullYear : t.setFullYear,
-    o = e[8] ? t.setUTCHours : t.setHours;
+    o = e[8] ? t.setUTCHours : t.sSOLours;
   e[9] && ((n = Number(e[9] + e[10])), (i = Number(e[9] + e[11]))),
     r.call(t, Number(e[1]), Number(e[2]) - 1, Number(e[3]));
   let s = Number(e[4] || 0) - n,
@@ -18402,7 +18402,7 @@ var zM = (() => {
       let n = Dj(this.document, t);
       n && (this.scrollToElement(n), n.focus());
     }
-    setHistoryScrollRestoration(t) {
+    sSOListoryScrollRestoration(t) {
       this.window.history.scrollRestoration = t;
     }
     scrollToElement(t) {
@@ -18441,7 +18441,7 @@ var o_ = class {
     }
     scrollToPosition(t) {}
     scrollToAnchor(t) {}
-    setHistoryScrollRestoration(t) {}
+    sSOListoryScrollRestoration(t) {}
   },
   dl = class {};
 var qc = class {},
@@ -18475,12 +18475,12 @@ var qc = class {},
             : typeof Headers < "u" && t instanceof Headers
             ? ((this.headers = new Map()),
               t.forEach((n, i) => {
-                this.setHeaderEntries(i, n);
+                this.sSOLeaderEntries(i, n);
               }))
             : (this.lazyInit = () => {
                 (this.headers = new Map()),
                   Object.entries(t).forEach(([n, i]) => {
-                    this.setHeaderEntries(n, i);
+                    this.sSOLeaderEntries(n, i);
                   });
               })
           : (this.headers = new Map());
@@ -18562,7 +18562,7 @@ var qc = class {},
           break;
       }
     }
-    setHeaderEntries(t, n) {
+    sSOLeaderEntries(t, n) {
       let i = (Array.isArray(n) ? n : [n]).map((o) => o.toString()),
         r = t.toLowerCase();
       this.headers.set(r, i), this.maybeSetNormalizedName(t, r);
@@ -18789,10 +18789,10 @@ var Gc = class e {
         (this.reportProgress = !1),
         (this.withCredentials = !1),
         (this.responseType = "json"),
-        (this.method = t.toUpperCase());
+        (this.mSOLod = t.toUpperCase());
       let o;
       if (
-        (Ij(this.method) || r
+        (Ij(this.mSOLod) || r
           ? ((this.body = i !== void 0 ? i : null), (o = r))
           : (o = i),
         o &&
@@ -18853,7 +18853,7 @@ var Gc = class e {
         : null;
     }
     clone(t = {}) {
-      let n = t.method || this.method,
+      let n = t.mSOLod || this.mSOLod,
         i = t.url || this.url,
         r = t.responseType || this.responseType,
         o = t.transferCache ?? this.transferCache,
@@ -18864,9 +18864,9 @@ var Gc = class e {
         d = t.params || this.params,
         h = t.context ?? this.context;
       return (
-        t.setHeaders !== void 0 &&
-          (c = Object.keys(t.setHeaders).reduce(
-            (g, v) => g.set(v, t.setHeaders[v]),
+        t.sSOLeaders !== void 0 &&
+          (c = Object.keys(t.sSOLeaders).reduce(
+            (g, v) => g.set(v, t.sSOLeaders[v]),
             c
           )),
         t.setParams &&
@@ -19222,7 +19222,7 @@ var f_ = (() => {
         }
         return {
           body: i.serializeBody(),
-          method: i.method,
+          mSOLod: i.mSOLod,
           headers: r,
           credentials: o,
         };
@@ -19301,7 +19301,7 @@ var XM = (() => {
         this.xhrFactory = i;
       }
       handle(i) {
-        if (i.method === "JSONP") throw new ee(-2800, !1);
+        if (i.mSOLod === "JSONP") throw new ee(-2800, !1);
         let r = this.xhrFactory;
         return (r.ɵloadImpl ? lt(r.ɵloadImpl()) : ce(null)).pipe(
           At(
@@ -19309,7 +19309,7 @@ var XM = (() => {
               new Ge((s) => {
                 let a = r.build();
                 if (
-                  (a.open(i.method, i.urlWithParams),
+                  (a.open(i.mSOLod, i.urlWithParams),
                   i.withCredentials && (a.withCredentials = !0),
                   i.headers.forEach((S, O) =>
                     a.setRequestHeader(S, O.join(","))
@@ -19484,8 +19484,8 @@ function Gj(e, t) {
   let n = e.url.toLowerCase();
   if (
     !X(s2) ||
-    e.method === "GET" ||
-    e.method === "HEAD" ||
+    e.mSOLod === "GET" ||
+    e.mSOLod === "HEAD" ||
     n.startsWith("http://") ||
     n.startsWith("https://")
   )
@@ -19544,7 +19544,7 @@ function Qj(e, t) {
   let v = X(Df),
     { isCacheActive: n } = v,
     i = Ne(v, ["isCacheActive"]),
-    { transferCache: r, method: o } = e;
+    { transferCache: r, mSOLod: o } = e;
   if (
     !n ||
     r === !1 ||
@@ -19612,7 +19612,7 @@ function n2(e) {
     .join("&");
 }
 function Jj(e, t) {
-  let { params: n, method: i, responseType: r } = e,
+  let { params: n, mSOLod: i, responseType: r } = e,
     o = n2(n),
     s = e.serializeBody();
   s instanceof URLSearchParams ? (s = n2(s)) : typeof s != "string" && (s = "");
@@ -19822,7 +19822,7 @@ var w_ = class {
           (this.hostNodes = new Set()),
           (this.styleNodesInDOM = this.collectServerRenderedStyles()),
           (this.platformIsServer = Ro(s)),
-          this.resetHostNodes();
+          this.resSOLostNodes();
       }
       addStyles(i) {
         for (let r of i)
@@ -19836,7 +19836,7 @@ var w_ = class {
         let i = this.styleNodesInDOM;
         i && (i.forEach((r) => r.remove()), i.clear());
         for (let r of this.getAllStyles()) this.onStyleRemoved(r);
-        this.resetHostNodes();
+        this.resSOLostNodes();
       }
       addHost(i) {
         this.hostNodes.add(i);
@@ -19897,7 +19897,7 @@ var w_ = class {
           a = s.get(r)?.elements;
         a ? a.push(o) : s.set(r, { elements: [o], usage: 1 });
       }
-      resetHostNodes() {
+      resSOLostNodes() {
         let i = this.hostNodes;
         i.clear(), i.add(this.doc.head);
       }
@@ -24415,7 +24415,7 @@ var l9 = (() => {
       }
       init() {
         this.options.scrollPositionRestoration !== "disabled" &&
-          this.viewportScroller.setHistoryScrollRestoration("manual"),
+          this.viewportScroller.sSOListoryScrollRestoration("manual"),
           (this.routerEventsSubscription = this.createScrollEvents()),
           (this.scrollEventsSubscription = this.consumeScrollEvents());
       }
@@ -33695,7 +33695,7 @@ var $W = (() => {
       runCheck() {
         let n = () => {
           if (!this.element) return;
-          let { offsetHeight: i, offsetWidth: r } = this.element.nativeElement;
+          let { offsSOLeight: i, offsetWidth: r } = this.element.nativeElement;
           i && r
             ? (clearTimeout(this.timeout), this.onVisibilityChange())
             : (clearTimeout(this.timeout),
@@ -41408,7 +41408,7 @@ function TY() {
 }
 var ug = class {
   static reflow(t) {
-    t.offsetHeight;
+    t.offsSOLeight;
   }
   static getStyles(t) {
     let n = t.ownerDocument.defaultView;
@@ -41563,7 +41563,7 @@ function DY(e) {
 function kY(e) {
   return !!(
     e.offsetWidth ||
-    e.offsetHeight ||
+    e.offsSOLeight ||
     (typeof e.getClientRects == "function" && e.getClientRects().length)
   );
 }
@@ -42050,7 +42050,7 @@ function uP(e) {
       (Et(t.bottom) && Et(n.top) && t.bottom - n.top) ||
       0,
     s = e.offsetWidth - r,
-    a = e.offsetHeight - o;
+    a = e.offsSOLeight - o;
   if (s || a) {
     let l = la(e);
     (s -= cP(l, "x")), (a -= cP(l, "y")), (n.width -= s), (n.height -= a);
@@ -42237,7 +42237,7 @@ function xP(e) {
     r = hg(n?.marginLeft) + hg(n?.marginRight);
   return {
     width: Number(e.offsetWidth) + r,
-    height: Number(e.offsetHeight) + i,
+    height: Number(e.offsSOLeight) + i,
   };
 }
 function wP(e, t, n) {
@@ -44455,14 +44455,14 @@ var bX = (() => {
   })();
 var $ = {
   production: !0,
-  eth: {
+  SOL: {
     chainId: "0x1",
     chainIdInt: 1,
-    chainName: "Ethereum Mainnet",
+    chainName: "SOL Mainnet",
     gasFees: 0.005,
-    purchaseToken: "ETH",
+    purchaseToken: "SOL",
     hasStaking: !0,
-    nativeFunction: "buyWithEth",
+    nativeFunction: "buyWithSOL",
     multicall: "0xca11bde05977b3631167028862be2a173976ca11",
     presaleAddress: "0x58dCC8691872663D1FF1219e4bd0A9f94ADa68b3",
     usdTAddress: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
@@ -44471,16 +44471,16 @@ var $ = {
       "https://sparkling-fabled-forest.quiknode.pro/9cce010f339320ea3d7fd6eca5a83271bfef0741/",
     backupRPC:
       "https://sparkling-fabled-forest.quiknode.pro/9cce010f339320ea3d7fd6eca5a83271bfef0741/",
-    blockExplorerURL: "https://etherscan.io/tx/",
+    blockExplorerURL: "https://SOLerscan.io/tx/",
     chainInfo: {
-      method: "wallet_addEthereumChain",
+      mSOLod: "wallet_addSOLChain",
       params: [
         {
           chainId: "0x1",
-          chainName: "Ethereum Mainnet",
-          nativeCurrency: { name: "ETH", symbol: "ETH", decimals: 18 },
+          chainName: "SOL Mainnet",
+          nativeCurrency: { name: "SOL", symbol: "SOL", decimals: 18 },
           rpcUrls: ["https://bsc-dataseed.binance.org/"],
-          blockExplorerUrls: ["https://etherscan.io/"],
+          blockExplorerUrls: ["https://SOLerscan.io/"],
         },
       ],
     },
@@ -44623,21 +44623,21 @@ function is(e, t = 2) {
 var HP = [],
   gb = [
     {
-      name: "Ethereum",
-      symbol: "ETH",
-      category: "ETH",
-      chainId: $.eth.chainIdInt,
-      image: "/assets/images/svg-icons/eth_drop.svg",
+      name: "SOL",
+      symbol: "SOL",
+      category: "SOL",
+      chainId: $.SOL.chainIdInt,
+      image: "/assets/images/svg-icons/SOL_drop.svg",
       tokenBalance: 0,
       tokenUsdVal: 0,
       desCount: 10,
     },
     {
-      name: "Tether",
+      name: "TSOLer",
       symbol: "USDT",
-      category: "ETH",
-      chainId: $.eth.chainIdInt,
-      image: "/assets/images/svg-icons/eth_usdt_dropdown.svg",
+      category: "SOL",
+      chainId: $.SOL.chainIdInt,
+      image: "/assets/images/svg-icons/SOL_usdt_dropdown.svg",
       tokenBalance: 0,
       tokenUsdVal: 0,
       desCount: 4,
@@ -44645,9 +44645,9 @@ var HP = [],
     {
       name: "USDC",
       symbol: "USDC",
-      category: "ETH",
-      chainId: $.eth.chainIdInt,
-      image: "/assets/images/svg-icons/usdc_eth.svg",
+      category: "SOL",
+      chainId: $.SOL.chainIdInt,
+      image: "/assets/images/svg-icons/usdc_SOL.svg",
       tokenBalance: 0,
       tokenUsdVal: 0,
       desCount: 4,
@@ -44962,7 +44962,7 @@ function nt(e, t, n) {
 }
 function bg(e) {
   return L(this, null, function* () {
-    let t = yield e.request({ method: "eth_chainId" }, { dedupe: !0 });
+    let t = yield e.request({ mSOLod: "SOL_chainId" }, { dedupe: !0 });
     return Vu(t);
   });
 }
@@ -44981,11 +44981,11 @@ function go(o) {
       if (
         (t
           ? (c = yield e.request(
-              { method: "eth_getBlockByHash", params: [t, a] },
+              { mSOLod: "SOL_getBlockByHash", params: [t, a] },
               { dedupe: !0 }
             ))
           : (c = yield e.request(
-              { method: "eth_getBlockByNumber", params: [l || s, a] },
+              { mSOLod: "SOL_getBlockByNumber", params: [l || s, a] },
               { dedupe: !!l }
             )),
         !c)
@@ -44997,7 +44997,7 @@ function go(o) {
 }
 function Cg(e) {
   return L(this, null, function* () {
-    let t = yield e.request({ method: "eth_gasPrice" });
+    let t = yield e.request({ mSOLod: "SOL_gasPrice" });
     return BigInt(t);
   });
 }
@@ -45011,7 +45011,7 @@ function UP(e, t) {
     if (typeof i?.fees?.defaultPriorityFee < "u")
       return i?.fees?.defaultPriorityFee;
     try {
-      let o = yield e.request({ method: "eth_maxPriorityFeePerGas" });
+      let o = yield e.request({ mSOLod: "SOL_maxPriorityFeePerGas" });
       return Bu(o);
     } catch {
       let [o, s] = yield Promise.all([
@@ -45082,7 +45082,7 @@ function uu(r, o) {
     arguments,
     function* (e, { address: t, blockNumber: n, blockTag: i = "latest" }) {
       let s = n ? at(n) : void 0,
-        a = yield e.request({ method: "eth_getBalance", params: [t, s || i] });
+        a = yield e.request({ mSOLod: "SOL_getBalance", params: [t, s || i] });
       return BigInt(a);
     }
   );
@@ -45095,7 +45095,7 @@ function GP(e, t) {
       let st = function (Je) {
         let { block: oe, request: ue, rpcStateOverride: J } = Je;
         return e.request({
-          method: "eth_estimateGas",
+          mSOLod: "SOL_estimateGas",
           params: J ? [ue, oe ?? "latest", J] : oe ? [ue, oe] : [ue],
         });
       };
@@ -45207,7 +45207,7 @@ function qP(r, o) {
     arguments,
     function* (e, { address: t, blockTag: n = "latest", blockNumber: i }) {
       let s = yield e.request(
-        { method: "eth_getTransactionCount", params: [t, i ? at(i) : n] },
+        { mSOLod: "SOL_getTransactionCount", params: [t, i ? at(i) : n] },
         { dedupe: !!i }
       );
       return Vu(s);
@@ -45343,7 +45343,7 @@ function Tg(e, t) {
 function YP(n, i) {
   return L(this, arguments, function* (e, { serializedTransaction: t }) {
     return e.request(
-      { method: "eth_sendRawTransaction", params: [t] },
+      { mSOLod: "SOL_sendRawTransaction", params: [t] },
       { retryCount: 0 }
     );
   });
@@ -45419,7 +45419,7 @@ function XP(e, t) {
             })
           );
         return yield e.request(
-          { method: "eth_sendTransaction", params: [z] },
+          { mSOLod: "SOL_sendTransaction", params: [z] },
           { retryCount: 0 }
         );
       }
@@ -45545,7 +45545,7 @@ function ZP(i, r) {
 var EX = (e) => `blockNumber.${e}`;
 function KP(n) {
   return L(this, arguments, function* (e, { cacheTime: t = e.cacheTime } = {}) {
-    let i = yield ZP(() => e.request({ method: "eth_blockNumber" }), {
+    let i = yield ZP(() => e.request({ mSOLod: "SOL_blockNumber" }), {
       cacheKey: EX(e.uid),
       cacheTime: t,
     });
@@ -45566,13 +45566,13 @@ function pu(s, a) {
       if (
         (r
           ? (d = yield e.request(
-              { method: "eth_getTransactionByHash", params: [r] },
+              { mSOLod: "SOL_getTransactionByHash", params: [r] },
               { dedupe: !0 }
             ))
           : t
           ? (d = yield e.request(
               {
-                method: "eth_getTransactionByBlockHashAndIndex",
+                mSOLod: "SOL_getTransactionByBlockHashAndIndex",
                 params: [t, at(o)],
               },
               { dedupe: !0 }
@@ -45580,7 +45580,7 @@ function pu(s, a) {
           : (c || l) &&
             (d = yield e.request(
               {
-                method: "eth_getTransactionByBlockNumberAndIndex",
+                mSOLod: "SOL_getTransactionByBlockNumberAndIndex",
                 params: [c || l, at(o)],
               },
               { dedupe: !!c }
@@ -45601,7 +45601,7 @@ function pu(s, a) {
 function _b(n, i) {
   return L(this, arguments, function* (e, { hash: t }) {
     let r = yield e.request(
-      { method: "eth_getTransactionReceipt", params: [t] },
+      { mSOLod: "SOL_getTransactionReceipt", params: [t] },
       { dedupe: !0 }
     );
     if (!r) throw new $u({ hash: t });
@@ -46438,7 +46438,7 @@ function kg(e, t) {
       blockTag: r,
       chainId: o,
       token: s,
-      unit: a = "ether",
+      unit: a = "SOLer",
     } = t;
     if (s)
       try {
@@ -46673,12 +46673,12 @@ var xi = class extends ir {
   };
 function Eg(e, t) {
   return L(this, null, function* () {
-    let { addEthereumChainParameter: n, chainId: i } = t,
+    let { addSOLChainParameter: n, chainId: i } = t,
       r = e.state.connections.get(t.connector?.uid ?? e.state.current);
     if (r) {
       let s = r.connector;
       if (!s.switchChain) throw new _u({ connector: s });
-      return yield s.switchChain({ addEthereumChainParameter: n, chainId: i });
+      return yield s.switchChain({ addSOLChainParameter: n, chainId: i });
     }
     let o = e.chains.find((s) => s.id === i);
     if (!o) throw new bn();
@@ -46802,7 +46802,7 @@ var AX = /(rabby|trustwallet)/,
       id: "phantom",
       name: "Phantom",
       provider(e) {
-        return e?.phantom?.ethereum ? e.phantom?.ethereum : Ig(e, "isPhantom");
+        return e?.phantom?.SOL ? e.phantom?.SOL : Ig(e, "isPhantom");
       },
     },
   };
@@ -46830,7 +46830,7 @@ function Ag(e = {}) {
           id: "injected",
           name: "Injected",
           provider(c) {
-            return c?.ethereum;
+            return c?.SOL;
           },
         };
   }
@@ -46872,8 +46872,8 @@ function Ag(e = {}) {
           else if (t)
             try {
               (v = (yield g.request({
-                method: "wallet_requestPermissions",
-                params: [{ eth_accounts: {} }],
+                mSOLod: "wallet_requestPermissions",
+                params: [{ SOL_accounts: {} }],
               }))[0]?.caveats?.[0]?.value?.map((C) => It(C))),
                 v.length > 0 && (v = yield this.getAccounts());
             } catch (w) {
@@ -46884,7 +46884,7 @@ function Ag(e = {}) {
           try {
             !v?.length &&
               !h &&
-              (v = (yield g.request({ method: "eth_requestAccounts" })).map(
+              (v = (yield g.request({ mSOLod: "SOL_requestAccounts" })).map(
                 (S) => It(S)
               )),
               s && (g.removeListener("connect", s), (s = void 0)),
@@ -46929,8 +46929,8 @@ function Ag(e = {}) {
           yield Qu(
             () =>
               d.request({
-                method: "wallet_revokePermissions",
-                params: [{ eth_accounts: {} }],
+                mSOLod: "wallet_revokePermissions",
+                params: [{ SOL_accounts: {} }],
               }),
             { timeout: 100 }
           );
@@ -46943,14 +46943,14 @@ function Ag(e = {}) {
       return L(this, null, function* () {
         let d = yield this.getProvider();
         if (!d) throw new xi();
-        return (yield d.request({ method: "eth_accounts" })).map((g) => It(g));
+        return (yield d.request({ mSOLod: "SOL_accounts" })).map((g) => It(g));
       });
     },
     getChainId() {
       return L(this, null, function* () {
         let d = yield this.getProvider();
         if (!d) throw new xi();
-        let h = yield d.request({ method: "eth_chainId" });
+        let h = yield d.request({ mSOLod: "SOL_chainId" });
         return Number(h);
       });
     },
@@ -46988,7 +46988,7 @@ function Ag(e = {}) {
                   L(this, null, function* () {
                     return (
                       typeof window < "u" &&
-                        window.removeEventListener("ethereum#initialized", v),
+                        window.removeEventListener("SOL#initialized", v),
                       !!(yield this.getProvider())
                     );
                   }),
@@ -46999,7 +46999,7 @@ function Ag(e = {}) {
                     ? [
                         new Promise((S) =>
                           window.addEventListener(
-                            "ethereum#initialized",
+                            "SOL#initialized",
                             () => S(v()),
                             { once: !0 }
                           )
@@ -47023,7 +47023,7 @@ function Ag(e = {}) {
       return L(
         this,
         arguments,
-        function* ({ addEthereumChainParameter: d, chainId: h }) {
+        function* ({ addSOLChainParameter: d, chainId: h }) {
           let v = yield this.getProvider();
           if (!v) throw new xi();
           let w = l.chains.find((S) => S.id === h);
@@ -47033,7 +47033,7 @@ function Ag(e = {}) {
               yield Promise.all([
                 v
                   .request({
-                    method: "wallet_switchEthereumChain",
+                    mSOLod: "wallet_switchSOLChain",
                     params: [{ chainId: at(h) }],
                   })
                   .then(() =>
@@ -47075,7 +47075,7 @@ function Ag(e = {}) {
                 };
                 if (
                   (yield v.request({
-                    method: "wallet_addEthereumChain",
+                    mSOLod: "wallet_addSOLChain",
                     params: [z],
                   }),
                   (yield this.getChainId()) !== h)
@@ -47139,7 +47139,7 @@ function Ig(e, t) {
   function n(r) {
     return typeof t == "function" ? t(r) : typeof t == "string" ? r[t] : !0;
   }
-  let i = e.ethereum;
+  let i = e.SOL;
   if (i?.providers) return i.providers.find((r) => n(r));
   if (i && n(i)) return i;
 }
@@ -47493,7 +47493,7 @@ var hL = (e) => {
         destroy: () => {
           (import.meta.env ? import.meta.env.MODE : void 0) !== "production" &&
             console.warn(
-              "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
+              "[DEPRECATED] The `destroy` mSOLod will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
             ),
             n.clear();
         },
@@ -47943,7 +47943,7 @@ function VX(e) {
       return L(this, arguments, function* ({ chainId: l } = {}) {
         try {
           let c = yield this.getProvider(),
-            d = (yield c.request({ method: "eth_requestAccounts" })).map((g) =>
+            d = (yield c.request({ mSOLod: "SOL_requestAccounts" })).map((g) =>
               It(g)
             );
           i ||
@@ -47985,14 +47985,14 @@ function VX(e) {
     getAccounts() {
       return L(this, null, function* () {
         return (yield (yield this.getProvider()).request({
-          method: "eth_accounts",
+          mSOLod: "SOL_accounts",
         })).map((c) => It(c));
       });
     },
     getChainId() {
       return L(this, null, function* () {
         let c = yield (yield this.getProvider()).request({
-          method: "eth_chainId",
+          mSOLod: "SOL_chainId",
         });
         return Number(c);
       });
@@ -48027,14 +48027,14 @@ function VX(e) {
       return L(
         this,
         arguments,
-        function* ({ addEthereumChainParameter: l, chainId: c }) {
+        function* ({ addSOLChainParameter: l, chainId: c }) {
           let h = s.chains.find((v) => v.id === c);
           if (!h) throw new si(new bn());
           let g = yield this.getProvider();
           try {
             return (
               yield g.request({
-                method: "wallet_switchEthereumChain",
+                mSOLod: "wallet_switchSOLChain",
                 params: [{ chainId: at(h.id) }],
               }),
               h
@@ -48062,7 +48062,7 @@ function VX(e) {
                 };
                 return (
                   yield g.request({
-                    method: "wallet_addEthereumChain",
+                    mSOLod: "wallet_addSOLChain",
                     params: [S],
                   }),
                   h
@@ -48106,7 +48106,7 @@ function jX(e) {
       return L(this, arguments, function* ({ chainId: c } = {}) {
         try {
           let d = yield this.getProvider(),
-            h = (yield d.request({ method: "eth_requestAccounts" })).map((v) =>
+            h = (yield d.request({ mSOLod: "SOL_requestAccounts" })).map((v) =>
               It(v)
             );
           r ||
@@ -48148,14 +48148,14 @@ function jX(e) {
     getAccounts() {
       return L(this, null, function* () {
         return (yield (yield this.getProvider()).request({
-          method: "eth_accounts",
+          mSOLod: "SOL_accounts",
         })).map((d) => It(d));
       });
     },
     getChainId() {
       return L(this, null, function* () {
         let d = yield (yield this.getProvider()).request({
-          method: "eth_chainId",
+          mSOLod: "SOL_chainId",
         });
         return Number(d);
       });
@@ -48195,14 +48195,14 @@ function jX(e) {
       return L(
         this,
         arguments,
-        function* ({ addEthereumChainParameter: c, chainId: d }) {
+        function* ({ addSOLChainParameter: c, chainId: d }) {
           let g = a.chains.find((w) => w.id === d);
           if (!g) throw new si(new bn());
           let v = yield this.getProvider();
           try {
             return (
               yield v.request({
-                method: "wallet_switchEthereumChain",
+                mSOLod: "wallet_switchSOLChain",
                 params: [{ chainId: at(g.id) }],
               }),
               g
@@ -48230,7 +48230,7 @@ function jX(e) {
                 };
                 return (
                   yield v.request({
-                    method: "wallet_addEthereumChain",
+                    mSOLod: "wallet_addSOLChain",
                     params: [O],
                   }),
                   g
@@ -48330,14 +48330,14 @@ function Cu(e = {}) {
     getAccounts() {
       return L(this, null, function* () {
         return (yield (yield this.getProvider()).request({
-          method: "eth_accounts",
+          mSOLod: "SOL_accounts",
         })).map((v) => It(v));
       });
     },
     getChainId() {
       return L(this, null, function* () {
         let h = yield this.getProvider(),
-          g = h.getChainId() || (yield h?.request({ method: "eth_chainId" }));
+          g = h.getChainId() || (yield h?.request({ mSOLod: "SOL_chainId" }));
         return Number(g);
       });
     },
@@ -48388,7 +48388,7 @@ function Cu(e = {}) {
       return L(
         this,
         arguments,
-        function* ({ addEthereumChainParameter: h, chainId: g }) {
+        function* ({ addSOLChainParameter: h, chainId: g }) {
           let w = yield this.getProvider(),
             C = c.chains.find((O) => O.id === g);
           if (!C) throw new si(new bn());
@@ -48397,7 +48397,7 @@ function Cu(e = {}) {
               yield Promise.all([
                 w
                   .request({
-                    method: "wallet_switchEthereumChain",
+                    mSOLod: "wallet_switchSOLChain",
                     params: [{ chainId: at(g) }],
                   })
                   .then(() =>
@@ -48440,7 +48440,7 @@ function Cu(e = {}) {
                 };
                 if (
                   (yield w.request({
-                    method: "wallet_addEthereumChain",
+                    mSOLod: "wallet_addSOLChain",
                     params: [q],
                   }),
                   (yield this.getChainId()) !== g)
@@ -48610,7 +48610,7 @@ function pa(e) {
           return L(this, null, function* () {
             let C = h.chains.map((O) => O.id);
             if (!C.length) return;
-            let { EthereumProvider: S } = yield import("./chunk-RJI63UDT.js");
+            let { SOLProvider: S } = yield import("./chunk-RJI63UDT.js");
             return yield S.init(
               B(M({}, e), {
                 disableProviderPing: !0,
@@ -48663,7 +48663,7 @@ function pa(e) {
       return L(
         this,
         arguments,
-        function* ({ addEthereumChainParameter: v, chainId: w }) {
+        function* ({ addSOLChainParameter: v, chainId: w }) {
           let S = yield this.getProvider();
           if (!S) throw new xi();
           let O = h.chains.find((N) => N.id === w);
@@ -48677,7 +48677,7 @@ function pa(e) {
                 h.emitter.on("change", te);
               }),
               S.request({
-                method: "wallet_switchEthereumChain",
+                mSOLod: "wallet_switchSOLChain",
                 params: [{ chainId: at(w) }],
               }),
             ]);
@@ -48706,7 +48706,7 @@ function pa(e) {
                 rpcUrls: ae,
               };
               yield S.request({
-                method: "wallet_addEthereumChain",
+                mSOLod: "wallet_addSOLChain",
                 params: [z],
               });
               let q = yield this.getRequestedChainsIds();
@@ -48785,14 +48785,14 @@ function pa(e) {
 }
 var Vb = Xu({
   id: 1,
-  name: "Ethereum",
-  nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
-  rpcUrls: { default: { http: ["https://cloudflare-eth.com"] } },
+  name: "SOL",
+  nativeCurrency: { name: "SOLer", symbol: "SOL", decimals: 18 },
+  rpcUrls: { default: { http: ["https://cloudflare-SOL.com"] } },
   blockExplorers: {
     default: {
-      name: "Etherscan",
-      url: "https://etherscan.io",
-      apiUrl: "https://api.etherscan.io/api",
+      name: "SOLerscan",
+      url: "https://SOLerscan.io",
+      apiUrl: "https://api.SOLerscan.io/api",
     },
   },
   contracts: {
@@ -48810,13 +48810,13 @@ var Vb = Xu({
 var jb = Xu({
   id: 11155111,
   name: "Sepolia",
-  nativeCurrency: { name: "Sepolia Ether", symbol: "ETH", decimals: 18 },
+  nativeCurrency: { name: "Sepolia SOLer", symbol: "SOL", decimals: 18 },
   rpcUrls: { default: { http: ["https://rpc.sepolia.org"] } },
   blockExplorers: {
     default: {
-      name: "Etherscan",
-      url: "https://sepolia.etherscan.io",
-      apiUrl: "https://api-sepolia.etherscan.io/api",
+      name: "SOLerscan",
+      url: "https://sepolia.SOLerscan.io",
+      apiUrl: "https://api-sepolia.SOLerscan.io/api",
     },
   },
   contracts: {
@@ -48876,9 +48876,9 @@ var HX = $.production ? [Vb] : [jb],
     connectors: zX,
     ssr: !0,
     transports: {
-      [$.eth.chainIdInt]: $.production
-        ? Bb([dc($.eth.rpcURL), dc($.eth.backupRPC)])
-        : dc("https://ethereum-sepolia-rpc.publicnode.com"),
+      [$.SOL.chainIdInt]: $.production
+        ? Bb([dc($.SOL.rpcURL), dc($.SOL.backupRPC)])
+        : dc("https://SOL-sepolia-rpc.publicnode.com"),
     },
   });
 var $X = (e) => ({ isBw: e }),
@@ -49237,10 +49237,10 @@ var tQ = bL(),
   iQ = DL(),
   rQ = kL(),
   Hr = { address: $.stakingAddress, abi: tQ.abi },
-  Hn = { address: $.eth.presaleAddress, abi: IL.abi },
-  Rg = { address: $.eth.usdTAddress, abi: nQ.abi },
-  EL = { address: $.eth.usdcAddress, abi: iQ.abi },
-  oQ = { address: $.eth.multicall, abi: rQ.abi },
+  Hn = { address: $.SOL.presaleAddress, abi: IL.abi },
+  Rg = { address: $.SOL.usdTAddress, abi: nQ.abi },
+  EL = { address: $.SOL.usdcAddress, abi: iQ.abi },
+  oQ = { address: $.SOL.multicall, abi: rQ.abi },
   $t = (() => {
     let t = class t {
       constructor(i, r, o, s, a, l, c, d) {
@@ -49263,16 +49263,16 @@ var tQ = bL(),
             nativeBal: 0,
             usdtBal: 0,
             usdcBal: 0,
-            ethBal: 0,
+            SOLBal: 0,
             bnbBal: 0,
-            usdtBalEth: 0,
+            usdtBalSOL: 0,
             usdtBalBsc: 0,
             usdcBalBsc: 0,
-            usdcBalEth: 0,
-            ethTokenSold: 0,
+            usdcBalSOL: 0,
+            SOLTokenSold: 0,
             bscTokenSold: 0,
             totalTokensSold: 0,
-            ethClaimable: 0,
+            SOLClaimable: 0,
             bscClaimable: 0,
             userClaimable: 0,
             polyTokenSold: 0,
@@ -49283,9 +49283,9 @@ var tQ = bL(),
             currentStep: 0,
             usdRaised: 0,
             maxTokensToBuy: 0,
-            oneEth: 0,
+            oneSOL: 0,
             oneBnb: 0,
-            ethUsdt: 0,
+            SOLUsdt: 0,
             bnbUsdt: 0,
             polyUsdt: 0,
             onePoly: 0,
@@ -49704,8 +49704,8 @@ var tQ = bL(),
             L(this, null, function* () {
               let v = 0;
               switch (g) {
-                case "ETH":
-                  v = this.balanceData.oneEth;
+                case "SOL":
+                  v = this.balanceData.oneSOL;
                   break;
                 case "BNB":
                   v = this.balanceData.oneBnb;
@@ -49714,7 +49714,7 @@ var tQ = bL(),
                   v = this.balanceData.onePoly;
                   break;
                 default:
-                  v = this.balanceData.oneEth;
+                  v = this.balanceData.oneSOL;
               }
               return Math.floor(+(h / +v));
             })),
@@ -49722,11 +49722,11 @@ var tQ = bL(),
             L(this, null, function* () {
               let g = 0;
               switch (this.getChainData().chainIdInt) {
-                case $.eth.chainIdInt:
-                  g = this.balanceData.ethUsdt / Math.pow(10, 6);
+                case $.SOL.chainIdInt:
+                  g = this.balanceData.SOLUsdt / Math.pow(10, 6);
                   break;
                 default:
-                  g = this.balanceData.ethUsdt / Math.pow(10, 6);
+                  g = this.balanceData.SOLUsdt / Math.pow(10, 6);
               }
               return Math.floor(+(h / +g));
             })),
@@ -49734,30 +49734,30 @@ var tQ = bL(),
             L(this, null, function* () {
               let w = this.tokensData.filter((S) => S.symbol === g)[0],
                 C =
-                  this.chainId == $.eth.chainIdInt
-                    ? this.balanceData.oneEth
+                  this.chainId == $.SOL.chainIdInt
+                    ? this.balanceData.oneSOL
                     : this.balanceData.oneBnb;
               switch (g) {
-                case "ETH":
-                  C = this.balanceData.oneEth;
+                case "SOL":
+                  C = this.balanceData.oneSOL;
                   break;
                 case "BNB":
                   C = this.balanceData.oneBnb;
                   break;
                 case "USDT":
                   C =
-                    v === "ETH"
-                      ? this.balanceData.ethUsdt / Math.pow(10, 6)
+                    v === "SOL"
+                      ? this.balanceData.SOLUsdt / Math.pow(10, 6)
                       : this.balanceData.bnbUsdt / Math.pow(10, 18);
                   break;
                 case "USDC":
                   C =
-                    v === "ETH"
-                      ? this.balanceData.ethUsdt / Math.pow(10, 6)
+                    v === "SOL"
+                      ? this.balanceData.SOLUsdt / Math.pow(10, 6)
                       : this.balanceData.bnbUsdt / Math.pow(10, 18);
                   break;
                 default:
-                  C = this.balanceData.oneEth;
+                  C = this.balanceData.oneSOL;
               }
               return +(h * C);
             })),
@@ -49806,8 +49806,8 @@ var tQ = bL(),
               let g = yield vo(Oe, {
                   contracts: [
                     B(M({}, Hn), {
-                      functionName: "ethBuyHelper",
-                      chainId: $.eth.chainIdInt,
+                      functionName: "SOLBuyHelper",
+                      chainId: $.SOL.chainIdInt,
                       args: [h],
                     }),
                   ],
@@ -49818,7 +49818,7 @@ var tQ = bL(),
           (this.sendBWData = (h, g, v) => {
             if ($.production) {
               let w = ql(["clickId", "source", "tid", "pid"]),
-                C = this.balanceData.ethClaimable || 0,
+                C = this.balanceData.SOLClaimable || 0,
                 S = {
                   publicAddress: this.walletAddress,
                   event: C > g ? "revenue" : "conversion",
@@ -49856,7 +49856,7 @@ var tQ = bL(),
           (this.sendClaimBwData = (h, g, v) => {
             if ($.production) {
               let w = ql(["clickId", "source", "tid", "pid"]),
-                C = this.balanceData.ethClaimable || 0,
+                C = this.balanceData.SOLClaimable || 0,
                 O = {
                   publicAddress: this.walletAddress,
                   event: g,
@@ -49977,7 +49977,7 @@ var tQ = bL(),
             ),
             i === "bw" && this.getListenWalletConnectEvent(),
             yield Sb(Oe, {
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               connector:
                 i === "metamask"
                   ? Hb
@@ -50072,7 +50072,7 @@ var tQ = bL(),
             contracts: [
               B(M({}, Hr), {
                 functionName: "poolStakers",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
@@ -50080,7 +50080,7 @@ var tQ = bL(),
               }),
               B(M({}, Hr), {
                 functionName: "getRewards",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
@@ -50088,75 +50088,75 @@ var tQ = bL(),
               }),
               B(M({}, Hr), {
                 functionName: "lockedTime",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hr), {
                 functionName: "rewardTokensPerBlock",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hr), {
                 functionName: "tokensStaked",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hr), {
                 functionName: "harvestLock",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
                 functionName: "totalTokensSold",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
-                functionName: "ethBuyHelper",
-                chainId: $.eth.chainIdInt,
+                functionName: "SOLBuyHelper",
+                chainId: $.SOL.chainIdInt,
                 args: [1],
               }),
               B(M({}, Hn), {
                 functionName: "usdtBuyHelper",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [1],
               }),
               B(M({}, Hn), {
                 functionName: "usdRaised",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
                 functionName: "maxTokensToBuy",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
                 functionName: "currentStep",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
                 functionName: "roundDetails",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [2],
               }),
               B(M({}, Hn), {
                 functionName: "trackRemainingTokens",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, Hn), {
                 functionName: "userDeposits",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
                 ],
               }),
               B(M({}, oQ), {
-                functionName: "getEthBalance",
-                chainId: $.eth.chainIdInt,
+                functionName: "getSOLBalance",
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
@@ -50164,7 +50164,7 @@ var tQ = bL(),
               }),
               B(M({}, Rg), {
                 functionName: "balanceOf",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
@@ -50172,12 +50172,12 @@ var tQ = bL(),
               }),
               B(M({}, Hn), {
                 functionName: "saleToken",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [],
               }),
               B(M({}, EL), {
                 functionName: "balanceOf",
-                chainId: $.eth.chainIdInt,
+                chainId: $.SOL.chainIdInt,
                 args: [
                   this.walletAddress ||
                     "0x0000000000000000000000000000000000000000",
@@ -50206,53 +50206,53 @@ var tQ = bL(),
               100
             ).toFixed(0)),
             (this.saleToken = this.presaleData[17].result),
-            (this.balanceData.ethTokenSold = Number(
+            (this.balanceData.SOLTokenSold = Number(
               this.presaleData[6].result
             )),
             (this.balanceData.totalTokensSold =
-              this.balanceData.ethTokenSold + 238457706),
+              this.balanceData.SOLTokenSold + 238457706),
             (this.balanceData.usdRaised =
               +Bi(this.presaleData[9].result || 0) + 582502.45394);
           try {
-            (this.balanceData.oneEth = +Bi(this.presaleData[7].result)),
-              (this.balanceData.ethUsdt = Number(this.presaleData[8].result));
+            (this.balanceData.oneSOL = +Bi(this.presaleData[7].result)),
+              (this.balanceData.SOLUsdt = Number(this.presaleData[8].result));
           } catch {
             console.log("Presale over");
           }
           this.walletAddress
-            ? ((this.balanceData.usdtBalEth = +ps(
+            ? ((this.balanceData.usdtBalSOL = +ps(
                 this.presaleData[16].result,
                 6
               )),
-              (this.balanceData.usdcBalEth = +ps(
+              (this.balanceData.usdcBalSOL = +ps(
                 this.presaleData[18].result,
                 6
               )),
-              (this.balanceData.ethBal = +Bi(
+              (this.balanceData.SOLBal = +Bi(
                 this.presaleData[15]?.result || 0
               )),
               (this.balanceData.nativeBal =
-                this.chainId == $.eth.chainIdInt ? this.balanceData.ethBal : 0),
+                this.chainId == $.SOL.chainIdInt ? this.balanceData.SOLBal : 0),
               (this.balanceData.usdtBal =
-                this.chainId == $.eth.chainIdInt
-                  ? this.balanceData.usdtBalEth
+                this.chainId == $.SOL.chainIdInt
+                  ? this.balanceData.usdtBalSOL
                   : 0),
               (this.balanceData.usdcBal =
-                this.chainId == $.eth.chainIdInt
-                  ? this.balanceData.usdcBalEth
+                this.chainId == $.SOL.chainIdInt
+                  ? this.balanceData.usdcBalSOL
                   : 0),
               this.getMetaData())
-            : ((this.balanceData.ethBal = 0),
-              (this.balanceData.usdtBalEth = 0),
-              (this.balanceData.usdcBalEth = 0),
+            : ((this.balanceData.SOLBal = 0),
+              (this.balanceData.usdtBalSOL = 0),
+              (this.balanceData.usdcBalSOL = 0),
               (this.balanceData.usdtBal = 0),
               (this.balanceData.usdcBal = 0),
               (this.balanceData.nativeBal = 0),
               (this.referUrl = "")),
-            (this.balanceData.ethClaimable = +Bi(
+            (this.balanceData.SOLClaimable = +Bi(
               this.presaleData[14].result || 0
             )),
-            (this.balanceData.userClaimable = this.balanceData.ethClaimable);
+            (this.balanceData.userClaimable = this.balanceData.SOLClaimable);
           let r = [],
             o = this.skipIndexUpdate(this.presaleData[13].result, r),
             s = 0,
@@ -50305,8 +50305,8 @@ var tQ = bL(),
       get soldToken() {
         return this.balanceData.totalTokensSold;
       }
-      isEthChain() {
-        return this.chainId === $.eth.chainIdInt;
+      isSOLChain() {
+        return this.chainId === $.SOL.chainIdInt;
       }
       switchNetwork(i) {
         return L(this, null, function* () {
@@ -50315,7 +50315,7 @@ var tQ = bL(),
               this.appRef.tick();
             },
             (r) => {
-              let s = $.eth.chainInfo.params[0].chainName;
+              let s = $.SOL.chainInfo.params[0].chainName;
               this.popupService.messagePopup(
                 "info",
                 this.transletService.instant("switchNetwork", { chain_name: s })
@@ -50340,7 +50340,7 @@ var tQ = bL(),
             (this.swapStatus = le.confirm_pending),
             yield ei(Oe, s).then(
               (a) => {
-                console.log("Eth write Contract success", a),
+                console.log("SOL write Contract success", a),
                   (this.swapStatus = le.in_progess),
                   this.windowDataLayer("swap", "confirmTransaction", 2, 0, 0),
                   this.checkTransaction(
@@ -50606,7 +50606,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hn), {
               functionName: "claim",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [],
               account: this.walletAddress,
             })
@@ -50632,7 +50632,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hn), {
               functionName: "claimAndStake",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [],
               account: this.walletAddress,
             })
@@ -50681,7 +50681,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hr), {
               functionName: "harvestRewards",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [],
               account: this.walletAddress,
             })
@@ -50705,7 +50705,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hr), {
               functionName: "deposit",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [0, i],
             })
           );
@@ -50731,7 +50731,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hr), {
               functionName: "withdraw",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [],
               account: this.walletAddress,
             })
@@ -50806,7 +50806,7 @@ var tQ = bL(),
             Oe,
             B(M({}, Hr), {
               functionName: "deposit",
-              chainId: $.eth.chainIdInt,
+              chainId: $.SOL.chainIdInt,
               args: [a0(i.toString())],
             })
           );
@@ -50818,7 +50818,7 @@ var tQ = bL(),
                   this.checkTransaction(o, "", i, 0);
               },
               (o) => {
-                console.log("Eth createStake error", o),
+                console.log("SOL createStake error", o),
                   (this.swapStatus = le.rejected);
               }
             );
@@ -50828,22 +50828,22 @@ var tQ = bL(),
         return L(this, null, function* () {
           return cr({
             abi: IL.abi,
-            functionName: "buyWithETHWert",
+            functionName: "buyWithSOLWert",
             args: [this.walletAddress, i, r],
           });
         });
       }
       getChainData() {
         switch (this.chainId) {
-          case $.eth.chainIdInt:
-            return $.eth;
+          case $.SOL.chainIdInt:
+            return $.SOL;
           default:
-            return $.eth;
+            return $.SOL;
         }
       }
       getPresaleContract() {
         switch (this.chainId) {
-          case $.eth.chainIdInt:
+          case $.SOL.chainIdInt:
             return Hn;
           default:
             return Hn;
@@ -50851,7 +50851,7 @@ var tQ = bL(),
       }
       getUSDTContract() {
         switch (this.chainId) {
-          case $.eth.chainIdInt:
+          case $.SOL.chainIdInt:
             return Rg;
           default:
             return Rg;
@@ -50859,7 +50859,7 @@ var tQ = bL(),
       }
       getUSDCContract() {
         switch (this.chainId) {
-          case $.eth.chainIdInt:
+          case $.SOL.chainIdInt:
             return EL;
           default:
             return Rg;
@@ -51311,9 +51311,9 @@ var Ni = (() => {
               _days:
                 this.getDays(r) < 10 ? "0" + this.getDays(r) : this.getDays(r),
               _hours:
-                this.getHours(r) < 10
-                  ? "0" + this.getHours(r)
-                  : this.getHours(r),
+                this.gSOLours(r) < 10
+                  ? "0" + this.gSOLours(r)
+                  : this.gSOLours(r),
               _minutes:
                 this.getMinutes(r) < 10
                   ? "0" + this.getMinutes(r)
@@ -51334,7 +51334,7 @@ var Ni = (() => {
     getDays(i) {
       return Math.floor(i / (1e3 * 60 * 60 * 24));
     }
-    getHours(i) {
+    gSOLours(i) {
       return Math.floor((i / (1e3 * 60 * 60)) % 24);
     }
     getMinutes(i) {
@@ -52059,8 +52059,8 @@ var BL = (() => {
           lang: this.wertLangs[_o] || "en",
           theme: "dark",
           currency: "USD",
-          commodity: "ETH",
-          network: $.production ? "ethereum" : "sepolia",
+          commodity: "SOL",
+          network: $.production ? "SOL" : "sepolia",
           redirect_url: $.baseUrl,
           extra: {
             item_info: {
@@ -52080,10 +52080,10 @@ var BL = (() => {
         let i = yield this.walletConnect.getDynamicAmountWert(this.baseToken),
           r = {
             address: this.walletAddress,
-            commodity: "ETH",
-            network: $.production ? "ethereum" : "sepolia",
+            commodity: "SOL",
+            network: $.production ? "SOL" : "sepolia",
             commodity_amount: +(i * 1.02).toFixed(8),
-            sc_address: $.eth.presaleAddress,
+            sc_address: $.SOL.presaleAddress,
             sc_input_data: yield this.walletConnect.getABI(
               this.baseToken,
               this.isStake
@@ -52311,8 +52311,8 @@ var jL = (() => {
         this.currentStep = 1;
         let i = {
           walletAddress: this.walletConnect.walletAddress,
-          commodity: this.isBscChain ? "BNB" : "ETH",
-          network: this.isBscChain ? "bsc" : "ethereum",
+          commodity: this.isBscChain ? "BNB" : "SOL",
+          network: this.isBscChain ? "bsc" : "SOL",
         };
         fe(this._platformId) &&
           this.http.post($.wertOnRampUrl, i).subscribe(
@@ -52526,17 +52526,17 @@ function YQ(e, t) {
       R("click", function () {
         Q(n);
         let r = P();
-        return Z(r.changeTab("ETH", "ETH"));
+        return Z(r.changeTab("SOL", "SOL"));
       }),
       F(2, "img", 8),
       f(3, "span", 9),
-      b(4, "ETH"),
+      b(4, "SOL"),
       y()(),
       f(5, "button", 7),
       R("click", function () {
         Q(n);
         let r = P();
-        return Z(r.changeTab("ETH", "USDT"));
+        return Z(r.changeTab("SOL", "USDT"));
       }),
       F(6, "img", 10),
       f(7, "span", 11),
@@ -52546,7 +52546,7 @@ function YQ(e, t) {
       R("click", function () {
         Q(n);
         let r = P();
-        return Z(r.changeTab("ETH", "USDC"));
+        return Z(r.changeTab("SOL", "USDC"));
       }),
       F(10, "img", 12),
       f(11, "span", 11),
@@ -52567,7 +52567,7 @@ function YQ(e, t) {
   if (e & 2) {
     let n = P();
     m(),
-      k("ngClass", pe(7, eC, !n.isWert && n.activeToken.symbol === "ETH")),
+      k("ngClass", pe(7, eC, !n.isWert && n.activeToken.symbol === "SOL")),
       m(4),
       k("ngClass", pe(9, eC, !n.isWert && n.activeToken.symbol === "USDT")),
       m(4),
@@ -52670,16 +52670,16 @@ function KQ(e, t) {
         return Q(n), Z(r.stopPropagation());
       }),
       f(1, "div", 55),
-      b(2, "Choose Payment Method"),
+      b(2, "Choose Payment MSOLod"),
       y(),
       f(3, "div", 56)(4, "button", 57),
       R("click", function (r) {
         Q(n);
         let o = P(3);
-        return Z(o.setTab("ETH", r, !0));
+        return Z(o.setTab("SOL", r, !0));
       }),
       f(5, "span"),
-      b(6, "ETH"),
+      b(6, "SOL"),
       y()()(),
       f(7, "div", 58),
       W(8, ZQ, 13, 10, "div", 59),
@@ -52700,7 +52700,7 @@ function KQ(e, t) {
   if (e & 2) {
     let n = P(3);
     m(4),
-      dn("active", n.selectedTab === "ETH"),
+      dn("active", n.selectedTab === "SOL"),
       m(4),
       k("ngForOf", n.tokenFilteredList),
       m(4),
@@ -52857,13 +52857,13 @@ function aZ(e, t) {
       R("click", function () {
         Q(n);
         let r = P(3);
-        return Z(r.openEthBuyWidget());
+        return Z(r.openSOLBuyWidget());
       }),
       b(1),
       T(2, "translate"),
       y();
   }
-  e & 2 && (m(), Y(" ", D(2, 1, "widget.not_enough_eth"), " "));
+  e & 2 && (m(), Y(" ", D(2, 1, "widget.not_enough_SOL"), " "));
 }
 function lZ(e, t) {
   if (e & 1) {
@@ -52872,7 +52872,7 @@ function lZ(e, t) {
       R("click", function () {
         Q(n);
         let r = P(3);
-        return Z(r.openEthBuyWidget(!0));
+        return Z(r.openSOLBuyWidget(!0));
       }),
       b(1),
       T(2, "translate"),
@@ -52888,7 +52888,7 @@ function cZ(e, t) {
   ) {
     let n = P(2);
     m(),
-      k("ngIf", n.activeToken.category == "ETH" && n.walletAddress),
+      k("ngIf", n.activeToken.category == "SOL" && n.walletAddress),
       m(),
       k("ngIf", n.activeToken.category == "BNB" && n.walletAddress);
   }
@@ -53016,7 +53016,7 @@ function dZ(e, t) {
           n.walletAddress
       ),
       m(2),
-      k("ngIf", n.activeToken.category == "ETH"),
+      k("ngIf", n.activeToken.category == "SOL"),
       m(),
       k("ngIf", !n.isModal),
       m(2),
@@ -53258,7 +53258,7 @@ function CZ(e, t) {
       m(),
       k("ngIf", !n.isStake),
       m(),
-      k("ngIf", n.modeName == "ETH" && !n.isModal && !n.isStake),
+      k("ngIf", n.modeName == "SOL" && !n.isModal && !n.isStake),
       m(3),
       A(D(11, 9, "widget.view_transaction")),
       m(3),
@@ -53455,7 +53455,7 @@ var Vg = (() => {
           (this.lowGas = !1),
           this.getBal(),
           this.checkLowBalance(),
-          this.updateAllgetMethod(),
+          this.updateAllgetMSOLod(),
           !this.isWert && !this.isModal && this.max();
       }, 600);
     }
@@ -53467,15 +53467,15 @@ var Vg = (() => {
         this.setTab(this.selectedTab, null, !1),
         fe(this._platformId) &&
           (setInterval(() => {
-            this.getBal(), this.updateAllgetMethod();
+            this.getBal(), this.updateAllgetMSOLod();
           }, 500),
-          this.isModal && this.changeTab("ETH", "ETH"));
+          this.isModal && this.changeTab("SOL", "SOL"));
     }
     max() {
       return L(this, null, function* () {
         let i =
             this.activeToken?.symbol == "BNB" ||
-            this.activeToken?.symbol == "ETH",
+            this.activeToken?.symbol == "SOL",
           r = 0;
         i
           ? (r = yield this.walletConnectService.getDynamicAmount(
@@ -53524,27 +53524,27 @@ var Vg = (() => {
         (this.usdtBal = this.allBalance.usdt),
         (this.usdcBal = this.allBalance.usdc);
       let i = this.walletConnectService.balanceData,
-        r = i.ethUsdt / (i.oneEth * 1e6),
-        o = i.ethUsdt / (i.oneBnb * 1e6);
+        r = i.SOLUsdt / (i.oneSOL * 1e6),
+        o = i.SOLUsdt / (i.oneBnb * 1e6);
       (this.tokenList = [
         ...gb.map((s) => s),
         ...this.walletConnectService.tokensData.map((s) => s),
       ]),
-        (this.tokenList[0].tokenBalance = i.ethBal),
-        (this.tokenList[1].tokenBalance = i.usdtBalEth),
-        (this.tokenList[2].tokenBalance = i.usdcBalEth),
-        (this.tokenList[0].tokenUsdVal = i.ethBal * r),
-        (this.tokenList[1].tokenUsdVal = i.usdtBalEth),
-        (this.tokenList[2].tokenUsdVal = i.usdcBalEth);
+        (this.tokenList[0].tokenBalance = i.SOLBal),
+        (this.tokenList[1].tokenBalance = i.usdtBalSOL),
+        (this.tokenList[2].tokenBalance = i.usdcBalSOL),
+        (this.tokenList[0].tokenUsdVal = i.SOLBal * r),
+        (this.tokenList[1].tokenUsdVal = i.usdtBalSOL),
+        (this.tokenList[2].tokenUsdVal = i.usdcBalSOL);
       for (let s = 6; s < this.tokenList.length; s++) {
-        let a = this.tokenList[s].category == "ETH" ? r : o;
+        let a = this.tokenList[s].category == "SOL" ? r : o;
         this.tokenList[s].tokenUsdVal =
           (a * this.tokenList[s].tokenBalance) /
           this.tokenList[s].tokenPerNative;
       }
       this.tokenList.sort(({ tokenUsdVal: s }, { tokenUsdVal: a }) => a - s);
     }
-    updateAllgetMethod() {
+    updateAllgetMSOLod() {
       (this.chainData = this.walletConnectService.getChainData()),
         (this.modeName = this.chainData.purchaseToken),
         (this.walletAddress = this.walletConnectService.walletAddress),
@@ -53555,7 +53555,7 @@ var Vg = (() => {
           : this.activeToken.name !== "USDT" &&
             this.activeToken.name !== "USDC"),
         (this.tokenName = this.isWert ? "USD" : this.activeToken.name),
-        (this.gasFees = $.eth.gasFees),
+        (this.gasFees = $.SOL.gasFees),
         (this.maxTokensToBuy =
           this.walletConnectService.balanceData.maxTokensToBuy),
         (this.cryptoName = $.tokenName),
@@ -53576,7 +53576,7 @@ var Vg = (() => {
     }
     startAgain() {
       this.getBal(),
-        this.updateAllgetMethod(),
+        this.updateAllgetMSOLod(),
         this.max(),
         (this.walletConnectService.swapStatus = le.not_started);
     }
@@ -53658,12 +53658,12 @@ var Vg = (() => {
       window.open(i + this.hash, "_blank");
     }
     checkLowBalance() {
-      let i = $.eth.gasFees,
+      let i = $.SOL.gasFees,
         r =
-          this.activeToken.chainId == $.eth.chainIdInt
-            ? this.walletConnectService.balanceData.ethBal
+          this.activeToken.chainId == $.SOL.chainIdInt
+            ? this.walletConnectService.balanceData.SOLBal
             : this.walletConnectService.balanceData.bnbBal;
-      this.activeToken.symbol == "ETH" || this.activeToken.symbol == "BNB"
+      this.activeToken.symbol == "SOL" || this.activeToken.symbol == "BNB"
         ? (this.isLowBalance =
             +this.activeToken.tokenBalance - i < +this.swapToken)
         : +this.activeToken.tokenBalance >= +this.swapToken && +r >= i
@@ -53675,10 +53675,10 @@ var Vg = (() => {
     }
     checkChain() {
       return this.isWert &&
-        this.walletConnectService.chainId == $.eth.chainIdInt
+        this.walletConnectService.chainId == $.SOL.chainIdInt
         ? !0
         : this.isWert
-        ? (this.walletConnectService.switchNetwork($.eth.chainIdInt), !1)
+        ? (this.walletConnectService.switchNetwork($.SOL.chainIdInt), !1)
         : this.walletConnectService.chainId == this.activeToken.chainId
         ? !0
         : (this.walletConnectService
@@ -53695,7 +53695,7 @@ var Vg = (() => {
     }
     changeChain(i) {
       if (i.category == this.activeToken.category) return !0;
-      let r = $.eth;
+      let r = $.SOL;
       return (
         this.walletAddress
           ? (this.walletConnectService.switchNetwork(r.chainIdInt),
@@ -53716,7 +53716,7 @@ var Vg = (() => {
         setTimeout(() => this.max(), 1e3);
     }
     stakeNow() {
-      this.walletConnectService.switchNetwork($.eth.chainIdInt),
+      this.walletConnectService.switchNetwork($.SOL.chainIdInt),
         this.router.navigateByUrl(this.currentLang + "/staking", {});
     }
     setTab(i, r, o = !0) {
@@ -53742,7 +53742,7 @@ var Vg = (() => {
             (yield this.walletConnectService.switchNetwork(i.chainId));
       });
     }
-    openEthBuyWidget(i = !1) {
+    openSOLBuyWidget(i = !1) {
       this.modalRef = this.modalService.show(jL, {
         class: "modal-xs modal-dialog-centered transak",
         backdrop: "static",
@@ -53785,11 +53785,11 @@ var Vg = (() => {
         [1, "btn", "btn-tertiary", 3, "click", "ngClass"],
         [
           "src",
-          "/assets/images/svg-icons/ETH.svg",
+          "/assets/images/svg-icons/SOL.svg",
           "height",
           "25",
           "alt",
-          "ETH",
+          "SOL",
         ],
         [1, "px-2"],
         [
@@ -53975,7 +53975,7 @@ var Vg = (() => {
         ],
         ["class", "mb-1 text-orange text-end", 4, "ngIf"],
         [1, "align-self-end"],
-        ["dropdown", "", 1, "dropdown", "eth-dropdown"],
+        ["dropdown", "", 1, "dropdown", "SOL-dropdown"],
         [
           "dropdownToggle",
           "",
@@ -53995,8 +53995,8 @@ var Vg = (() => {
           "justify-content-center",
           "px-auto",
         ],
-        ["alt", "ETH", 1, "eth-logo", 3, "src"],
-        [1, "eth-name", "text-orange", "mx-2", "fs-6"],
+        ["alt", "SOL", 1, "SOL-logo", 3, "src"],
+        [1, "SOL-name", "text-orange", "mx-2", "fs-6"],
         [1, "arrow-down"],
         [
           "src",
@@ -54281,7 +54281,7 @@ var Vg = (() => {
       },
       dependencies: [an, Yt, Le, zl, Gm, Tw, nu, HL, yg, _g, du, je],
       styles: [
-        '.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{letter-spacing:1px;color:#ffc700}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]{position:relative}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{min-height:45px;padding:8px 15px;font-size:1rem;font-weight:600;border-radius:8px;border:1px solid #FFFF2E;color:#f7ef22;background:#0c0702;line-height:1}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]   .amountType[_ngcontent-%COMP%]{position:absolute;top:22px;right:.8rem;transform:translateY(-50%);display:flex;align-items:center}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .lowBalance[_ngcontent-%COMP%]{line-height:20px;font-weight:400}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .statusIcon[_ngcontent-%COMP%]{height:55px}.swapSection[_ngcontent-%COMP%]   .amountTypeDrp[_ngcontent-%COMP%]{padding-bottom:.5px}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]{min-width:90px!important;border-radius:5px;border:1px solid #FFFF2E;background:#f7ef2233;height:45px;display:flex;align-items:center;position:relative}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]{height:35px}.swapSection[_ngcontent-%COMP%]   .dropdown.eth-dropdown[_ngcontent-%COMP%]{height:45px}}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .toggle-btn[_ngcontent-%COMP%]{color:#000;min-height:unset;min-width:unset;box-shadow:none;text-shadow:0 0 0 white}@media screen and (max-width: 1399px){.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .toggle-btn[_ngcontent-%COMP%]{line-height:1.8}}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .eth-logo[_ngcontent-%COMP%]{height:25px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{min-width:400px;max-width:400px;max-height:620px;overflow:hidden;z-index:999;right:-3px!important;top:-317px!important;overflow-y:auto}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   hr[_ngcontent-%COMP%]{margin:.5em 0}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]{position:relative;letter-spacing:1.5px;font-size:12px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:before, .swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{content:"";width:36%;height:1px;background:#1f1f1f;position:absolute;margin:0% 5%;left:0;top:50%}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:before, .swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{width:20%}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{right:0;left:auto}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:400px;line-height:unset;overflow-y:auto;overflow-x:hidden;font-weight:700}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:218px}}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:300px}}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{max-height:426px;right:27px!important;top:-212px!important}}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{width:100%;max-width:100%;min-width:350px;max-height:550px}}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{right:-8px!important;top:-210px!important}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-bottom:10px;padding:10px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border-radius:4px;padding:10px 5px;font-size:14px;letter-spacing:1px;color:#000}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{padding:5px;font-size:14px}}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{min-width:32%}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button.active[_ngcontent-%COMP%]{background:#1f1f1f;color:#fff}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]::-webkit-scrollbar{display:none}.swapSection[_ngcontent-%COMP%]   .drop-logo[_ngcontent-%COMP%]{width:42px;height:42px;margin-top:11px;margin-bottom:8px}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap[_ngcontent-%COMP%]{margin:0 10px 10px;padding:0 15px;border:1px solid #393939;border-radius:4px;background:#1f1f1f;color:#fff}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap.no-bal[_ngcontent-%COMP%]{opacity:.5}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap[_ngcontent-%COMP%]:last-child{margin:0 10px}.swapSection[_ngcontent-%COMP%]   .active-tab[_ngcontent-%COMP%]{border:1px solid #000000;background:#ffc700}.swapSection[_ngcontent-%COMP%]   .down-arrow[_ngcontent-%COMP%]{height:8px}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .down-arrow[_ngcontent-%COMP%]{height:10px}}.swapSection[_ngcontent-%COMP%]   .change-text[_ngcontent-%COMP%]{text-transform:uppercase;font-size:10px;margin-bottom:0;margin-top:4px}.swapSection[_ngcontent-%COMP%]   .change-text[_ngcontent-%COMP%]   .clickable[_ngcontent-%COMP%]{cursor:pointer;text-decoration:underline;color:#f7ef22;letter-spacing:.7px}',
+        '.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{letter-spacing:1px;color:#ffc700}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]{position:relative}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{min-height:45px;padding:8px 15px;font-size:1rem;font-weight:600;border-radius:8px;border:1px solid #FFFF2E;color:#f7ef22;background:#0c0702;line-height:1}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .amountField[_ngcontent-%COMP%]   .amountType[_ngcontent-%COMP%]{position:absolute;top:22px;right:.8rem;transform:translateY(-50%);display:flex;align-items:center}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .lowBalance[_ngcontent-%COMP%]{line-height:20px;font-weight:400}.swapSection[_ngcontent-%COMP%]   .body-section[_ngcontent-%COMP%]   .statusIcon[_ngcontent-%COMP%]{height:55px}.swapSection[_ngcontent-%COMP%]   .amountTypeDrp[_ngcontent-%COMP%]{padding-bottom:.5px}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]{min-width:90px!important;border-radius:5px;border:1px solid #FFFF2E;background:#f7ef2233;height:45px;display:flex;align-items:center;position:relative}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]{height:35px}.swapSection[_ngcontent-%COMP%]   .dropdown.SOL-dropdown[_ngcontent-%COMP%]{height:45px}}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .toggle-btn[_ngcontent-%COMP%]{color:#000;min-height:unset;min-width:unset;box-shadow:none;text-shadow:0 0 0 white}@media screen and (max-width: 1399px){.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .toggle-btn[_ngcontent-%COMP%]{line-height:1.8}}.swapSection[_ngcontent-%COMP%]   .dropdown[_ngcontent-%COMP%]   .SOL-logo[_ngcontent-%COMP%]{height:25px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{min-width:400px;max-width:400px;max-height:620px;overflow:hidden;z-index:999;right:-3px!important;top:-317px!important;overflow-y:auto}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   hr[_ngcontent-%COMP%]{margin:.5em 0}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]{position:relative;letter-spacing:1.5px;font-size:12px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:before, .swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{content:"";width:36%;height:1px;background:#1f1f1f;position:absolute;margin:0% 5%;left:0;top:50%}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:before, .swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{width:20%}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dashTitle[_ngcontent-%COMP%]:after{right:0;left:auto}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:400px;line-height:unset;overflow-y:auto;overflow-x:hidden;font-weight:700}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:218px}}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .itemHolder[_ngcontent-%COMP%]{max-height:300px}}@media screen and (max-width: 1199px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{max-height:426px;right:27px!important;top:-212px!important}}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{width:100%;max-width:100%;min-width:350px;max-height:550px}}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]{right:-8px!important;top:-210px!important}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-bottom:10px;padding:10px}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border-radius:4px;padding:10px 5px;font-size:14px;letter-spacing:1px;color:#000}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{padding:5px;font-size:14px}}@media screen and (max-width: 576px){.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{min-width:32%}}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .tabs[_ngcontent-%COMP%]   button.active[_ngcontent-%COMP%]{background:#1f1f1f;color:#fff}.swapSection[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]::-webkit-scrollbar{display:none}.swapSection[_ngcontent-%COMP%]   .drop-logo[_ngcontent-%COMP%]{width:42px;height:42px;margin-top:11px;margin-bottom:8px}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap[_ngcontent-%COMP%]{margin:0 10px 10px;padding:0 15px;border:1px solid #393939;border-radius:4px;background:#1f1f1f;color:#fff}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap.no-bal[_ngcontent-%COMP%]{opacity:.5}.swapSection[_ngcontent-%COMP%]   .tab-cont-wrap[_ngcontent-%COMP%]:last-child{margin:0 10px}.swapSection[_ngcontent-%COMP%]   .active-tab[_ngcontent-%COMP%]{border:1px solid #000000;background:#ffc700}.swapSection[_ngcontent-%COMP%]   .down-arrow[_ngcontent-%COMP%]{height:8px}@media screen and (max-width: 768px){.swapSection[_ngcontent-%COMP%]   .down-arrow[_ngcontent-%COMP%]{height:10px}}.swapSection[_ngcontent-%COMP%]   .change-text[_ngcontent-%COMP%]{text-transform:uppercase;font-size:10px;margin-bottom:0;margin-top:4px}.swapSection[_ngcontent-%COMP%]   .change-text[_ngcontent-%COMP%]   .clickable[_ngcontent-%COMP%]{cursor:pointer;text-decoration:underline;color:#f7ef22;letter-spacing:.7px}',
       ],
     }));
   let e = t;
@@ -54374,9 +54374,9 @@ var GL = (() => {
         (this.currentStep = 0),
         (this.userStaked = 0),
         (this.usdtBal = 0),
-        (this.ethBal = 0),
+        (this.SOLBal = 0),
         (this.userClaimable = 0),
-        (this.userEthClaimable = 0),
+        (this.userSOLClaimable = 0),
         (this.userBscClaimable = 0),
         (this.refreshRate = 1e3),
         (this.dataLoaded = !1),
@@ -54426,12 +54426,12 @@ var GL = (() => {
         (this.maxAmount = this.currentStoreData.maxAmount || 0),
         (this.maxToken = this.currentStoreData.maxToken || 0),
         (this.minToken = this.currentStoreData.minToken || 0),
-        (this.ethBal = i.nativeBal),
+        (this.SOLBal = i.nativeBal),
         (this.usdtBal = i.usdtBal),
         (this.usdRaised = i.usdRaised),
         (this.userStaked = this.walletConnectService.stakeData.userStaked),
         (this.userClaimable = i.userClaimable),
-        (this.userEthClaimable = i.ethClaimable),
+        (this.userSOLClaimable = i.SOLClaimable),
         (this.userBscClaimable = i.bscClaimable),
         (this.referUrl = this.walletConnectService.referUrl),
         (this.status = this.walletConnectService.swapStatus),
@@ -54489,27 +54489,27 @@ var GL = (() => {
           (this.isWert = r)),
         setTimeout(() => this.swapComp.max(), 1e3);
     }
-    checkEthChain() {
-      return this.walletConnectService.isEthChain()
+    checkSOLChain() {
+      return this.walletConnectService.isSOLChain()
         ? !0
         : (this.popupService
             .messagePopup(
               "info",
               this.translate.instant("popup.wrong_chain", {
-                chainName: $.eth.chainName,
+                chainName: $.SOL.chainName,
               }),
               this.translate.instant("popup.change_network")
             )
             .then((i) => {
               i.isConfirmed &&
-                this.walletConnectService.switchNetwork($.eth.chainIdInt);
+                this.walletConnectService.switchNetwork($.SOL.chainIdInt);
             }),
           !1);
     }
     changeChain(i) {
       if (i == this.modeName) return;
-      let r = $.eth;
-      this.modeName == "ETH"
+      let r = $.SOL;
+      this.modeName == "SOL"
         ? this.popupService
             .messagePopup(
               "info",
@@ -54586,7 +54586,7 @@ var GL = (() => {
     }
     claimAndStake() {
       this.userClaimable > 0 &&
-        this.checkEthChain() &&
+        this.checkSOLChain() &&
         ((this.modalRef = this.modalService.show(yo, {
           class: "modal-xs modal-dialog-centered",
           backdrop: "static",
@@ -54728,7 +54728,7 @@ var GL = (() => {
         ],
         [
           "href",
-          "https://www.dextools.io/app/en/ether/pair-explorer/0xaA089185Bc53B701375495d93B6192e94E8ca296",
+          "https://www.dextools.io/app/en/SOLer/pair-explorer/0xaA089185Bc53B701375495d93B6192e94E8ca296",
           "target",
           "_blank",
           1,
@@ -54745,7 +54745,7 @@ var GL = (() => {
         ],
         [
           "href",
-          "https://dexscreener.com/ethereum/0xaA089185Bc53B701375495d93B6192e94E8ca296",
+          "https://dexscreener.com/SOL/0xaA089185Bc53B701375495d93B6192e94E8ca296",
           "target",
           "_blank",
           1,
@@ -54827,7 +54827,7 @@ var GL = (() => {
         ],
         [
           "href",
-          "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0xcomingsoon",
+          "https://pump.fun/coin/Pumpfun000",
           "target",
           "_blank",
           1,
@@ -55030,7 +55030,7 @@ var GL = (() => {
             m(),
             k("ngClass", pe(50, UL, !o.usdRaised || o.usdRaised <= 0)),
             m(2),
-            A(it(48, 36, "widget.your_eth_claimable", pe(52, WL, o.tokenName))),
+            A(it(48, 36, "widget.your_SOL_claimable", pe(52, WL, o.tokenName))),
             m(3),
             Y(
               " \xA0 = \xA0 ",
@@ -55045,7 +55045,7 @@ var GL = (() => {
             m(2),
             A(it(55, 39, "widget.your_bsc_claimable", pe(56, WL, o.tokenName))),
             m(3),
-            Y(" \xA0 = \xA0 ", o.convertNum(o.userEthClaimable), ""),
+            Y(" \xA0 = \xA0 ", o.convertNum(o.userSOLClaimable), ""),
             m(7),
             A(D(65, 42, "widget.buy_uniswap")),
             m(2),
@@ -55258,7 +55258,7 @@ var YL = (() => {
         (this.translateService = s),
         (this.isMobile = !1),
         (this.windowSize = 0),
-        (this.address = "0xcomingsoon"),
+        (this.address = "pumpfun0000"),
         (this.copied = !1),
         (this.copyAddress = () => {
           fe(this._platformId) && navigator.clipboard.writeText(this.address);
@@ -56145,11 +56145,11 @@ var KL = (() => {
         ],
         ["accordion-panel", "", 1, "mt-0"],
         [1, "para", "fw-regular"],
-        ["href", "https://x.com/btcbull_x", "target", "_blank"],
-        ["href", "https://t.me/thebtcbull", "target", "_blank"],
+        ["href", "https://x.com/btcbullsol", "target", "_blank"],
+        ["href", "https://t.me/bitcoinbullsol", "target", "_blank"],
         ["href", "https://web3toolkit.com/", "target", "_blank"],
         ["href", "https://web3paymentsolutions.io/", "target", "_blank"],
-        ["href", "https://metamask.io/", "target", "_blank"],
+        ["href", "https://phantom.com/", "target", "_blank"],
         [1, "text-white", "font-14", "font-sm-18"],
       ],
       template: function (r, o) {
@@ -56925,7 +56925,7 @@ var tF = (() => {
           "d-lg-block",
         ],
         [1, "container", "position-relative"],
-        ["href", "https://metamask.io/", "target", "_blank"],
+        ["href", "https://phantom.com/", "target", "_blank"],
         [
           "src",
           "/assets/images/svg-icons/bw-with-bitcoin.svg",
@@ -56967,7 +56967,7 @@ var tF = (() => {
         ],
         [1, "col-12", "col-md-6"],
         [1, "text-white", "me-1"],
-        ["href", "https://metamask.io/", "target", "_blank", 1, "bw-text"],
+        ["href", "https://phantom.com/", "target", "_blank", 1, "bw-text"],
       ],
       template: function (r, o) {
         r & 1 &&
@@ -57459,12 +57459,12 @@ var rF = (() => {
           {
             img: "assets/images/telegram.svg",
             alt: "telegram",
-            link: "https://t.me/thebtcbull",
+            link: "https://t.me/bitcoinbullsol",
           },
           {
             img: "assets/images/twitter.svg",
             alt: "twitter",
-            link: "https://x.com/btcbull_x",
+            link: "https://x.com/btcbullsol",
           },
         ]),
         this.translate.onLangChange.subscribe((h) => {
@@ -58753,8 +58753,8 @@ var rC = (() => {
         (this.userStaked = 0),
         (this.poolPercent = 0),
         (this.userReward = 0),
-        (this.ethClaimable = 0),
-        (this.ethTokens = 0),
+        (this.SOLClaimable = 0),
+        (this.SOLTokens = 0),
         (this.totalStaked = 0),
         (this.userBal = 0),
         (this.userBalString = 0),
@@ -58775,7 +58775,7 @@ var rC = (() => {
       }),
         (this.colorScheme.domain[d] = "#FFC700"),
         fe(this._platformId) &&
-          setInterval(() => this.updateAllgetMethod(), 500);
+          setInterval(() => this.updateAllgetMSOLod(), 500);
     }
     ngOnInit() {}
     ngAfterViewInit() {
@@ -58792,7 +58792,7 @@ var rC = (() => {
         this.cdRef.detectChanges(),
         (this.bwUrl = Li("bwUrl")));
     }
-    updateAllgetMethod() {
+    updateAllgetMSOLod() {
       (this.walletAddress = this.walletConnectService.walletAddress),
         (this.stakeData = this.walletConnectService.stakeData),
         (this.userStaked = this.walletAddress
@@ -58809,13 +58809,13 @@ var rC = (() => {
         (this.userReward = this.walletAddress
           ? this.formatNumber(+this.stakeData.userReward.toFixed(0))
           : 0),
-        (this.ethClaimable = this.walletAddress
+        (this.SOLClaimable = this.walletAddress
           ? this.formatNumber(
-              +this.walletConnectService.balanceData.ethClaimable.toFixed(0)
+              +this.walletConnectService.balanceData.SOLClaimable.toFixed(0)
             )
           : 0),
-        (this.ethTokens = this.walletAddress
-          ? this.walletConnectService.balanceData.ethClaimable
+        (this.SOLTokens = this.walletAddress
+          ? this.walletConnectService.balanceData.SOLClaimable
           : 0),
         (this.totalStaked = this.formatNumber(
           +this.stakeData.totalStaked.toFixed(0)
@@ -58831,21 +58831,21 @@ var rC = (() => {
         (this.hash = this.walletConnectService.swapHash),
         (this.status = this.walletConnectService.swapStatus);
     }
-    checkEthChain() {
+    checkSOLChain() {
       return this.walletAddress
-        ? this.walletConnectService.isEthChain()
+        ? this.walletConnectService.isSOLChain()
           ? !0
           : (this.popupService
               .messagePopup(
                 "info",
                 this.translate.instant("popup.wrong_chain", {
-                  chainName: $.eth.chainName,
+                  chainName: $.SOL.chainName,
                 }),
                 this.translate.instant("popup.change_network")
               )
               .then((i) => {
                 i.isConfirmed &&
-                  this.walletConnectService.switchNetwork($.eth.chainIdInt);
+                  this.walletConnectService.switchNetwork($.SOL.chainIdInt);
               }),
             !1)
         : (this.connectModal(), !1);
@@ -58858,8 +58858,8 @@ var rC = (() => {
     }
     buyClaimStake(i) {
       fe(this._platformId) &&
-        (this.checkEthChain()
-          ? this.walletAddress && this.ethTokens == 0 && this.openModal(i)
+        (this.checkSOLChain()
+          ? this.walletAddress && this.SOLTokens == 0 && this.openModal(i)
           : (this.timeInterval = setInterval(
               () => this.startConnectInterval(i),
               2e3
@@ -58867,18 +58867,18 @@ var rC = (() => {
     }
     startConnectInterval(i) {
       this.walletAddress &&
-        this.walletConnectService.isEthChain() &&
+        this.walletConnectService.isSOLChain() &&
         (this.openModal(i), clearInterval(this.timeInterval));
     }
     claimAndStake() {
-      this.ethTokens > 0 &&
-        this.checkEthChain() &&
+      this.SOLTokens > 0 &&
+        this.checkSOLChain() &&
         ((this.modalRef = this.modalService.show(yo, {
           class: "modal-xs modal-dialog-centered",
           backdrop: "static",
           initialState: { isStake: !0 },
         })),
-        this.walletConnectService.claimAndStake(+this.ethTokens));
+        this.walletConnectService.claimAndStake(+this.SOLTokens));
     }
     closeModal() {
       this.modalRef.hide();
@@ -58904,7 +58904,7 @@ var rC = (() => {
     withdrawStake() {
       fe(this._platformId) &&
         this.stakeData.userStaked > 0 &&
-        this.checkEthChain() &&
+        this.checkSOLChain() &&
         (this.modalRef.hide(),
         setTimeout(() => {
           this.modalRef = this.modalService.show(yo, {
@@ -58925,7 +58925,7 @@ var rC = (() => {
           return;
         }
         this.stakeData.userReward > 0 &&
-          this.checkEthChain() &&
+          this.checkSOLChain() &&
           (this.walletConnectService.harvestRewards(),
           this.modalRef?.hide(),
           setTimeout(() => {
@@ -58941,7 +58941,7 @@ var rC = (() => {
     }
     stakeToken(i) {
       fe(this._platformId) &&
-        this.checkEthChain() &&
+        this.checkSOLChain() &&
         this.stakeAmount <= this.stakeData.userBal &&
         (this.walletConnectService.createStake(this.stakeAmount),
         this.modalRef.hide(),
@@ -58975,7 +58975,7 @@ var rC = (() => {
     viewUrl() {
       if (fe(this._platformId)) {
         if (typeof window > "u") return;
-        let i = $.eth.blockExplorerURL;
+        let i = $.SOL.blockExplorerURL;
         window.open(i + this.hash, "_blank");
       }
     }
@@ -59542,13 +59542,13 @@ var rC = (() => {
           m(3),
           Y(
             " ",
-            o.userBal > 0 && o.isClaimActive ? o.userBalString : o.ethClaimable,
+            o.userBal > 0 && o.isClaimActive ? o.userBalString : o.SOLClaimable,
             " "
           ),
           m(2),
           A(D(32, 42, "staking.card_coin")),
           m(2),
-          k("ngIf", o.ethTokens && o.ethTokens > 0),
+          k("ngIf", o.SOLTokens && o.SOLTokens > 0),
           m(),
           k("ngIf", o.userBal > 0 && o.isClaimActive),
           m(5),
@@ -59694,7 +59694,7 @@ var oC = (() => {
         (this.currentStep = 0),
         (this.userStaked = 0),
         (this.userClaimable = 0),
-        (this.userEthClaimable = 0),
+        (this.userSOLClaimable = 0),
         (this.userBscClaimable = 0),
         (this.refreshRate = 1e3),
         (this.dataLoaded = !1),
@@ -59727,7 +59727,7 @@ var oC = (() => {
         (this.usdRaised = i.usdRaised),
         (this.userStaked = this.walletConnectService.stakeData.userStaked),
         (this.userClaimable = i.userClaimable),
-        (this.userEthClaimable = i.ethClaimable),
+        (this.userSOLClaimable = i.SOLClaimable),
         (this.userBscClaimable = i.bscClaimable),
         (this.walletAddress = this.walletConnectService.walletAddress),
         (this.modeName =
@@ -59750,20 +59750,20 @@ var oC = (() => {
     convertNum(i) {
       return is(i);
     }
-    checkEthChain() {
-      return this.walletConnectService.isEthChain()
+    checkSOLChain() {
+      return this.walletConnectService.isSOLChain()
         ? !0
         : (this.popupService
             .messagePopup(
               "info",
               this.translate.instant("popup.wrong_chain", {
-                chainName: $.eth.chainName,
+                chainName: $.SOL.chainName,
               }),
               this.translate.instant("popup.change_network")
             )
             .then((i) => {
               i.isConfirmed &&
-                this.walletConnectService.switchNetwork($.eth.chainIdInt);
+                this.walletConnectService.switchNetwork($.SOL.chainIdInt);
             }),
           !1);
     }
@@ -59785,7 +59785,7 @@ var oC = (() => {
     claim() {
       return L(this, null, function* () {
         this.userClaimable > 0 &&
-          this.checkEthChain() &&
+          this.checkSOLChain() &&
           ((this.modalRef = this.modalService.show(yo, {
             class: "modal-xs modal-dialog-centered",
             backdrop: "static",
@@ -59795,7 +59795,7 @@ var oC = (() => {
     }
     claimAndStake() {
       this.userClaimable > 0 &&
-        this.checkEthChain() &&
+        this.checkSOLChain() &&
         ((this.modalRef = this.modalService.show(yo, {
           class: "modal-xs modal-dialog-centered",
           backdrop: "static",
@@ -59931,7 +59931,7 @@ var oC = (() => {
         ],
         [
           "href",
-          "https://www.dextools.io/app/en/ether/pair-explorer/0xaA089185Bc53B701375495d93B6192e94E8ca296",
+          "https://www.dextools.io/app/en/SOLer/pair-explorer/0xaA089185Bc53B701375495d93B6192e94E8ca296",
           "target",
           "_blank",
           1,
@@ -59948,7 +59948,7 @@ var oC = (() => {
         ],
         [
           "href",
-          "https://dexscreener.com/ethereum/0xaA089185Bc53B701375495d93B6192e94E8ca296",
+          "https://dexscreener.com/SOL/0xaA089185Bc53B701375495d93B6192e94E8ca296",
           "target",
           "_blank",
           1,
@@ -60189,7 +60189,7 @@ var oC = (() => {
             m(),
             k("ngClass", pe(47, aF, !o.usdRaised || o.usdRaised <= 0)),
             m(2),
-            A(it(48, 35, "widget.your_eth_claimable", pe(49, lF, o.tokenName))),
+            A(it(48, 35, "widget.your_SOL_claimable", pe(49, lF, o.tokenName))),
             m(3),
             Y(
               " \xA0 = \xA0 ",
@@ -60204,7 +60204,7 @@ var oC = (() => {
             m(2),
             A(it(55, 38, "widget.your_bsc_claimable", pe(53, lF, o.tokenName))),
             m(3),
-            Y(" \xA0 = \xA0 ", o.convertNum(o.userEthClaimable), ""),
+            Y(" \xA0 = \xA0 ", o.convertNum(o.userSOLClaimable), ""),
             m(4),
             k("ngIf", !o.walletAddress),
             m(),

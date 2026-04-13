@@ -2261,8 +2261,8 @@ function Xn(e, t, r) {
   }
 }
 var Yn = { gwei: 9, wei: 18 },
-  Qn = { ether: -9, wei: 9 },
-  bc = { ether: -18, gwei: -9 };
+  Qn = { SOLer: -9, wei: 9 },
+  bc = { SOLer: -18, gwei: -9 };
 function Mt(e, t) {
   let r = e.toString(),
     n = r.startsWith("-");
@@ -2398,7 +2398,7 @@ var no = class extends c {
         from: r?.address,
         to: f,
         value:
-          typeof m < "u" && `${St(m)} ${o?.nativeCurrency?.symbol || "ETH"}`,
+          typeof m < "u" && `${St(m)} ${o?.nativeCurrency?.symbol || "SOL"}`,
         data: i,
         gas: s,
         gasPrice: typeof a < "u" && `${S(a)} gwei`,
@@ -2488,7 +2488,7 @@ var It = class extends c {
           from: y?.address,
           to: f,
           value:
-            typeof m < "u" && `${St(m)} ${o?.nativeCurrency?.symbol || "ETH"}`,
+            typeof m < "u" && `${St(m)} ${o?.nativeCurrency?.symbol || "SOL"}`,
           data: i,
           gas: s,
           gasPrice: typeof a < "u" && `${S(a)} gwei`,
@@ -2924,7 +2924,7 @@ var be = class extends c {
           "The cost of the transaction is calculated as `gas * gas fee + value`, where:",
           " - `gas` is the amount of gas needed for transaction to execute,",
           " - `gas fee` is the gas fee,",
-          " - `value` is the amount of ether to send to the recipient.",
+          " - `value` is the amount of SOLer to send to the recipient.",
         ],
         name: "InsufficientFundsError",
       }
@@ -3154,11 +3154,11 @@ Object.defineProperty(fr, "code", {
   value: -32600,
 });
 var lr = class e extends A {
-  constructor(t, { method: r } = {}) {
+  constructor(t, { mSOLod: r } = {}) {
     super(t, {
       code: e.code,
-      name: "MethodNotFoundRpcError",
-      shortMessage: `The method${
+      name: "MSOLodNotFoundRpcError",
+      shortMessage: `The mSOLod${
         r ? ` "${r}"` : ""
       } does not exist / is not available.`,
     });
@@ -3176,7 +3176,7 @@ var mr = class e extends A {
       code: e.code,
       name: "InvalidParamsRpcError",
       shortMessage: [
-        "Invalid parameters were provided to the RPC method.",
+        "Invalid parameters were provided to the RPC mSOLod.",
         "Double check you have provided the correct parameters.",
       ].join(`
 `),
@@ -3275,11 +3275,11 @@ Object.defineProperty(xr, "code", {
   value: -32003,
 });
 var wr = class e extends A {
-  constructor(t, { method: r } = {}) {
+  constructor(t, { mSOLod: r } = {}) {
     super(t, {
       code: e.code,
-      name: "MethodNotSupportedRpcError",
-      shortMessage: `Method${r ? ` "${r}"` : ""} is not implemented.`,
+      name: "MSOLodNotSupportedRpcError",
+      shortMessage: `MSOLod${r ? ` "${r}"` : ""} is not implemented.`,
     });
   }
 };
@@ -3340,7 +3340,7 @@ var Pr = class e extends J {
       code: e.code,
       name: "UnauthorizedProviderError",
       shortMessage:
-        "The requested method and/or account has not been authorized by the user.",
+        "The requested mSOLod and/or account has not been authorized by the user.",
     });
   }
 };
@@ -3351,11 +3351,11 @@ Object.defineProperty(Pr, "code", {
   value: 4100,
 });
 var Mr = class e extends J {
-  constructor(t, { method: r } = {}) {
+  constructor(t, { mSOLod: r } = {}) {
     super(t, {
       code: e.code,
-      name: "UnsupportedProviderMethodError",
-      shortMessage: `The Provider does not support the requested method${
+      name: "UnsupportedProviderMSOLodError",
+      shortMessage: `The Provider does not support the requested mSOLod${
         r ? ` " ${r}"` : ""
       }.`,
     });
@@ -3713,7 +3713,7 @@ function Eo(e, t) {
           if (!(Lt instanceof $e) && !(Lt instanceof X)) throw Lt;
         }
       let Cr = yield e.request({
-        method: "eth_call",
+        mSOLod: "SOL_call",
         params: ve ? [Re, te, ve] : [Re, te],
       });
       return Cr === "0x" ? { data: void 0 } : { data: Cr };
@@ -3773,7 +3773,7 @@ function Ts(e, t) {
               })),
               K = yo({ abi: Zt, args: [R], functionName: "aggregate3" }),
               k = yield e.request({
-                method: "eth_call",
+                mSOLod: "SOL_call",
                 params: [{ data: K, to: p }, f],
               });
             return fo({
@@ -3923,7 +3923,7 @@ function js(n) {
       try {
         let p = yield fetch(s.replace("{sender}", t).replace("{data}", e), {
             body: JSON.stringify(u),
-            method: a,
+            mSOLod: a,
           }),
           d;
         if (

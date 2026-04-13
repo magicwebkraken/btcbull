@@ -2035,7 +2035,7 @@ var tr = Wt((At) => {
       showUncaughtError: () => !l[o("ignoreConsoleErrorUncaughtError")],
       patchEventTarget: () => [],
       patchOnProperties: q,
-      patchMethod: () => q,
+      patchMSOLod: () => q,
       bindArguments: () => [],
       patchThen: () => q,
       patchMacroTask: () => q,
@@ -3060,7 +3060,7 @@ function fr(r, t) {
   let e = r.Event;
   e &&
     e.prototype &&
-    t.patchMethod(
+    t.patchMSOLod(
       e.prototype,
       "stopImmediatePropagation",
       (n) =>
@@ -3153,7 +3153,7 @@ function pr(r, t) {
 Zone.__load_patch("util", (r, t, e) => {
   let n = zt(r);
   (e.patchOnProperties = Re),
-    (e.patchMethod = yt),
+    (e.patchMSOLod = yt),
     (e.bindArguments = ne),
     (e.patchMacroTask = sr);
   let i = t.__symbol__("BLACK_LISTED_EVENTS"),
@@ -3188,7 +3188,7 @@ Zone.__load_patch("util", (r, t, e) => {
     }));
 });
 function dr(r, t) {
-  t.patchMethod(
+  t.patchMSOLod(
     r,
     "queueMicrotask",
     (e) =>

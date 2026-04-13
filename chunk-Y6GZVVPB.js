@@ -458,7 +458,7 @@ function N(e, t, n, r) {
   return n === "m" ? r : n === "a" ? r.call(e) : r ? r.value : t.get(e);
 }
 function z(e, t, n, r, i) {
-  if (r === "m") throw new TypeError("Private method is not writable");
+  if (r === "m") throw new TypeError("Private mSOLod is not writable");
   if (r === "a" && !i)
     throw new TypeError("Private accessor was defined without a setter");
   if (typeof t == "function" ? e !== t || !i : !t.has(e))

@@ -361,7 +361,7 @@ var gV = mV((V6, TL) => {
               (this.url = f.url),
                 (this.credentials = f.credentials),
                 d.headers || (this.headers = new Y(f.headers)),
-                (this.method = f.method),
+                (this.mSOLod = f.mSOLod),
                 (this.mode = f.mode),
                 (this.signal = f.signal),
                 b ||
@@ -372,20 +372,20 @@ var gV = mV((V6, TL) => {
               ((this.credentials =
                 d.credentials || this.credentials || "same-origin"),
               (!d.headers && this.headers) || (this.headers = new Y(d.headers)),
-              (this.method = (function (R) {
+              (this.mSOLod = (function (R) {
                 var L = R.toUpperCase();
                 return xe.indexOf(L) > -1 ? L : R;
-              })(d.method || this.method || "GET")),
+              })(d.mSOLod || this.mSOLod || "GET")),
               (this.mode = d.mode || this.mode || null),
               (this.signal = d.signal || this.signal),
               (this.referrer = null),
-              (this.method === "GET" || this.method === "HEAD") && b)
+              (this.mSOLod === "GET" || this.mSOLod === "HEAD") && b)
             )
               throw new TypeError("Body not allowed for GET or HEAD requests");
             if (
               (this._initBody(b),
               !(
-                (this.method !== "GET" && this.method !== "HEAD") ||
+                (this.mSOLod !== "GET" && this.mSOLod !== "HEAD") ||
                 (d.cache !== "no-store" && d.cache !== "no-cache")
               ))
             ) {
@@ -530,7 +530,7 @@ var gV = mV((V6, TL) => {
                   }, 0);
                 }),
                 L.open(
-                  R.method,
+                  R.mSOLod,
                   (function (q) {
                     try {
                       return q === "" && g.location.href ? g.location.href : q;
@@ -2741,7 +2741,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
         "%s - %s",
         (function () {
           var e = new Date(),
-            t = [f4(e.getHours()), f4(e.getMinutes()), f4(e.getSeconds())].join(
+            t = [f4(e.gSOLours()), f4(e.getMinutes()), f4(e.getSeconds())].join(
               ":"
             );
           return [e.getDate(), dP[e.getMonth()], t].join(" ");
@@ -3212,8 +3212,8 @@ Use Chrome, Firefox or Internet Explorer 11`);
         TypeError
       ),
       qa("ERR_STREAM_PUSH_AFTER_EOF", "stream.push() after EOF"),
-      qa("ERR_METHOD_NOT_IMPLEMENTED", function (e) {
-        return "The " + e + " method is not implemented";
+      qa("ERR_MSOLOD_NOT_IMPLEMENTED", function (e) {
+        return "The " + e + " mSOLod is not implemented";
       }),
       qa("ERR_STREAM_PREMATURE_CLOSE", "Premature close"),
       qa("ERR_STREAM_DESTROYED", function (e) {
@@ -3245,7 +3245,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
       v4,
       Tw,
       Iw = {
-        getHighWaterMark: function (e, t, n, r) {
+        gSOLighWaterMark: function (e, t, n, r) {
           var o = (function (i, l, g) {
             return i.highWaterMark != null ? i.highWaterMark : l ? i[g] : null;
           })(t, r, n);
@@ -3311,10 +3311,10 @@ Use Chrome, Firefox or Internet Explorer 11`);
           ).Uint8Array || function () {},
         l,
         g = Mw,
-        w = Iw.getHighWaterMark,
+        w = Iw.gSOLighWaterMark,
         A = qf.codes,
         _ = A.ERR_INVALID_ARG_TYPE,
-        E = A.ERR_METHOD_NOT_IMPLEMENTED,
+        E = A.ERR_MSOLOD_NOT_IMPLEMENTED,
         T = A.ERR_MULTIPLE_CALLBACK,
         P = A.ERR_STREAM_CANNOT_PIPE,
         D = A.ERR_STREAM_DESTROYED,
@@ -4056,7 +4056,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
           };
         return (
           (function (D) {
-            return D.setHeader && typeof D.abort == "function";
+            return D.sSOLeader && typeof D.abort == "function";
           })(t)
             ? (t.on("complete", w),
               t.on("abort", T),
@@ -4263,11 +4263,11 @@ Use Chrome, Firefox or Internet Explorer 11`);
         A,
         _ = hP(),
         E = Mw,
-        T = Iw.getHighWaterMark,
+        T = Iw.gSOLighWaterMark,
         P = qf.codes,
         D = P.ERR_INVALID_ARG_TYPE,
         H = P.ERR_STREAM_PUSH_AFTER_EOF,
-        $ = P.ERR_METHOD_NOT_IMPLEMENTED,
+        $ = P.ERR_MSOLOD_NOT_IMPLEMENTED,
         X = P.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
       Nn(pe, n);
       var Y = E.errorOrDestroy,
@@ -4879,7 +4879,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
     }
     var Uw = Wl,
       kv = qf.codes,
-      bP = kv.ERR_METHOD_NOT_IMPLEMENTED,
+      bP = kv.ERR_MSOLOD_NOT_IMPLEMENTED,
       yP = kv.ERR_MULTIPLE_CALLBACK,
       AP = kv.ERR_TRANSFORM_ALREADY_TRANSFORMING,
       wP = kv.ERR_TRANSFORM_WITH_LENGTH_0,
@@ -5025,7 +5025,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
               return (
                 (D = !0),
                 (function ($) {
-                  return $.setHeader && typeof $.abort == "function";
+                  return $.sSOLeader && typeof $.abort == "function";
                 })(A)
                   ? A.abort()
                   : typeof A.destroy == "function"
@@ -19878,7 +19878,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
       };
     }
     function ap(e, t) {
-      (this.path = e), this.rethrow(t);
+      (this.path = e), this.rSOLrow(t);
     }
     (db.Reporter = Za),
       (Za.prototype.isError = function (e) {
@@ -19944,7 +19944,7 @@ Use Chrome, Firefox or Internet Explorer 11`);
           : e;
       }),
       vB(ap, Error),
-      (ap.prototype.rethrow = function (e) {
+      (ap.prototype.rSOLrow = function (e) {
         if (
           ((this.message = e + " at: " + (this.path || "(shallow)")),
           Error.captureStackTrace && Error.captureStackTrace(this, ap),
@@ -21896,7 +21896,7 @@ use chrome, FireFox or Internet Explorer 11`);
           "md5",
           "rmd160",
         ].concat(t);
-      Ln.getHashes = function () {
+      Ln.gSOLashes = function () {
         return n;
       };
       var r = jv;
@@ -29140,9 +29140,9 @@ use chrome, FireFox or Internet Explorer 11`);
           )
             throw Error("target does not implement any known event API");
           if (typeof R != "function")
-            throw TypeError("on method must be a function");
+            throw TypeError("on mSOLod must be a function");
           if (typeof L != "function")
-            throw TypeError("off method must be a function");
+            throw TypeError("off mSOLod must be a function");
           (this._on = R), (this._off = L);
           var j = d._observers;
           j ? j.push(this) : (d._observers = [this]);
@@ -30473,7 +30473,7 @@ use chrome, FireFox or Internet Explorer 11`);
         super(),
           Bb(this, n),
           (this.opts = n),
-          (this.method = n.method || "GET"),
+          (this.mSOLod = n.mSOLod || "GET"),
           (this.uri = t),
           (this.data = n.data !== void 0 ? n.data : null),
           this.create();
@@ -30495,7 +30495,7 @@ use chrome, FireFox or Internet Explorer 11`);
         n.xdomain = !!this.opts.xd;
         let r = (this.xhr = new PM(n));
         try {
-          r.open(this.method, this.uri, !0);
+          r.open(this.mSOLod, this.uri, !0);
           try {
             if (this.opts.extraHeaders) {
               r.setDisableHeaderCheck && r.setDisableHeaderCheck(!0);
@@ -30504,7 +30504,7 @@ use chrome, FireFox or Internet Explorer 11`);
                   r.setRequestHeader(o, this.opts.extraHeaders[o]);
             }
           } catch {}
-          if (this.method === "POST")
+          if (this.mSOLod === "POST")
             try {
               r.setRequestHeader("Content-type", "text/plain;charset=UTF-8");
             } catch {}
@@ -30865,7 +30865,7 @@ use chrome, FireFox or Internet Explorer 11`);
             );
           }
           doWrite(e, t) {
-            let n = this.request({ method: "POST", data: e });
+            let n = this.request({ mSOLod: "POST", data: e });
             n.on("success", t),
               n.on("error", (r, o) => {
                 this.onError("xhr post error", r, o);
@@ -32600,7 +32600,7 @@ use chrome, FireFox or Internet Explorer 11`);
           })()),
           (t.destroy = function () {
             console.warn(
-              "Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
+              "Instance mSOLod `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
             );
           }),
           Object.keys(e).forEach((o) => {
@@ -32696,7 +32696,7 @@ use chrome, FireFox or Internet Explorer 11`);
             r ||
               ((r = !0),
               console.warn(
-                "Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
+                "Instance mSOLod `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
               ));
           };
         })()),
@@ -32830,7 +32830,7 @@ use chrome, FireFox or Internet Explorer 11`);
         );
         try {
           let o = yield IL(t, {
-              method: "POST",
+              mSOLod: "POST",
               headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -34164,7 +34164,7 @@ use chrome, FireFox or Internet Explorer 11`);
       Zb = 6048e5,
       lU = {
         METAMASK_GETPROVIDERSTATE: "metamask_getProviderState",
-        ETH_REQUESTACCOUNTS: "eth_requestAccounts",
+        SOL_REQUESTACCOUNTS: "SOL_requestAccounts",
       };
     function hC(e) {
       let { context: t } = e;
@@ -34524,14 +34524,14 @@ use chrome, FireFox or Internet Explorer 11`);
       (e.RPC_CHECK = "rpcCheck"), (e.SKIPPED_RPC = "skippedRpc");
     })(Cp || (Cp = {}));
     let gC = [
-      "eth_sendTransaction",
-      "eth_signTypedData",
-      "eth_signTransaction",
+      "SOL_sendTransaction",
+      "SOL_signTypedData",
+      "SOL_signTransaction",
       "personal_sign",
       "wallet_requestPermissions",
-      "wallet_switchEthereumChain",
-      "eth_signTypedData_v3",
-      "eth_signTypedData_v4",
+      "wallet_switchSOLChain",
+      "SOL_signTypedData_v3",
+      "SOL_signTypedData_v4",
       "metamask_connectSign",
       "metamask_connectWith",
       "metamask_batch",
@@ -34589,16 +34589,16 @@ use chrome, FireFox or Internet Explorer 11`);
             })(e, t),
             (function (l, g) {
               var w;
-              let A = (w = g?.method) !== null && w !== void 0 ? w : "",
+              let A = (w = g?.mSOLod) !== null && w !== void 0 ? w : "",
                 _ = g?.id;
               l.state.isOriginator &&
                 _ &&
-                ((l.state.rpcMethodTracker[_] = {
+                ((l.state.rpcMSOLodTracker[_] = {
                   id: _,
                   timestamp: Date.now(),
-                  method: A,
+                  mSOLod: A,
                 }),
-                l.emit(Ne.EventType.RPC_UPDATE, l.state.rpcMethodTracker[_]));
+                l.emit(Ne.EventType.RPC_UPDATE, l.state.rpcMSOLodTracker[_]));
             })(e, t),
             (function (l, g) {
               var w, A;
@@ -34625,8 +34625,8 @@ use chrome, FireFox or Internet Explorer 11`);
             })(e, t),
             e.remote.state.analytics &&
               e.remote.state.isOriginator &&
-              t.method &&
-              gC.includes(t.method.toLowerCase()) &&
+              t.mSOLod &&
+              gC.includes(t.mSOLod.toLowerCase()) &&
               Mp(
                 {
                   id:
@@ -34640,7 +34640,7 @@ use chrome, FireFox or Internet Explorer 11`);
                     (i = e.remote.state.walletInfo) === null || i === void 0
                       ? void 0
                       : i.version,
-                  params: { method: t.method, from: "mobile" },
+                  params: { mSOLod: t.mSOLod, from: "mobile" },
                 },
                 e.remote.state.communicationServerUrl
               ).catch((l) => {
@@ -34650,10 +34650,10 @@ use chrome, FireFox or Internet Explorer 11`);
               var w;
               return ci(this, void 0, void 0, function* () {
                 let A = g?.id,
-                  _ = (w = g?.method) !== null && w !== void 0 ? w : "";
+                  _ = (w = g?.mSOLod) !== null && w !== void 0 ? w : "";
                 if (l.state.isOriginator && A)
                   try {
-                    let E = pC(A, l.state.rpcMethodTracker, 200).then((D) => ({
+                    let E = pC(A, l.state.rpcMSOLodTracker, 200).then((D) => ({
                         type: Cp.RPC_CHECK,
                         result: D,
                       })),
@@ -34669,7 +34669,7 @@ use chrome, FireFox or Internet Explorer 11`);
                                 yield eg(200);
                               return X.state.lastRpcId;
                             }))({ instance: l, rpcId: A }),
-                          H = yield pC(D, l.state.rpcMethodTracker, 200);
+                          H = yield pC(D, l.state.rpcMSOLodTracker, 200);
                         return { type: Cp.SKIPPED_RPC, result: H };
                       }),
                       P = yield Promise.race([E, T]);
@@ -34685,11 +34685,11 @@ use chrome, FireFox or Internet Explorer 11`);
                       {
                         let { result: D } = P;
                         console.warn(
-                          `[SocketService handleRpcReplies()] RPC METHOD HAS BEEN SKIPPED rpcid=${A} method=${_}`,
+                          `[SocketService handleRpcReplies()] RPC MSOLOD HAS BEEN SKIPPED rpcid=${A} mSOLod=${_}`,
                           D
                         );
                         let H = Object.assign(
-                          Object.assign({}, l.state.rpcMethodTracker[A]),
+                          Object.assign({}, l.state.rpcMSOLodTracker[A]),
                           { error: new Error("SDK_CONNECTION_ISSUE") }
                         );
                         l.emit(Ne.EventType.RPC_UPDATE, H);
@@ -35041,15 +35041,15 @@ use chrome, FireFox or Internet Explorer 11`);
                 e.state.isOriginator && p.data)
               ) {
                 let h = p.data,
-                  f = e.state.rpcMethodTracker[h.id];
+                  f = e.state.rpcMSOLodTracker[h.id];
                 if (f) {
                   let d = Date.now() - f.timestamp;
                   tt.SocketService(
-                    `[SocketService handleMessage()] context=${e.state.context}::on 'message' received answer for id=${h.id} method=${f.method} responseTime=${d}`,
+                    `[SocketService handleMessage()] context=${e.state.context}::on 'message' received answer for id=${h.id} mSOLod=${f.mSOLod} responseTime=${d}`,
                     p
                   ),
                     e.remote.state.analytics &&
-                      gC.includes(f.method.toLowerCase()) &&
+                      gC.includes(f.mSOLod.toLowerCase()) &&
                       Mp(
                         {
                           id:
@@ -35065,7 +35065,7 @@ use chrome, FireFox or Internet Explorer 11`);
                             Y === void 0
                               ? void 0
                               : Y.version,
-                          params: { method: f.method, from: "mobile" },
+                          params: { mSOLod: f.mSOLod, from: "mobile" },
                         },
                         e.remote.state.communicationServerUrl
                       ).catch((M) => {
@@ -35087,7 +35087,7 @@ use chrome, FireFox or Internet Explorer 11`);
                       : void 0,
                     elapsedTime: d,
                   });
-                  (e.state.rpcMethodTracker[h.id] = b),
+                  (e.state.rpcMSOLodTracker[h.id] = b),
                     e.emit(Ne.EventType.RPC_UPDATE, b);
                 }
               }
@@ -35278,7 +35278,7 @@ use chrome, FireFox or Internet Explorer 11`);
             clientsPaused: !1,
             manualDisconnect: !1,
             lastRpcId: void 0,
-            rpcMethodTracker: {},
+            rpcMSOLodTracker: {},
             hasPlaintext: !1,
             communicationServerUrl: "",
           }),
@@ -35554,8 +35554,8 @@ use chrome, FireFox or Internet Explorer 11`);
         );
         var t, n, r, o, i, l, g, w, A, _;
       }
-      getRPCMethodTracker() {
-        return this.state.rpcMethodTracker;
+      getRPCMSOLodTracker() {
+        return this.state.rpcMSOLodTracker;
       }
       disconnect(t) {
         return (function (n, r) {
@@ -35567,7 +35567,7 @@ use chrome, FireFox or Internet Explorer 11`);
             r?.terminate &&
               ((n.state.channelId = r.channelId),
               (o = n.state.keyExchange) === null || o === void 0 || o.clean(),
-              (n.state.rpcMethodTracker = {})),
+              (n.state.rpcMSOLodTracker = {})),
             (n.state.manualDisconnect = !0),
             (i = n.state.socket) === null || i === void 0 || i.disconnect();
         })(this, t);
@@ -35902,10 +35902,10 @@ use chrome, FireFox or Internet Explorer 11`);
                             : w.version) || ""
                         ) === 1 &&
                           (console.warn(
-                            "RemoteCommunication::on 'otp' -- backward compatibility <6.6 -- triger eth_requestAccounts"
+                            "RemoteCommunication::on 'otp' -- backward compatibility <6.6 -- triger SOL_requestAccounts"
                           ),
                           l.emit(Ne.EventType.SDK_RPC_CALL, {
-                            method: lU.ETH_REQUESTACCOUNTS,
+                            mSOLod: lU.SOL_REQUESTACCOUNTS,
                             params: [],
                           }));
                     })(o, r);
@@ -36437,7 +36437,7 @@ use chrome, FireFox or Internet Explorer 11`);
                     let { state: D } = g;
                     if (
                       (tt.RemoteCommunication(
-                        `[RemoteCommunication: handleAuthorization()] context=${D.context} ready=${D.ready} authorized=${D.authorized} method=${w.method}`
+                        `[RemoteCommunication: handleAuthorization()] context=${D.context} ready=${D.ready} authorized=${D.authorized} mSOLod=${w.mSOLod}`
                       ),
                       "7.3".localeCompare(
                         ((_ = D.walletInfo) === null || _ === void 0
@@ -36622,11 +36622,11 @@ use chrome, FireFox or Internet Explorer 11`);
       getChannelId() {
         return this.state.channelId;
       }
-      getRPCMethodTracker() {
+      getRPCMSOLodTracker() {
         var t;
         return (t = this.state.communicationLayer) === null || t === void 0
           ? void 0
-          : t.getRPCMethodTracker();
+          : t.getRPCMSOLodTracker();
       }
       disconnect(t) {
         return yC({ options: t, instance: this });
@@ -36672,7 +36672,7 @@ use chrome, FireFox or Internet Explorer 11`);
       return n === "m" ? r : n === "a" ? r.call(e) : r ? r.value : t.get(e);
     }
     function M5(e, t, n, r, o) {
-      if (r === "m") throw new TypeError("Private method is not writable");
+      if (r === "m") throw new TypeError("Private mSOLod is not writable");
       if (r === "a" && !o)
         throw new TypeError("Private accessor was defined without a setter");
       if (typeof t == "function" ? e !== t || !o : !t.has(e))
@@ -36696,78 +36696,78 @@ use chrome, FireFox or Internet Explorer 11`);
           sendSiteMetadata: () =>
             "MetaMask: Failed to send site metadata. This is an internal error, please report this bug.",
           unsupportedSync: (e) =>
-            `MetaMask: The MetaMask Ethereum provider does not support synchronous methods like ${e} without a callback parameter.`,
+            `MetaMask: The MetaMask SOL provider does not support synchronous mSOLods like ${e} without a callback parameter.`,
           invalidDuplexStream: () =>
             "Must provide a Node.js-style duplex stream.",
           invalidNetworkParams: () =>
             "MetaMask: Received invalid network parameters. Please report this bug.",
           invalidRequestArgs: () =>
             "Expected a single, non-array, object argument.",
-          invalidRequestMethod: () =>
-            "'args.method' must be a non-empty string.",
+          invalidRequestMSOLod: () =>
+            "'args.mSOLod' must be a non-empty string.",
           invalidRequestParams: () =>
             "'args.params' must be an object or array if provided.",
           invalidLoggerObject: () =>
             "'args.logger' must be an object if provided.",
-          invalidLoggerMethod: (e) =>
-            `'args.logger' must include required method '${e}'.`,
+          invalidLoggerMSOLod: (e) =>
+            `'args.logger' must include required mSOLod '${e}'.`,
         },
         info: {
           connected: (e) => `MetaMask: Connected to chain with ID "${e}".`,
         },
         warnings: {
-          chainIdDeprecation: `MetaMask: 'ethereum.chainId' is deprecated and may be removed in the future. Please use the 'eth_chainId' RPC method instead.
+          chainIdDeprecation: `MetaMask: 'SOL.chainId' is deprecated and may be removed in the future. Please use the 'SOL_chainId' RPC mSOLod instead.
 For more information, see: https://github.com/MetaMask/metamask-improvement-proposals/discussions/23`,
-          networkVersionDeprecation: `MetaMask: 'ethereum.networkVersion' is deprecated and may be removed in the future. Please use the 'net_version' RPC method instead.
+          networkVersionDeprecation: `MetaMask: 'SOL.networkVersion' is deprecated and may be removed in the future. Please use the 'net_version' RPC mSOLod instead.
 For more information, see: https://github.com/MetaMask/metamask-improvement-proposals/discussions/23`,
-          selectedAddressDeprecation: `MetaMask: 'ethereum.selectedAddress' is deprecated and may be removed in the future. Please use the 'eth_accounts' RPC method instead.
+          selectedAddressDeprecation: `MetaMask: 'SOL.selectedAddress' is deprecated and may be removed in the future. Please use the 'SOL_accounts' RPC mSOLod instead.
 For more information, see: https://github.com/MetaMask/metamask-improvement-proposals/discussions/23`,
-          enableDeprecation: `MetaMask: 'ethereum.enable()' is deprecated and may be removed in the future. Please use the 'eth_requestAccounts' RPC method instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1102`,
-          sendDeprecation: `MetaMask: 'ethereum.send(...)' is deprecated and may be removed in the future. Please use 'ethereum.sendAsync(...)' or 'ethereum.request(...)' instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1193`,
+          enableDeprecation: `MetaMask: 'SOL.enable()' is deprecated and may be removed in the future. Please use the 'SOL_requestAccounts' RPC mSOLod instead.
+For more information, see: https://eips.SOL.org/EIPS/eip-1102`,
+          sendDeprecation: `MetaMask: 'SOL.send(...)' is deprecated and may be removed in the future. Please use 'SOL.sendAsync(...)' or 'SOL.request(...)' instead.
+For more information, see: https://eips.SOL.org/EIPS/eip-1193`,
           events: {
             close: `MetaMask: The event 'close' is deprecated and may be removed in the future. Please use 'disconnect' instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1193#disconnect`,
+For more information, see: https://eips.SOL.org/EIPS/eip-1193#disconnect`,
             data: `MetaMask: The event 'data' is deprecated and will be removed in the future. Use 'message' instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1193#message`,
+For more information, see: https://eips.SOL.org/EIPS/eip-1193#message`,
             networkChanged: `MetaMask: The event 'networkChanged' is deprecated and may be removed in the future. Use 'chainChanged' instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1193#chainchanged`,
+For more information, see: https://eips.SOL.org/EIPS/eip-1193#chainchanged`,
             notification: `MetaMask: The event 'notification' is deprecated and may be removed in the future. Use 'message' instead.
-For more information, see: https://eips.ethereum.org/EIPS/eip-1193#message`,
+For more information, see: https://eips.SOL.org/EIPS/eip-1193#message`,
           },
           rpc: {
-            ethDecryptDeprecation: `MetaMask: The RPC method 'eth_decrypt' is deprecated and may be removed in the future.
-For more information, see: https://medium.com/metamask/metamask-api-method-deprecation-2b0564a84686`,
-            ethGetEncryptionPublicKeyDeprecation: `MetaMask: The RPC method 'eth_getEncryptionPublicKey' is deprecated and may be removed in the future.
-For more information, see: https://medium.com/metamask/metamask-api-method-deprecation-2b0564a84686`,
-            walletWatchAssetNFTExperimental: `MetaMask: The RPC method 'wallet_watchAsset' is experimental for ERC721/ERC1155 assets and may change in the future.
+            SOLDecryptDeprecation: `MetaMask: The RPC mSOLod 'SOL_decrypt' is deprecated and may be removed in the future.
+For more information, see: https://medium.com/metamask/metamask-api-mSOLod-deprecation-2b0564a84686`,
+            SOLGetEncryptionPublicKeyDeprecation: `MetaMask: The RPC mSOLod 'SOL_getEncryptionPublicKey' is deprecated and may be removed in the future.
+For more information, see: https://medium.com/metamask/metamask-api-mSOLod-deprecation-2b0564a84686`,
+            walletWatchAssetNFTExperimental: `MetaMask: The RPC mSOLod 'wallet_watchAsset' is experimental for ERC721/ERC1155 assets and may change in the future.
 For more information, see: https://github.com/MetaMask/metamask-improvement-proposals/blob/main/MIPs/mip-1.md and https://github.com/MetaMask/metamask-improvement-proposals/blob/main/PROCESS-GUIDE.md#proposal-lifecycle`,
           },
-          experimentalMethods:
-            "MetaMask: 'ethereum._metamask' exposes non-standard, experimental methods. They may be removed or changed without warning.",
+          experimentalMSOLods:
+            "MetaMask: 'SOL._metamask' exposes non-standard, experimental mSOLods. They may be removed or changed without warning.",
         },
       },
       Zr = xU;
     function RU(e) {
       let t = {
-        ethDecryptDeprecation: !1,
-        ethGetEncryptionPublicKeyDeprecation: !1,
+        SOLDecryptDeprecation: !1,
+        SOLGetEncryptionPublicKeyDeprecation: !1,
         walletWatchAssetNFTExperimental: !1,
       };
       return (n, r, o) => {
-        t.ethDecryptDeprecation || n.method !== "eth_decrypt"
-          ? t.ethGetEncryptionPublicKeyDeprecation ||
-            n.method !== "eth_getEncryptionPublicKey"
+        t.SOLDecryptDeprecation || n.mSOLod !== "SOL_decrypt"
+          ? t.SOLGetEncryptionPublicKeyDeprecation ||
+            n.mSOLod !== "SOL_getEncryptionPublicKey"
             ? !t.walletWatchAssetNFTExperimental &&
-              n.method === "wallet_watchAsset" &&
+              n.mSOLod === "wallet_watchAsset" &&
               [MU, CU].includes(n.params?.type || "") &&
               (e.warn(Zr.warnings.rpc.walletWatchAssetNFTExperimental),
               (t.walletWatchAssetNFTExperimental = !0))
-            : (e.warn(Zr.warnings.rpc.ethGetEncryptionPublicKeyDeprecation),
-              (t.ethGetEncryptionPublicKeyDeprecation = !0))
-          : (e.warn(Zr.warnings.rpc.ethDecryptDeprecation),
-            (t.ethDecryptDeprecation = !0)),
+            : (e.warn(Zr.warnings.rpc.SOLGetEncryptionPublicKeyDeprecation),
+              (t.SOLGetEncryptionPublicKeyDeprecation = !0))
+          : (e.warn(Zr.warnings.rpc.SOLDecryptDeprecation),
+            (t.SOLDecryptDeprecation = !0)),
           o();
       };
     }
@@ -36798,17 +36798,17 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
       Xb = (e, t, n, r) => (
         C5(e, t, "write to private field"), r ? r.call(e, n) : t.set(e, n), n
       ),
-      xo = (e, t, n) => (C5(e, t, "access private method"), n),
+      xo = (e, t, n) => (C5(e, t, "access private mSOLod"), n),
       Ed = {
         invalidInput: -32e3,
         resourceNotFound: -32001,
         resourceUnavailable: -32002,
         transactionRejected: -32003,
-        methodNotSupported: -32004,
+        mSOLodNotSupported: -32004,
         limitExceeded: -32005,
         parse: -32700,
         invalidRequest: -32600,
-        methodNotFound: -32601,
+        mSOLodNotFound: -32601,
         invalidParams: -32602,
         internal: -32603,
       },
@@ -36824,11 +36824,11 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
         },
         "-32601": {
           standard: "JSON RPC 2.0",
-          message: "The method does not exist / is not available.",
+          message: "The mSOLod does not exist / is not available.",
         },
         "-32602": {
           standard: "JSON RPC 2.0",
-          message: "Invalid method parameter(s).",
+          message: "Invalid mSOLod parameter(s).",
         },
         "-32603": {
           standard: "JSON RPC 2.0",
@@ -36838,18 +36838,18 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
         "-32001": { standard: "EIP-1474", message: "Resource not found." },
         "-32002": { standard: "EIP-1474", message: "Resource unavailable." },
         "-32003": { standard: "EIP-1474", message: "Transaction rejected." },
-        "-32004": { standard: "EIP-1474", message: "Method not supported." },
+        "-32004": { standard: "EIP-1474", message: "MSOLod not supported." },
         "-32005": { standard: "EIP-1474", message: "Request limit exceeded." },
         4001: { standard: "EIP-1193", message: "User rejected the request." },
         4100: {
           standard: "EIP-1193",
           message:
-            "The requested account and/or method has not been authorized by the user.",
+            "The requested account and/or mSOLod has not been authorized by the user.",
         },
         4200: {
           standard: "EIP-1193",
           message:
-            "The requested method is not supported by this Ethereum provider.",
+            "The requested mSOLod is not supported by this SOL provider.",
         },
         4900: {
           standard: "EIP-1193",
@@ -37260,8 +37260,8 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
         stack: ty(Md()),
       }),
       BC = ey([PC(Md(), rg), xC(rg)]),
-      DU = ng({ id: iy, jsonrpc: ig, method: Md(), params: ty(BC) }),
-      BU = ng({ jsonrpc: ig, method: Md(), params: ty(BC) });
+      DU = ng({ id: iy, jsonrpc: ig, mSOLod: Md(), params: ty(BC) }),
+      BU = ng({ jsonrpc: ig, mSOLod: Md(), params: ty(BC) });
     function jC(e) {
       return xp(e, DU);
     }
@@ -37483,7 +37483,7 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
         (t.humanize = jU()),
         (t.destroy = function () {
           console.warn(
-            "Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
+            "Instance mSOLod `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
           );
         }),
         Object.keys(e).forEach((o) => {
@@ -37573,7 +37573,7 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
             r ||
               ((r = !0),
               console.warn(
-                "Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
+                "Instance mSOLod `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."
               ));
           };
         })()),
@@ -38101,10 +38101,10 @@ For more information, see: https://github.com/MetaMask/metamask-improvement-prop
             );
             return t(l, { id: null, jsonrpc: "2.0", error: l });
           }
-          if (typeof e.method != "string") {
+          if (typeof e.mSOLod != "string") {
             let l = new sc(
               Ed.invalidRequest,
-              "Must specify a string method. Received: " + typeof e.method,
+              "Must specify a string mSOLod. Received: " + typeof e.mSOLod,
               { request: e }
             );
             return Sd(this, Tp) && !jC(e)
@@ -38229,13 +38229,13 @@ ${F5(e)}`,
     function F5(e) {
       return JSON.stringify(e, null, 2);
     }
-    var ix = Object.freeze(["eth_subscription"]),
+    var ix = Object.freeze(["SOL_subscription"]),
       ZU = (e = console) => [TU(), GU(e), RU(e)];
     function GU(e) {
       return (t, n, r) => {
-        (typeof t.method == "string" && t.method) ||
+        (typeof t.mSOLod == "string" && t.mSOLod) ||
           (n.error = ag({
-            message: "The request 'method' must be a non-empty string.",
+            message: "The request 'mSOLod' must be a non-empty string.",
             data: t,
           })),
           r((o) => {
@@ -38267,7 +38267,7 @@ ${F5(e)}`,
             {
               jsonrpc: "2.0",
               id: 1,
-              method: "metamask_sendDomainMetadata",
+              mSOLod: "metamask_sendDomainMetadata",
               params: n,
             },
             ax
@@ -38429,16 +38429,16 @@ ${F5(e)}`,
           return _i(this, null, function* () {
             if (!t || typeof t != "object" || Array.isArray(t))
               throw ag({ message: Zr.errors.invalidRequestArgs(), data: t });
-            let { method: n, params: r } = t;
+            let { mSOLod: n, params: r } = t;
             if (typeof n != "string" || n.length === 0)
-              throw ag({ message: Zr.errors.invalidRequestMethod(), data: t });
+              throw ag({ message: Zr.errors.invalidRequestMSOLod(), data: t });
             if (
               r !== void 0 &&
               !Array.isArray(r) &&
               (typeof r != "object" || r === null)
             )
               throw ag({ message: Zr.errors.invalidRequestParams(), data: t });
-            let o = r == null ? { method: n } : { method: n, params: r };
+            let o = r == null ? { mSOLod: n } : { mSOLod: n, params: r };
             return new Promise((i, l) => {
               this._rpcRequest(o, hy(i, l));
             });
@@ -38466,12 +38466,12 @@ ${F5(e)}`,
           return (
             Array.isArray(t) ||
               (t.jsonrpc || (t.jsonrpc = "2.0"),
-              (t.method !== "eth_accounts" &&
-                t.method !== "eth_requestAccounts") ||
+              (t.mSOLod !== "SOL_accounts" &&
+                t.mSOLod !== "SOL_requestAccounts") ||
                 (r = (o, i) => {
                   this._handleAccountsChanged(
                     i.result ?? [],
-                    t.method === "eth_accounts"
+                    t.mSOLod === "SOL_accounts"
                   ),
                     n(o, i);
                 })),
@@ -38535,7 +38535,7 @@ ${F5(e)}`,
             (n &&
               this._state.accounts !== null &&
               this._log.error(
-                "MetaMask: 'eth_accounts' unexpectedly updated accounts. Please report this bug.",
+                "MetaMask: 'SOL_accounts' unexpectedly updated accounts. Please report this bug.",
                 r
               ),
             (this._state.accounts = r),
@@ -38587,7 +38587,7 @@ ${F5(e)}`,
                   })(i)
                 : (function (A) {
                     e?.retryOnMessage &&
-                      A.method === e.retryOnMessage &&
+                      A.mSOLod === e.retryOnMessage &&
                       Object.values(t).forEach(
                         ({ req: _, retryCount: E = 0 }) => {
                           if (!_.id) return;
@@ -38819,7 +38819,7 @@ ${F5(e)}`,
             ),
             this._rpcEngine.push(this._jsonRpcConnection.middleware),
             this._jsonRpcConnection.events.on("notification", (l) => {
-              let { method: g, params: w } = l;
+              let { mSOLod: g, params: w } = l;
               g === "metamask_accountsChanged"
                 ? this._handleAccountsChanged(w)
                 : g === "metamask_unlockStateChanged"
@@ -38836,7 +38836,7 @@ ${F5(e)}`,
           return _i(this, null, function* () {
             let e;
             try {
-              e = yield this.request({ method: "metamask_getProviderState" });
+              e = yield this.request({ mSOLod: "metamask_getProviderState" });
             } catch (t) {
               this._log.error(
                 "MetaMask: Failed to get initial state. Please report this bug.",
@@ -38888,7 +38888,7 @@ ${t.stack}`),
               networkVersion: !1,
               selectedAddress: !1,
               enable: !1,
-              experimentalMethods: !1,
+              experimentalMSOLods: !1,
               send: !1,
               events: {
                 close: !1,
@@ -38908,7 +38908,7 @@ ${t.stack}`),
             (this._warnOfDeprecation = this._warnOfDeprecation.bind(this)),
             (this._metamask = this._getExperimentalApi()),
             this._jsonRpcConnection.events.on("notification", (i) => {
-              let { method: l } = i;
+              let { mSOLod: l } = i;
               ix.includes(l) &&
                 (this.emit("data", i),
                 this.emit("notification", i.params.result));
@@ -38985,7 +38985,7 @@ ${t.stack}`),
               new Promise((e, t) => {
                 try {
                   this._rpcRequest(
-                    { method: "eth_requestAccounts", params: [] },
+                    { mSOLod: "SOL_requestAccounts", params: [] },
                     hy(e, t)
                   );
                 } catch (n) {
@@ -39006,7 +39006,7 @@ ${t.stack}`),
                 : this._sendSync(e)
               : new Promise((n, r) => {
                   try {
-                    this._rpcRequest({ method: e, params: t }, hy(n, r, !1));
+                    this._rpcRequest({ mSOLod: e, params: t }, hy(n, r, !1));
                   } catch (o) {
                     r(o);
                   }
@@ -39015,21 +39015,21 @@ ${t.stack}`),
         }
         _sendSync(e) {
           let t;
-          switch (e.method) {
-            case "eth_accounts":
+          switch (e.mSOLod) {
+            case "SOL_accounts":
               t = this.selectedAddress ? [this.selectedAddress] : [];
               break;
-            case "eth_coinbase":
+            case "SOL_coinbase":
               t = this.selectedAddress ?? null;
               break;
-            case "eth_uninstallFilter":
+            case "SOL_uninstallFilter":
               this._rpcRequest(e, ax), (t = !0);
               break;
             case "net_version":
               t = sl(this, ll) ?? null;
               break;
             default:
-              throw new Error(Zr.errors.unsupportedSync(e.method));
+              throw new Error(Zr.errors.unsupportedSync(e.mSOLod));
           }
           return { id: e.id, jsonrpc: e.jsonrpc, result: t };
         }
@@ -39061,9 +39061,9 @@ ${t.stack}`),
             },
             {
               get: (e, t, ...n) => (
-                this._sentWarnings.experimentalMethods ||
-                  (this._log.warn(Zr.warnings.experimentalMethods),
-                  (this._sentWarnings.experimentalMethods = !0)),
+                this._sentWarnings.experimentalMSOLods ||
+                  (this._log.warn(Zr.warnings.experimentalMSOLods),
+                  (this._sentWarnings.experimentalMSOLods = !0)),
                 Reflect.get(e, t, ...n)
               ),
             }
@@ -39084,7 +39084,7 @@ ${t.stack}`),
     var px = {},
       Rd = {};
     Object.defineProperty(Rd, "__esModule", { value: !0 }),
-      (Rd.EthereumProviderError = Rd.EthereumRpcError = void 0);
+      (Rd.SOLProviderError = Rd.SOLRpcError = void 0);
     let bq = $C;
     class mx extends Error {
       constructor(t, n, r) {
@@ -39105,11 +39105,11 @@ ${t.stack}`),
         return bq.default(this.serialize(), yq, 2);
       }
     }
-    Rd.EthereumRpcError = mx;
+    Rd.SOLRpcError = mx;
     function yq(e, t) {
       if (t !== "[Circular]") return t;
     }
-    Rd.EthereumProviderError = class extends mx {
+    Rd.SOLProviderError = class extends mx {
       constructor(e, t, n) {
         if (
           !(function (r) {
@@ -39132,18 +39132,18 @@ ${t.stack}`),
           resourceNotFound: -32001,
           resourceUnavailable: -32002,
           transactionRejected: -32003,
-          methodNotSupported: -32004,
+          mSOLodNotSupported: -32004,
           limitExceeded: -32005,
           parse: -32700,
           invalidRequest: -32600,
-          methodNotFound: -32601,
+          mSOLodNotFound: -32601,
           invalidParams: -32602,
           internal: -32603,
         },
         provider: {
           userRejectedRequest: 4001,
           unauthorized: 4100,
-          unsupportedMethod: 4200,
+          unsupportedMSOLod: 4200,
           disconnected: 4900,
           chainDisconnected: 4901,
         },
@@ -39160,11 +39160,11 @@ ${t.stack}`),
         },
         "-32601": {
           standard: "JSON RPC 2.0",
-          message: "The method does not exist / is not available.",
+          message: "The mSOLod does not exist / is not available.",
         },
         "-32602": {
           standard: "JSON RPC 2.0",
-          message: "Invalid method parameter(s).",
+          message: "Invalid mSOLod parameter(s).",
         },
         "-32603": {
           standard: "JSON RPC 2.0",
@@ -39174,18 +39174,18 @@ ${t.stack}`),
         "-32001": { standard: "EIP-1474", message: "Resource not found." },
         "-32002": { standard: "EIP-1474", message: "Resource unavailable." },
         "-32003": { standard: "EIP-1474", message: "Transaction rejected." },
-        "-32004": { standard: "EIP-1474", message: "Method not supported." },
+        "-32004": { standard: "EIP-1474", message: "MSOLod not supported." },
         "-32005": { standard: "EIP-1474", message: "Request limit exceeded." },
         4001: { standard: "EIP-1193", message: "User rejected the request." },
         4100: {
           standard: "EIP-1193",
           message:
-            "The requested account and/or method has not been authorized by the user.",
+            "The requested account and/or mSOLod has not been authorized by the user.",
         },
         4200: {
           standard: "EIP-1193",
           message:
-            "The requested method is not supported by this Ethereum provider.",
+            "The requested mSOLod is not supported by this SOL provider.",
         },
         4900: {
           standard: "EIP-1193",
@@ -39244,7 +39244,7 @@ ${t.stack}`),
               throw new Error(
                 "Must provide fallback error with integer number code and string message."
               );
-            if (E instanceof n.EthereumRpcError) return E.serialize();
+            if (E instanceof n.SOLRpcError) return E.serialize();
             let $ = {};
             if (
               E &&
@@ -39271,17 +39271,17 @@ ${t.stack}`),
       })(H5);
     var vy = {};
     Object.defineProperty(vy, "__esModule", { value: !0 }),
-      (vy.ethErrors = void 0);
+      (vy.SOLErrors = void 0);
     let V5 = Rd,
       gx = H5,
       po = Td;
     function os(e, t) {
       let [n, r] = vx(t);
-      return new V5.EthereumRpcError(e, n || gx.getMessageFromCode(e), r);
+      return new V5.SOLRpcError(e, n || gx.getMessageFromCode(e), r);
     }
     function lg(e, t) {
       let [n, r] = vx(t);
-      return new V5.EthereumProviderError(e, n || gx.getMessageFromCode(e), r);
+      return new V5.SOLProviderError(e, n || gx.getMessageFromCode(e), r);
     }
     function vx(e) {
       if (e) {
@@ -39295,17 +39295,17 @@ ${t.stack}`),
       }
       return [];
     }
-    (vy.ethErrors = {
+    (vy.SOLErrors = {
       rpc: {
         parse: (e) => os(po.errorCodes.rpc.parse, e),
         invalidRequest: (e) => os(po.errorCodes.rpc.invalidRequest, e),
         invalidParams: (e) => os(po.errorCodes.rpc.invalidParams, e),
-        methodNotFound: (e) => os(po.errorCodes.rpc.methodNotFound, e),
+        mSOLodNotFound: (e) => os(po.errorCodes.rpc.mSOLodNotFound, e),
         internal: (e) => os(po.errorCodes.rpc.internal, e),
         server: (e) => {
           if (!e || typeof e != "object" || Array.isArray(e))
             throw new Error(
-              "Ethereum RPC Server errors must provide single object argument."
+              "SOL RPC Server errors must provide single object argument."
             );
           let { code: t } = e;
           if (!Number.isInteger(t) || t > -32005 || t < -32099)
@@ -39320,27 +39320,27 @@ ${t.stack}`),
           os(po.errorCodes.rpc.resourceUnavailable, e),
         transactionRejected: (e) =>
           os(po.errorCodes.rpc.transactionRejected, e),
-        methodNotSupported: (e) => os(po.errorCodes.rpc.methodNotSupported, e),
+        mSOLodNotSupported: (e) => os(po.errorCodes.rpc.mSOLodNotSupported, e),
         limitExceeded: (e) => os(po.errorCodes.rpc.limitExceeded, e),
       },
       provider: {
         userRejectedRequest: (e) =>
           lg(po.errorCodes.provider.userRejectedRequest, e),
         unauthorized: (e) => lg(po.errorCodes.provider.unauthorized, e),
-        unsupportedMethod: (e) =>
-          lg(po.errorCodes.provider.unsupportedMethod, e),
+        unsupportedMSOLod: (e) =>
+          lg(po.errorCodes.provider.unsupportedMSOLod, e),
         disconnected: (e) => lg(po.errorCodes.provider.disconnected, e),
         chainDisconnected: (e) =>
           lg(po.errorCodes.provider.chainDisconnected, e),
         custom: (e) => {
           if (!e || typeof e != "object" || Array.isArray(e))
             throw new Error(
-              "Ethereum Provider custom errors must provide single object argument."
+              "SOL Provider custom errors must provide single object argument."
             );
           let { code: t, message: n, data: r } = e;
           if (!n || typeof n != "string")
             throw new Error('"message" must be a nonempty string');
-          return new V5.EthereumProviderError(t, n, r);
+          return new V5.SOLProviderError(t, n, r);
         },
       },
     }),
@@ -39348,22 +39348,22 @@ ${t.stack}`),
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (e.getMessageFromCode =
             e.serializeError =
-            e.EthereumProviderError =
-            e.EthereumRpcError =
-            e.ethErrors =
+            e.SOLProviderError =
+            e.SOLRpcError =
+            e.SOLErrors =
             e.errorCodes =
               void 0);
         let t = Rd;
-        Object.defineProperty(e, "EthereumRpcError", {
+        Object.defineProperty(e, "SOLRpcError", {
           enumerable: !0,
           get: function () {
-            return t.EthereumRpcError;
+            return t.SOLRpcError;
           },
         }),
-          Object.defineProperty(e, "EthereumProviderError", {
+          Object.defineProperty(e, "SOLProviderError", {
             enumerable: !0,
             get: function () {
-              return t.EthereumProviderError;
+              return t.SOLProviderError;
             },
           });
         let n = H5;
@@ -39380,10 +39380,10 @@ ${t.stack}`),
             },
           });
         let r = vy;
-        Object.defineProperty(e, "ethErrors", {
+        Object.defineProperty(e, "SOLErrors", {
           enumerable: !0,
           get: function () {
-            return r.ethErrors;
+            return r.SOLErrors;
           },
         });
         let o = Td;
@@ -39405,34 +39405,34 @@ ${t.stack}`),
         WALLET_REVOKEPERMISSIONS: "wallet_revokePermissions",
         WALLET_GETPERMISSIONS: "wallet_getPermissions",
         WALLET_WATCHASSET: "wallet_watchAsset",
-        WALLET_ADDETHEREUMCHAIN: "wallet_addEthereumChain",
-        WALLET_SWITCHETHETHEREUMCHAIN: "wallet_switchEthereumChain",
-        ETH_REQUESTACCOUNTS: "eth_requestAccounts",
-        ETH_ACCOUNTS: "eth_accounts",
-        ETH_CHAINID: "eth_chainId",
-        ETH_SENDTRANSACTION: "eth_sendTransaction",
-        ETH_SIGNTYPEDDATA: "eth_signTypedData",
-        ETH_SIGNTYPEDDATA_V3: "eth_signTypedData_v3",
-        ETH_SIGNTYPEDDATA_V4: "eth_signTypedData_v4",
-        ETH_SIGNTRANSACTION: "eth_signTransaction",
-        ETH_SIGN: "eth_sign",
+        WALLET_ADDSOLCHAIN: "wallet_addSOLChain",
+        WALLET_SWITCHSOLSOLCHAIN: "wallet_switchSOLChain",
+        SOL_REQUESTACCOUNTS: "SOL_requestAccounts",
+        SOL_ACCOUNTS: "SOL_accounts",
+        SOL_CHAINID: "SOL_chainId",
+        SOL_SENDTRANSACTION: "SOL_sendTransaction",
+        SOL_SIGNTYPEDDATA: "SOL_signTypedData",
+        SOL_SIGNTYPEDDATA_V3: "SOL_signTypedData_v3",
+        SOL_SIGNTYPEDDATA_V4: "SOL_signTypedData_v4",
+        SOL_SIGNTRANSACTION: "SOL_signTransaction",
+        SOL_SIGN: "SOL_sign",
         PERSONAL_EC_RECOVER: "personal_ecRecover",
       },
       by = {
-        [En.ETH_REQUESTACCOUNTS]: !0,
-        [En.ETH_SENDTRANSACTION]: !0,
-        [En.ETH_SIGNTRANSACTION]: !0,
-        [En.ETH_SIGN]: !0,
-        [En.ETH_ACCOUNTS]: !0,
+        [En.SOL_REQUESTACCOUNTS]: !0,
+        [En.SOL_SENDTRANSACTION]: !0,
+        [En.SOL_SIGNTRANSACTION]: !0,
+        [En.SOL_SIGN]: !0,
+        [En.SOL_ACCOUNTS]: !0,
         [En.PERSONAL_SIGN]: !0,
-        [En.ETH_SIGNTYPEDDATA]: !0,
-        [En.ETH_SIGNTYPEDDATA_V3]: !0,
-        [En.ETH_SIGNTYPEDDATA_V4]: !0,
+        [En.SOL_SIGNTYPEDDATA]: !0,
+        [En.SOL_SIGNTYPEDDATA_V3]: !0,
+        [En.SOL_SIGNTYPEDDATA_V4]: !0,
         [En.WALLET_REQUESTPERMISSIONS]: !0,
         [En.WALLET_GETPERMISSIONS]: !0,
         [En.WALLET_WATCHASSET]: !0,
-        [En.WALLET_ADDETHEREUMCHAIN]: !0,
-        [En.WALLET_SWITCHETHETHEREUMCHAIN]: !0,
+        [En.WALLET_ADDSOLCHAIN]: !0,
+        [En.WALLET_SWITCHSOLSOLCHAIN]: !0,
         [En.METAMASK_CONNECTSIGN]: !0,
         [En.METAMASK_CONNECTWITH]: !0,
         [En.PERSONAL_EC_RECOVER]: !0,
@@ -39441,10 +39441,10 @@ ${t.stack}`),
       },
       Aq = Object.keys(by).map((e) => e.toLowerCase()),
       bx = [
-        "eth_signTypedData",
-        "eth_signTypedData_v3",
-        "eth_signTypedData_v4",
-        "eth_sign",
+        "SOL_signTypedData",
+        "SOL_signTypedData_v3",
+        "SOL_signTypedData_v4",
+        "SOL_sign",
       ].map((e) => e.toLowerCase()),
       W5 = ".sdk-comm",
       yy = "providerType",
@@ -39631,7 +39631,7 @@ ${t.stack}`),
                 (r._state.initialized = !1)),
               r._handleAccountsChanged([]),
               (r._state.isConnected = !1),
-              r.emit("disconnect", px.ethErrors.provider.disconnected()),
+              r.emit("disconnect", px.SOLErrors.provider.disconnected()),
               (o.providerStateRequested = !1))
             : $e(
                 "[SDKProvider: handleDisconnect()] not connected --- interrupt disconnection"
@@ -39686,7 +39686,7 @@ ${t.stack}`),
                   else
                     try {
                       i = yield t.request({
-                        method: "metamask_getProviderState",
+                        mSOLod: "metamask_getProviderState",
                       });
                     } catch (E) {
                       return (
@@ -39709,7 +39709,7 @@ ${t.stack}`),
                       "[SDKProvider: initializeStateAsync()] Fetch accounts remotely."
                     );
                     let E = yield t.request({
-                      method: "eth_requestAccounts",
+                      mSOLod: "SOL_requestAccounts",
                       params: [],
                     });
                     i.accounts = E;
@@ -39862,9 +39862,9 @@ ${t.stack}`),
           )
             throw Error("target does not implement any known event API");
           if (typeof R != "function")
-            throw TypeError("on method must be a function");
+            throw TypeError("on mSOLod must be a function");
           if (typeof L != "function")
-            throw TypeError("off method must be a function");
+            throw TypeError("off mSOLod must be a function");
           (this._on = R), (this._off = L);
           var j = d._observers;
           j ? j.push(this) : (d._observers = [this]);
@@ -41604,7 +41604,7 @@ ${t.stack}`),
                     `key "${r}" for languages "${H.join(
                       ", "
                     )}" won't get resolved as namespace "${l}" was not yet loaded`,
-                    "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!"
+                    "This means somSOLing IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!"
                   )),
                 H.forEach((X) => {
                   if (this.isValidLookup(n)) return;
@@ -42786,7 +42786,7 @@ ${t.stack}`),
         )
           this.logger.warn(
             `did not save key "${r}" as the namespace "${n}" was not yet loaded`,
-            "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!"
+            "This means somSOLing IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!"
           );
         else if (r != null && r !== "") {
           if (this.backend && this.backend.create) {
@@ -43518,11 +43518,11 @@ ${t.stack}`),
         $e("[MetaMaskSDK: connectWithExtensionProvider()] ", e),
           (e.sdkProvider = e.activeProvider),
           (e.activeProvider = window.extension),
-          (window.ethereum = window.extension);
+          (window.SOL = window.extension);
         try {
           let r = yield (t = window.extension) === null || t === void 0
             ? void 0
-            : t.request({ method: "eth_requestAccounts" });
+            : t.request({ mSOLod: "SOL_requestAccounts" });
           $e(`[MetaMaskSDK: connectWithExtensionProvider()] accounts=${r}`);
         } catch (r) {
           return void console.warn(
@@ -43562,8 +43562,8 @@ ${t.stack}`),
           t &&
             typeof window < "u" &&
             ((g = i),
-            (window.ethereum = g),
-            window.dispatchEvent(new Event("ethereum#initialized"))),
+            (window.SOL = g),
+            window.dispatchEvent(new Event("SOL#initialized"))),
           o &&
             typeof window < "u" &&
             (function (w, A = console) {
@@ -43589,7 +43589,7 @@ ${t.stack}`),
                             "MetaMask no longer injects web3. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3"
                           ),
                           w
-                            .request({ method: "metamask_logWeb3ShimUsage" })
+                            .request({ mSOLod: "metamask_logWeb3ShimUsage" })
                             .catch((X) => {
                               A.debug(
                                 "MetaMask: Failed to log web3 shim usage.",
@@ -43598,13 +43598,13 @@ ${t.stack}`),
                             }))
                         : ((_ = !0),
                           A.warn(
-                            "You are accessing the MetaMask window.web3.currentProvider shim. This property is deprecated; use window.ethereum instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3"
+                            "You are accessing the MetaMask window.web3.currentProvider shim. This property is deprecated; use window.SOL instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3"
                           )),
                       Reflect.get(D, H, ...$)
                     ),
                     set: (...D) => (
                       A.warn(
-                        "You are accessing the MetaMask window.web3 shim. This object is deprecated; use window.ethereum instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3"
+                        "You are accessing the MetaMask window.web3 shim. This object is deprecated; use window.SOL instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3"
                       ),
                       Reflect.set(...D)
                     ),
@@ -43625,13 +43625,13 @@ ${t.stack}`),
               selectedAddress: this.provider.getSelectedAddress(),
               networkVersion: this.provider.getNetworkVersion(),
             };
-            $e("[Ethereum: constructor()] provider initialized", w);
+            $e("[SOL: constructor()] provider initialized", w);
           });
       }
       static init(t) {
         var n;
         return (
-          $e("[Ethereum: init()] Initializing Ethereum service"),
+          $e("[SOL: init()] Initializing SOL service"),
           (this.instance = new mo(t)),
           (n = this.instance) === null || n === void 0 ? void 0 : n.provider
         );
@@ -43643,7 +43643,7 @@ ${t.stack}`),
         var t;
         if (!(!((t = this.instance) === null || t === void 0) && t.provider))
           throw new Error(
-            "Ethereum instance not intiialized - call Ethereum.factory first."
+            "SOL instance not intiialized - call SOL.factory first."
           );
         return this.instance;
       }
@@ -43651,7 +43651,7 @@ ${t.stack}`),
         var t;
         if (!(!((t = this.instance) === null || t === void 0) && t.provider))
           throw new Error(
-            "Ethereum instance not intiialized - call Ethereum.factory first."
+            "SOL instance not intiialized - call SOL.factory first."
           );
         return this.instance.provider;
       }
@@ -43680,21 +43680,21 @@ ${t.stack}`),
             (w = e.state.remote) === null || w === void 0
               ? void 0
               : w.isAuthorized(),
-          { method: xe, data: y } = ((C) => {
+          { mSOLod: xe, data: y } = ((C) => {
             var c;
             let p;
             return (
               ze.isBuffer(C) ? ((p = C.toJSON()), (p._isBuffer = !0)) : (p = C),
               {
-                method:
-                  (c = p?.data) === null || c === void 0 ? void 0 : c.method,
+                mSOLod:
+                  (c = p?.data) === null || c === void 0 ? void 0 : c.mSOLod,
                 data: p,
               }
             );
           })(t);
         if (
           ($e(
-            `[RCPMS: write()] method='${xe}' isRemoteReady=${Y} channelId=${ke} isSocketConnected=${de} isRemotePaused=${ue} providerConnected=${pe.isConnected()}`,
+            `[RCPMS: write()] mSOLod='${xe}' isRemoteReady=${Y} channelId=${ke} isSocketConnected=${de} isRemotePaused=${ue} providerConnected=${pe.isConnected()}`,
             t
           ),
           !ke)
@@ -43730,14 +43730,14 @@ ${t.stack}`),
           )
             return (
               $e(
-                `[RCPMS: _write()] unsecure platform for method ${xe} -- return callback`
+                `[RCPMS: _write()] unsecure platform for mSOLod ${xe} -- return callback`
               ),
               r()
             );
           if (!de && !Y)
             return (
               $e(
-                `[RCPMS: _write()] invalid connection status targetMethod=${xe} socketConnected=${de} ready=${Y} providerConnected=${pe.isConnected()}`
+                `[RCPMS: _write()] invalid connection status targetMSOLod=${xe} socketConnected=${de} ready=${Y} providerConnected=${pe.isConnected()}`
               ),
               r()
             );
@@ -43768,7 +43768,7 @@ ${t.stack}`),
                 H.openDeeplink(`${pg}?${c}`, `${mg}?${c}`, "_self"))
             : !(($ = e.state.remote) === null || $ === void 0) && $.isPaused()
             ? ($e(
-                `[RCPMS: _write()] MM is PAUSED! deeplink with connect! targetMethod=${xe}`
+                `[RCPMS: _write()] MM is PAUSED! deeplink with connect! targetMSOLod=${xe}`
               ),
               (X = e.state.platformManager) === null ||
                 X === void 0 ||
@@ -43777,7 +43777,7 @@ ${t.stack}`),
                   `${mg}?redirect=true&${c}`,
                   "_self"
                 ))
-            : $e(`[RCPMS: _write()] method ${xe} doesn't need redirect.`);
+            : $e(`[RCPMS: _write()] mSOLod ${xe} doesn't need redirect.`);
         } catch (C) {
           return (
             $e("[RCPMS: _write()] error sending message", C),
@@ -44117,7 +44117,7 @@ ${t.stack}`),
               (this.url = f.url),
                 (this.credentials = f.credentials),
                 d.headers || (this.headers = new Y(f.headers)),
-                (this.method = f.method),
+                (this.mSOLod = f.mSOLod),
                 (this.mode = f.mode),
                 (this.signal = f.signal),
                 b ||
@@ -44128,20 +44128,20 @@ ${t.stack}`),
               ((this.credentials =
                 d.credentials || this.credentials || "same-origin"),
               (!d.headers && this.headers) || (this.headers = new Y(d.headers)),
-              (this.method = (function (R) {
+              (this.mSOLod = (function (R) {
                 var L = R.toUpperCase();
                 return xe.indexOf(L) > -1 ? L : R;
-              })(d.method || this.method || "GET")),
+              })(d.mSOLod || this.mSOLod || "GET")),
               (this.mode = d.mode || this.mode || null),
               (this.signal = d.signal || this.signal),
               (this.referrer = null),
-              (this.method === "GET" || this.method === "HEAD") && b)
+              (this.mSOLod === "GET" || this.mSOLod === "HEAD") && b)
             )
               throw new TypeError("Body not allowed for GET or HEAD requests");
             if (
               (this._initBody(b),
               !(
-                (this.method !== "GET" && this.method !== "HEAD") ||
+                (this.mSOLod !== "GET" && this.mSOLod !== "HEAD") ||
                 (d.cache !== "no-store" && d.cache !== "no-cache")
               ))
             ) {
@@ -44286,7 +44286,7 @@ ${t.stack}`),
                   }, 0);
                 }),
                 L.open(
-                  R.method,
+                  R.mSOLod,
                   (function (q) {
                     try {
                       return q === "" && g.location.href ? g.location.href : q;
@@ -44438,7 +44438,7 @@ ${t.stack}`),
                   for (; ie; ) yield Bx(1e3), (ie = ke());
                   return (
                     $e(
-                      "[initializeMobileProvider: sendRequest()] initial method completed -- prevent installation and call provider"
+                      "[initializeMobileProvider: sendRequest()] initial mSOLod completed -- prevent installation and call provider"
                     ),
                     p(...c)
                   );
@@ -44476,15 +44476,15 @@ ${t.stack}`),
                   }),
                   h &&
                     $e(
-                      `[initializeMobileProvider: sendRequest()] method=${C} ongoing=${ue} selectedAddress=${Z} isInstalled=${N} checkInstallationOnAllCalls=${e} socketConnected=${B}`
+                      `[initializeMobileProvider: sendRequest()] mSOLod=${C} ongoing=${ue} selectedAddress=${Z} isInstalled=${N} checkInstallationOnAllCalls=${e} socketConnected=${B}`
                     ),
-                  Z && C.toLowerCase() === En.ETH_ACCOUNTS.toLowerCase())
+                  Z && C.toLowerCase() === En.SOL_ACCOUNTS.toLowerCase())
                 )
                   return [Z];
-                if (J && C.toLowerCase() === En.ETH_CHAINID.toLowerCase())
+                if (J && C.toLowerCase() === En.SOL_CHAINID.toLowerCase())
                   return J;
                 let oe = [
-                    En.ETH_REQUESTACCOUNTS,
+                    En.SOL_REQUESTACCOUNTS,
                     En.WALLET_REQUESTPERMISSIONS,
                     En.METAMASK_CONNECTSIGN,
                     En.METAMASK_CONNECTWITH,
@@ -44502,14 +44502,14 @@ ${t.stack}`),
                           : b.params,
                       se = yield (({
                         rpcEndpoint: fe,
-                        method: be,
+                        mSOLod: be,
                         sdkInfo: Re,
                         params: De,
                       }) =>
                         Wt(void 0, void 0, void 0, function* () {
                           let Me = JSON.stringify({
                               jsonrpc: "2.0",
-                              method: be,
+                              mSOLod: be,
                               params: De,
                               id: ((Dx += 1), Dx),
                             }),
@@ -44522,7 +44522,7 @@ ${t.stack}`),
                             (Ze["Metamask-Sdk-Info"] = Re);
                           try {
                             Xe = yield Kq(fe, {
-                              method: "POST",
+                              mSOLod: "POST",
                               headers: Ze,
                               body: Me,
                             });
@@ -44541,7 +44541,7 @@ ${t.stack}`),
                         }))({
                         rpcEndpoint: Ee,
                         sdkInfo: D,
-                        method: C,
+                        mSOLod: C,
                         params: ie || [],
                       });
                     return (
@@ -44550,7 +44550,7 @@ ${t.stack}`),
                     );
                   } catch (ie) {
                     console.warn(
-                      `[initializeMobileProvider: sendRequest()] method=${C} readOnlyRPCRequest failed:`,
+                      `[initializeMobileProvider: sendRequest()] mSOLod=${C} readOnlyRPCRequest failed:`,
                       ie
                     );
                   }
@@ -44576,7 +44576,7 @@ ${t.stack}`),
                           R === void 0
                             ? void 0
                             : R.request({
-                                method: En.ETH_REQUESTACCOUNTS,
+                                mSOLod: En.SOL_REQUESTACCOUNTS,
                                 params: [],
                               });
                           if (!be.length)
@@ -44587,7 +44587,7 @@ ${t.stack}`),
                           L === void 0
                             ? void 0
                             : L.request({
-                                method: En.PERSONAL_SIGN,
+                                mSOLod: En.PERSONAL_SIGN,
                                 params: [ie[0], be[0]],
                               });
                         }
@@ -44596,7 +44596,7 @@ ${t.stack}`),
                           En.METAMASK_CONNECTWITH.toLowerCase()
                         ) {
                           let [be] = ie;
-                          return yield (({ method: Re, sdk: De, params: Me }) =>
+                          return yield (({ mSOLod: Re, sdk: De, params: Me }) =>
                             Wt(void 0, void 0, void 0, function* () {
                               var Ze, Xe, Fe, kt;
                               if (!De.isExtensionActive())
@@ -44604,7 +44604,7 @@ ${t.stack}`),
                                   "SDK state invalid -- extension is not active"
                                 );
                               $e(
-                                "[MetaMaskProvider: extensionConnectWithOverwrite()] Overwriting request method",
+                                "[MetaMaskProvider: extensionConnectWithOverwrite()] Overwriting request mSOLod",
                                 Re,
                                 Me
                               );
@@ -44612,7 +44612,7 @@ ${t.stack}`),
                               Ze === void 0
                                 ? void 0
                                 : Ze.request({
-                                    method: En.ETH_REQUESTACCOUNTS,
+                                    mSOLod: En.SOL_REQUESTACCOUNTS,
                                     params: [],
                                   });
                               if (!rt.length)
@@ -44623,7 +44623,7 @@ ${t.stack}`),
                                 Re?.toLowerCase() ===
                                 En.PERSONAL_SIGN.toLowerCase()
                               ) {
-                                let Ke = { method: Re, params: [Me[0], rt[0]] };
+                                let Ke = { mSOLod: Re, params: [Me[0], rt[0]] };
                                 return yield (Xe = De.getProvider()) === null ||
                                 Xe === void 0
                                   ? void 0
@@ -44631,10 +44631,10 @@ ${t.stack}`),
                               }
                               if (
                                 Re?.toLowerCase() ===
-                                En.ETH_SENDTRANSACTION.toLowerCase()
+                                En.SOL_SENDTRANSACTION.toLowerCase()
                               ) {
                                 let Ke = {
-                                  method: Re,
+                                  mSOLod: Re,
                                   params: [
                                     Object.assign(Object.assign({}, Me[0]), {
                                       from: rt[0],
@@ -44648,15 +44648,15 @@ ${t.stack}`),
                               }
                               return bx.includes(Re.toLowerCase())
                                 ? (console.warn(
-                                    `MetaMaskSDK connectWith method=${Re} -- not handled by the extension -- call separately`
+                                    `MetaMaskSDK connectWith mSOLod=${Re} -- not handled by the extension -- call separately`
                                   ),
                                   rt)
                                 : yield (kt = De.getProvider()) === null ||
                                   kt === void 0
                                     ? void 0
-                                    : kt.request({ method: Re, params: Me });
+                                    : kt.request({ mSOLod: Re, params: Me });
                             }))({
-                            method: be.method,
+                            mSOLod: be.mSOLod,
                             sdk: l,
                             params: be.params,
                           });
@@ -44668,7 +44668,7 @@ ${t.stack}`),
                           ),
                           yield (j = l.getProvider()) === null || j === void 0
                             ? void 0
-                            : j.request({ method: C, params: ie })
+                            : j.request({ mSOLod: C, params: ie })
                         );
                       }
                       throw (
@@ -44698,7 +44698,7 @@ ${t.stack}`),
                         return yield (q = l.getProvider()) === null ||
                         q === void 0
                           ? void 0
-                          : q.request({ method: C, params: ie });
+                          : q.request({ mSOLod: C, params: ie });
                       throw fe;
                     }
                     return pe(!1), se;
@@ -44713,21 +44713,21 @@ ${t.stack}`),
                       ),
                       yield (z = l.getProvider()) === null || z === void 0
                         ? void 0
-                        : z.request({ method: C, params: ie })
+                        : z.request({ mSOLod: C, params: ie })
                     );
                   throw (
                     ($e(
-                      `[initializeMobileProvider: sendRequest()] method=${C} --- skip --- not connected/installed`
+                      `[initializeMobileProvider: sendRequest()] mSOLod=${C} --- skip --- not connected/installed`
                     ),
                     new Error(
-                      "MetaMask is not connected/installed, please call eth_requestAccounts to connect first."
+                      "MetaMask is not connected/installed, please call SOL_requestAccounts to connect first."
                     ))
                   );
                 }
                 let ce = yield p(...c);
                 return (
                   $e(
-                    `[initializeMobileProvider: sendRequest()] method=${C} rpcResponse: ${ce}`
+                    `[initializeMobileProvider: sendRequest()] mSOLod=${C} rpcResponse: ${ce}`
                   ),
                   ce
                 );
@@ -44735,7 +44735,7 @@ ${t.stack}`),
             { request: xe } = de;
           de.request = (...C) =>
             Wt(void 0, void 0, void 0, function* () {
-              return we(C?.[0].method, C, xe, w);
+              return we(C?.[0].mSOLod, C, xe, w);
             });
           let { send: y } = de;
           return (
@@ -44841,10 +44841,10 @@ ${t.stack}`),
                   var i, l;
                   return Wt(this, void 0, void 0, function* () {
                     $e(
-                      "[wrapExtensionProvider()] Overwriting request method",
+                      "[wrapExtensionProvider()] Overwriting request mSOLod",
                       o
                     );
-                    let { method: g, params: w } = o,
+                    let { mSOLod: g, params: w } = o,
                       A = Aq.includes(g.toLowerCase());
                     if (
                       (A &&
@@ -44852,7 +44852,7 @@ ${t.stack}`),
                           i === void 0 ||
                           i.send({
                             event: di.SDK_RPC_REQUEST,
-                            params: { method: g, from: "extension" },
+                            params: { mSOLod: g, from: "extension" },
                           })),
                       g === En.METAMASK_BATCH && Array.isArray(w))
                     )
@@ -44868,7 +44868,7 @@ ${t.stack}`),
                           var X;
                           for (let de of E)
                             yield H?.request({
-                              method: de.method,
+                              mSOLod: de.mSOLod,
                               params: de.params,
                             });
                           let Y = yield T.request(P);
@@ -44879,7 +44879,7 @@ ${t.stack}`),
                                 X.send({
                                   event: di.SDK_RPC_REQUEST_DONE,
                                   params: {
-                                    method: P.method,
+                                    mSOLod: P.mSOLod,
                                     from: "extension",
                                   },
                                 })),
@@ -44901,7 +44901,7 @@ ${t.stack}`),
                       return (({ target: E, params: T }) =>
                         Wt(void 0, void 0, void 0, function* () {
                           let P = yield E.request({
-                            method: En.ETH_REQUESTACCOUNTS,
+                            mSOLod: En.SOL_REQUESTACCOUNTS,
                             params: [],
                           });
                           if (!P.length)
@@ -44909,7 +44909,7 @@ ${t.stack}`),
                               "SDK state invalid -- undefined accounts"
                             );
                           return yield E.request({
-                            method: En.PERSONAL_SIGN,
+                            mSOLod: En.PERSONAL_SIGN,
                             params: [T[0], P[0]],
                           });
                         }))({ target: n, params: w });
@@ -44921,10 +44921,10 @@ ${t.stack}`),
                       return (({ target: E, params: T }) =>
                         Wt(void 0, void 0, void 0, function* () {
                           let [P] = T,
-                            D = P.method,
+                            D = P.mSOLod,
                             H = P.params,
                             $ = yield E.request({
-                              method: En.ETH_REQUESTACCOUNTS,
+                              mSOLod: En.SOL_REQUESTACCOUNTS,
                               params: [],
                             });
                           if (!$.length)
@@ -44934,13 +44934,13 @@ ${t.stack}`),
                           return D?.toLowerCase() ===
                             En.PERSONAL_SIGN.toLowerCase()
                             ? yield E.request({
-                                method: D,
+                                mSOLod: D,
                                 params: [H[0], $[0]],
                               })
                             : D?.toLowerCase() ===
-                              En.ETH_SENDTRANSACTION.toLowerCase()
+                              En.SOL_SENDTRANSACTION.toLowerCase()
                             ? yield E.request({
-                                method: D,
+                                mSOLod: D,
                                 params: [
                                   Object.assign(Object.assign({}, H[0]), {
                                     from: $[0],
@@ -44949,10 +44949,10 @@ ${t.stack}`),
                               })
                             : bx.includes(D.toLowerCase())
                             ? (console.warn(
-                                `MetaMaskSDK connectWith method=${D} -- not handled by the extension -- call separately`
+                                `MetaMaskSDK connectWith mSOLod=${D} -- not handled by the extension -- call separately`
                               ),
                               $)
-                            : yield E.request({ method: D, params: H });
+                            : yield E.request({ mSOLod: D, params: H });
                         }))({ target: n, params: w });
                     let _;
                     try {
@@ -44963,7 +44963,7 @@ ${t.stack}`),
                           l === void 0 ||
                           l.send({
                             event: di.SDK_RPC_REQUEST_DONE,
-                            params: { method: g, from: "extension" },
+                            params: { mSOLod: g, from: "extension" },
                           }));
                     }
                   });
@@ -45012,8 +45012,8 @@ ${t.stack}`),
             Ry({ provider: n, sdkInstance: t })
           );
         } catch {
-          let { ethereum: o } = window;
-          if (!o) throw new Error("Ethereum not found in window object");
+          let { SOL: o } = window;
+          if (!o) throw new Error("SOL not found in window object");
           if ("providers" in o) {
             if (Array.isArray(o.providers)) {
               let i = e
@@ -45022,7 +45022,7 @@ ${t.stack}`),
               if (!i) throw new Error("No suitable provider found");
               return Ry({ provider: i, sdkInstance: t });
             }
-          } else if (e && !o.isMetaMask) throw new Error("MetaMask provider not found in Ethereum");
+          } else if (e && !o.isMetaMask) throw new Error("MetaMask provider not found in SOL");
           return Ry({ provider: o, sdkInstance: t });
         }
       });
@@ -46874,7 +46874,7 @@ ${t.stack}`),
       }
       isMetaMaskInstalled() {
         return (function () {
-          let t = mo.getProvider() || window?.ethereum;
+          let t = mo.getProvider() || window?.SOL;
           return (
             $e(
               `[PlatfformManager: isMetaMaskInstalled()] isMetaMask=${
@@ -47079,7 +47079,7 @@ ${t.stack}`),
       Vx = {
         CHROME:
           "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
-        FIREFOX: "https://addons.mozilla.org/firefox/addon/ether-metamask/",
+        FIREFOX: "https://addons.mozilla.org/firefox/addon/SOLer-metamask/",
         DEFAULT: "https://metamask.io",
       },
       Py = "REGISTRATION_IN_PROGRESS",
@@ -47211,11 +47211,11 @@ ${t.stack}`),
             window.open(this.downloadUrl, "_blank");
           }),
           (e.isMetaMaskInstalled = function () {
-            return !!(window.ethereum && window.ethereum.isMetaMask);
+            return !!(window.SOL && window.SOL.isMetaMask);
           }),
           (e._register = function () {
-            return window.ethereum.request({
-              method: "wallet_registerOnboarding",
+            return window.SOL.request({
+              mSOLod: "wallet_registerOnboarding",
             });
           }),
           (e._injectForwarder = function (t) {
@@ -47283,7 +47283,7 @@ ${t.stack}`),
               "[MetamaskInstaller: startDesktopOnboarding() starting desktop onboarding"
             ),
               mo.destroy(),
-              delete window.ethereum,
+              delete window.SOL,
               new rK().startOnboarding();
           });
         })();
@@ -48650,7 +48650,7 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
                       return (
                         `
 
-Check the render method of \`` +
+Check the render mSOLod of \`` +
                         ne +
                         "`."
                       );
@@ -50202,7 +50202,7 @@ Check your code at ` +
                     (F = F.type) === 3 || (F === 4 && S === !0) ? "" : "" + S),
                   I ? u.setAttributeNS(I, m, S) : u.setAttribute(m, S))));
       }
-      "accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height"
+      "accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikSOLrough-position strikSOLrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height"
         .split(" ")
         .forEach(function (u) {
           var m = u.replace(D, H);
@@ -55136,7 +55136,7 @@ Error generating stack: ` +
               }
               a2(m, !0, S, null, V);
               break;
-            case "together":
+            case "togSOLer":
               a2(m, !1, null, null, void 0);
               break;
             default:
@@ -58746,8 +58746,8 @@ Error generating stack: ` +
                 "shape-rendering",
                 "stop-color",
                 "stop-opacity",
-                "strikethrough-position",
-                "strikethrough-thickness",
+                "strikSOLrough-position",
+                "strikSOLrough-thickness",
                 "stroke-dasharray",
                 "stroke-dashoffset",
                 "stroke-linecap",
@@ -59629,7 +59629,7 @@ Error generating stack: ` +
                 return a
                   ? `
 
-Check the render method of \`` +
+Check the render mSOLod of \`` +
                       a +
                       "`."
                   : "";
@@ -60357,7 +60357,7 @@ Check the render method of \`` +
                   enterkeyhint: "enterKeyHint",
                   for: "htmlFor",
                   form: "form",
-                  formmethod: "formMethod",
+                  formmSOLod: "formMSOLod",
                   formaction: "formAction",
                   formenctype: "formEncType",
                   formnovalidate: "formNoValidate",
@@ -60400,7 +60400,7 @@ Check the render method of \`` +
                   maxlength: "maxLength",
                   media: "media",
                   mediagroup: "mediaGroup",
-                  method: "method",
+                  mSOLod: "mSOLod",
                   min: "min",
                   minlength: "minLength",
                   multiple: "multiple",
@@ -60619,8 +60619,8 @@ Check the render method of \`` +
                   overflow: "overflow",
                   overlineposition: "overlinePosition",
                   "overline-position": "overlinePosition",
-                  overlinethickness: "overlineThickness",
-                  "overline-thickness": "overlineThickness",
+                  overlinSOLickness: "overlinSOLickness",
+                  "overline-thickness": "overlinSOLickness",
                   paintorder: "paintOrder",
                   "paint-order": "paintOrder",
                   panose1: "panose1",
@@ -60667,7 +60667,7 @@ Check the render method of \`` +
                   specularconstant: "specularConstant",
                   specularexponent: "specularExponent",
                   speed: "speed",
-                  spreadmethod: "spreadMethod",
+                  spreadmSOLod: "spreadMSOLod",
                   startoffset: "startOffset",
                   stddeviation: "stdDeviation",
                   stemh: "stemh",
@@ -60677,10 +60677,10 @@ Check the render method of \`` +
                   "stop-color": "stopColor",
                   stopopacity: "stopOpacity",
                   "stop-opacity": "stopOpacity",
-                  strikethroughposition: "strikethroughPosition",
-                  "strikethrough-position": "strikethroughPosition",
-                  strikethroughthickness: "strikethroughThickness",
-                  "strikethrough-thickness": "strikethroughThickness",
+                  strikSOLroughposition: "strikSOLroughPosition",
+                  "strikSOLrough-position": "strikSOLroughPosition",
+                  strikSOLroughthickness: "strikSOLroughThickness",
+                  "strikSOLrough-thickness": "strikSOLroughThickness",
                   string: "string",
                   stroke: "stroke",
                   strokedasharray: "strokeDasharray",
@@ -60719,8 +60719,8 @@ Check the render method of \`` +
                   u2: "u2",
                   underlineposition: "underlinePosition",
                   "underline-position": "underlinePosition",
-                  underlinethickness: "underlineThickness",
-                  "underline-thickness": "underlineThickness",
+                  underlinSOLickness: "underlinSOLickness",
+                  "underline-thickness": "underlinSOLickness",
                   unicode: "unicode",
                   unicodebidi: "unicodeBidi",
                   "unicode-bidi": "unicodeBidi",
@@ -65051,7 +65051,7 @@ Check the render method of \`` +
                     w7[O] ||
                       ((w7[O] = !0),
                       i(
-                        "%s.childContextTypes is specified but there is no getChildContext() method on the instance. You can either define getChildContext() on %s or remove childContextTypes from it.",
+                        "%s.childContextTypes is specified but there is no getChildContext() mSOLod on the instance. You can either define getChildContext() on %s or remove childContextTypes from it.",
                         O,
                         O
                       )),
@@ -65893,7 +65893,7 @@ Learn more about this warning here: https://reactjs.org/link/legacy-context`,
               function si(a) {
                 z3 &&
                   i(
-                    "Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
+                    "Context can only be read while React is rendering. In classes, you can read it in the render mSOLod or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
                   );
                 var s = a._currentValue;
                 if (N7 !== a) {
@@ -65901,7 +65901,7 @@ Learn more about this warning here: https://reactjs.org/link/legacy-context`,
                   if (H1 === null) {
                     if (j3 === null)
                       throw new Error(
-                        "Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
+                        "Context can only be read while React is rendering. In classes, you can read it in the render mSOLod or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
                       );
                     (H1 = v),
                       (j3.dependencies = { lanes: st, firstContext: v });
@@ -66304,7 +66304,7 @@ Learn more about this warning here: https://reactjs.org/link/legacy-context`,
                         k = v.stateNode;
                       k._warnedAboutRefsInRender ||
                         i(
-                          "%s is accessing isMounted inside its render() function. render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.",
+                          "%s is accessing isMounted inside its render() function. render() should be a pure function of props and state. It should never access somSOLing that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.",
                           ne(v) || "A component"
                         ),
                         (k._warnedAboutRefsInRender = !0);
@@ -66536,11 +66536,11 @@ https://reactjs.org/link/unsafe-component-lifecycles`,
                   ge.render ||
                     (ye.prototype && typeof ye.prototype.render == "function"
                       ? i(
-                          "%s(...): No `render` method found on the returned component instance: did you accidentally return an object from the constructor?",
+                          "%s(...): No `render` mSOLod found on the returned component instance: did you accidentally return an object from the constructor?",
                           he
                         )
                       : i(
-                          "%s(...): No `render` method found on the returned component instance: you may have forgotten to define `render`.",
+                          "%s(...): No `render` mSOLod found on the returned component instance: you may have forgotten to define `render`.",
                           he
                         )),
                     !ge.getInitialState ||
@@ -66581,34 +66581,34 @@ https://reactjs.org/link/unsafe-component-lifecycles`,
                       )),
                     typeof ge.componentShouldUpdate == "function" &&
                       i(
-                        "%s has a method called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.",
+                        "%s has a mSOLod called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.",
                         he
                       ),
                     ye.prototype &&
                       ye.prototype.isPureReactComponent &&
                       ge.shouldComponentUpdate !== void 0 &&
                       i(
-                        "%s has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.",
+                        "%s has a mSOLod called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.",
                         lr(ye) || "A pure component"
                       ),
                     typeof ge.componentDidUnmount == "function" &&
                       i(
-                        "%s has a method called componentDidUnmount(). But there is no such lifecycle method. Did you mean componentWillUnmount()?",
+                        "%s has a mSOLod called componentDidUnmount(). But there is no such lifecycle mSOLod. Did you mean componentWillUnmount()?",
                         he
                       ),
                     typeof ge.componentDidReceiveProps == "function" &&
                       i(
-                        "%s has a method called componentDidReceiveProps(). But there is no such lifecycle method. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().",
+                        "%s has a mSOLod called componentDidReceiveProps(). But there is no such lifecycle mSOLod. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().",
                         he
                       ),
                     typeof ge.componentWillRecieveProps == "function" &&
                       i(
-                        "%s has a method called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?",
+                        "%s has a mSOLod called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?",
                         he
                       ),
                     typeof ge.UNSAFE_componentWillRecieveProps == "function" &&
                       i(
-                        "%s has a method called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?",
+                        "%s has a mSOLod called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?",
                         he
                       );
                   var ae = ge.props !== _e;
@@ -66635,17 +66635,17 @@ https://reactjs.org/link/unsafe-component-lifecycles`,
                       )),
                     typeof ge.getDerivedStateFromProps == "function" &&
                       i(
-                        "%s: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method.",
+                        "%s: getDerivedStateFromProps() is defined as an instance mSOLod and will be ignored. Instead, declare it as a static mSOLod.",
                         he
                       ),
                     typeof ge.getDerivedStateFromError == "function" &&
                       i(
-                        "%s: getDerivedStateFromError() is defined as an instance method and will be ignored. Instead, declare it as a static method.",
+                        "%s: getDerivedStateFromError() is defined as an instance mSOLod and will be ignored. Instead, declare it as a static mSOLod.",
                         he
                       ),
                     typeof ye.getSnapshotBeforeUpdate == "function" &&
                       i(
-                        "%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.",
+                        "%s: getSnapshotBeforeUpdate() is defined as a static mSOLod and will be ignored. Instead, declare it as an instance mSOLod.",
                         he
                       );
                   var te = ge.state;
@@ -66783,7 +66783,7 @@ https://reactjs.org/link/unsafe-component-lifecycles`,
                         k +
                         `) but no owner was set. This could happen for one of the following reasons:
 1. You may be adding a ref to a function component
-2. You may be adding a ref to a component that was not created inside a component's render method
+2. You may be adding a ref to a component that was not created inside a component's render mSOLod
 3. You have multiple copies of React loaded
 See https://reactjs.org/link/refs-must-have-owner for more information.`
                     );
@@ -68251,7 +68251,7 @@ Incoming: %s`,
                 p6 = null,
                 L9 = function () {
                   i(
-                    "Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
+                    "Context can only be read while React is rendering. In classes, you can read it in the render mSOLod or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."
                   );
                 },
                 _n = function () {
@@ -68960,7 +68960,7 @@ Visit https://reactjs.org/link/error-boundaries to learn more about error bounda
                         typeof x != "function" &&
                           (Jn(a.lanes, vn) ||
                             i(
-                              "%s: Error boundaries should implement getDerivedStateFromError(). In that method, return a state update to display an error message or fallback UI.",
+                              "%s: Error boundaries should implement getDerivedStateFromError(). In that mSOLod, return a state update to display an error message or fallback UI.",
                               ne(a) || "Unknown"
                             ));
                     }),
@@ -69615,7 +69615,7 @@ Visit https://reactjs.org/link/error-boundaries to learn more about error bounda
                     (v +=
                       `
 
-Check the render method of \`` +
+Check the render mSOLod of \`` +
                       k +
                       "`.");
                   var x = k || "",
@@ -70029,12 +70029,12 @@ Check the render method of \`` +
                     he !== void 0 &&
                     he !== "forwards" &&
                     he !== "backwards" &&
-                    he !== "together" &&
+                    he !== "togSOLer" &&
                     !V9[he]
                   )
                     if (((V9[he] = !0), typeof he == "string"))
                       switch (he.toLowerCase()) {
-                        case "together":
+                        case "togSOLer":
                         case "forwards":
                         case "backwards":
                           i(
@@ -70053,13 +70053,13 @@ Check the render method of \`` +
                           break;
                         default:
                           i(
-                            '"%s" is not a supported revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?',
+                            '"%s" is not a supported revealOrder on <SuspenseList />. Did you mean "togSOLer", "forwards" or "backwards"?',
                             he
                           );
                       }
                     else
                       i(
-                        '%s is not a supported value for revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?',
+                        '%s is not a supported value for revealOrder on <SuspenseList />. Did you mean "togSOLer", "forwards" or "backwards"?',
                         he
                       );
                 })(x),
@@ -70170,7 +70170,7 @@ Check the render method of \`` +
                       }
                       J9(s, !0, le, null, O);
                       break;
-                    case "together":
+                    case "togSOLer":
                       J9(s, !1, null, null, void 0);
                       break;
                     default:
@@ -70372,7 +70372,7 @@ Check the render method of \`` +
                         var Qe = lr(me) || "Unknown";
                         U9[Qe] ||
                           (i(
-                            "The <%s /> component appears to have a render method, but doesn't extend React.Component. This is likely to cause errors. Change %s to extend React.Component instead.",
+                            "The <%s /> component appears to have a render mSOLod, but doesn't extend React.Component. This is likely to cause errors. Change %s to extend React.Component instead.",
                             Qe,
                             Qe
                           ),
@@ -72671,7 +72671,7 @@ Learn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-f
                             case w:
                               KI ||
                                 (i(
-                                  "Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state."
+                                  "Cannot update during an existing state transition (such as within `render`). Render mSOLods should be a pure function of props and state."
                                 ),
                                 (KI = !0));
                           }
@@ -74141,7 +74141,7 @@ This ensures that you're testing the behavior the user would see in the browser.
                           (Q +=
                             `
 
-Check the render method of \`` +
+Check the render mSOLod of \`` +
                             G +
                             "`."),
                         new Error(
@@ -74383,9 +74383,9 @@ Check the render method of \`` +
                     !OA &&
                     ((OA = !0),
                     i(
-                      `Render methods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.
+                      `Render mSOLods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.
 
-Check the render method of %s.`,
+Check the render mSOLod of %s.`,
                       ne(Ve) || "Unknown"
                     ));
                 var Q = Zc(O, U);
@@ -74985,7 +74985,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                       s.stateNode !== null &&
                       (s.stateNode._warnedAboutRefsInRender ||
                         i(
-                          "%s is accessing findDOMNode inside its render(). render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.",
+                          "%s is accessing findDOMNode inside its render(). render() should be a pure function of props and state. It should never access somSOLing that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.",
                           lr(s.type) || "A component"
                         ),
                       (s.stateNode._warnedAboutRefsInRender = !0)),
@@ -75041,7 +75041,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                   return (
                     LI() &&
                       i(
-                        "flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task."
+                        "flushSync was called from inside a lifecycle mSOLod. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task."
                       ),
                     ed(a)
                   );
@@ -79429,7 +79429,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                                     typeof B == "string"
                                       ? ((K = B),
                                         console.warn(
-                                          "Extension is deprecated as argument for 'download' method, please pass object { name: '...', extension: '...' } as argument"
+                                          "Extension is deprecated as argument for 'download' mSOLod, please pass object { name: '...', extension: '...' } as argument"
                                         ))
                                       : typeof B == "object" &&
                                         B !== null &&
@@ -79495,7 +79495,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
     (function (e, t) {
       (function (n, r, o) {
         var i =
-            "data:image/png;base64,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",
+            "data:image/png;base64,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",
           l = function () {
             return (
               (l =
@@ -82427,14 +82427,14 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Trusted by over 30 million users to buy, store, send and swap crypto securely",
           LEADING_CRYPTO_WALLET:
-            "The leading crypto wallet & gateway to blockchain apps built on Ethereum Mainnet, Polygon, Optimism, and many other networks",
+            "The leading crypto wallet & gateway to blockchain apps built on SOL Mainnet, Polygon, Optimism, and many other networks",
           CONTROL_DIGITAL_INTERACTIONS:
             "Puts you in control of your digital interactions by making power of cryptography more accessible",
           INSTALL_META_MASK_EXTENSION: "Install MetaMask Extension",
         },
         PENDING_MODAL: {
           OPEN_META_MASK_SELECT_CODE:
-            "Please open the MetaMask wallet app and select the code on the screen OR disconnect",
+            "Please open the PHANTOM WALLET app and select the code on the screen OR disconnect",
           OPEN_META_MASK_CONTINUE:
             "Open the MetaMask app to continue with your session.",
           NUMBER_AFTER_OPEN_NOTICE:
@@ -82461,7 +82461,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Confiado por m\xE1s de 30 millones de usuarios para comprar, almacenar, enviar e intercambiar cripto de manera segura",
           LEADING_CRYPTO_WALLET:
-            "La principal billetera de criptomonedas y pasarela hacia aplicaciones blockchain construidas en Ethereum Mainnet, Polygon, Optimism y muchas otras redes",
+            "La principal billetera de criptomonedas y pasarela hacia aplicaciones blockchain construidas en SOL Mainnet, Polygon, Optimism y muchas otras redes",
           CONTROL_DIGITAL_INTERACTIONS:
             "Te da el control de tus interacciones digitales al hacer que el poder de la criptograf\xEDa sea m\xE1s accesible",
           INSTALL_META_MASK_EXTENSION: "Instalar la Extensi\xF3n de MetaMask",
@@ -82495,7 +82495,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Fait confiance \xE0 plus de 30 millions d'utilisateurs pour acheter, stocker, envoyer et \xE9changer des crypto en toute s\xE9curit\xE9",
           LEADING_CRYPTO_WALLET:
-            "Le portefeuille crypto leader et la passerelle vers des applications blockchain bas\xE9es sur Ethereum Mainnet, Polygon, Optimism, et de nombreux autres r\xE9seaux",
+            "Le portefeuille crypto leader et la passerelle vers des applications blockchain bas\xE9es sur SOL Mainnet, Polygon, Optimism, et de nombreux autres r\xE9seaux",
           CONTROL_DIGITAL_INTERACTIONS:
             "Vous donne le contr\xF4le de vos interactions num\xE9riques en rendant la puissance de la cryptographie plus accessible",
           INSTALL_META_MASK_EXTENSION: "Installez l'extension MetaMask",
@@ -82569,14 +82569,14 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Ritenuto affidabile da oltre 30 milioni di utenti per acquistare, conservare, inviare e scambiare cripto in modo sicuro",
           LEADING_CRYPTO_WALLET:
-            "Il principale portafoglio cripto e gateway per applicazioni blockchain funzionanti su Ethereum Mainnet, Polygon, Optimism e molte altre reti",
+            "Il principale portafoglio cripto e gateway per applicazioni blockchain funzionanti su SOL Mainnet, Polygon, Optimism e molte altre reti",
           CONTROL_DIGITAL_INTERACTIONS:
             "Ti da il controllo delle tue interazioni digitali rendendo piu' accessibile il potere della crittografia",
           INSTALL_META_MASK_EXTENSION: "Installa l'estensione MetaMask",
         },
         PENDING_MODAL: {
           OPEN_META_MASK_SELECT_CODE:
-            "Si prega di aprire l'app mobile MetaMask Wallet e selezionare il codice sullo schermo OPPURE scollegarsi",
+            "Si prega di aprire l'app mobile PHANTOM WALLET e selezionare il codice sullo schermo OPPURE scollegarsi",
           OPEN_META_MASK_CONTINUE:
             "Apri l'app mobile MetaMask per continuare con la tua sessione.",
           NUMBER_AFTER_OPEN_NOTICE:
@@ -82603,7 +82603,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Confiado por mais de 30 milh\xF5es de usu\xE1rios para comprar, armazenar, enviar e trocar cripto com seguran\xE7a",
           LEADING_CRYPTO_WALLET:
-            "A principal carteira de cripto & portal para aplicativos blockchain constru\xEDdos em Ethereum Mainnet, Polygon, Optimism, e muitas outras redes",
+            "A principal carteira de cripto & portal para aplicativos blockchain constru\xEDdos em SOL Mainnet, Polygon, Optimism, e muitas outras redes",
           CONTROL_DIGITAL_INTERACTIONS:
             "Coloca voc\xEA no controle de suas intera\xE7\xF5es digitais, tornando o poder da criptografia mais acess\xEDvel",
           INSTALL_META_MASK_EXTENSION: "Instalar a extens\xE3o MetaMask",
@@ -82638,7 +82638,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           TRUSTED_BY_USERS:
             "Kriptoyu g\xFCvenle sat\u0131n almak, saklamak, g\xF6ndermek ve de\u011Fi\u015Ftirmek i\xE7in 30 milyondan fazla kullan\u0131c\u0131 taraf\u0131ndan g\xFCvenilir",
           LEADING_CRYPTO_WALLET:
-            "Ethereum Ana A\u011F\u0131, Polygon, Optimism ve bir\xE7ok di\u011Fer a\u011Fda kurulu blockchain uygulamalar\u0131na eri\u015Fim sa\u011Flayan \xF6nc\xFC kripto c\xFCzdan\u0131",
+            "SOL Ana A\u011F\u0131, Polygon, Optimism ve bir\xE7ok di\u011Fer a\u011Fda kurulu blockchain uygulamalar\u0131na eri\u015Fim sa\u011Flayan \xF6nc\xFC kripto c\xFCzdan\u0131",
           CONTROL_DIGITAL_INTERACTIONS:
             "Kriptografinin g\xFCc\xFCn\xFC daha eri\u015Filebilir k\u0131larak dijital etkile\u015Fimlerinizin kontrol\xFCn\xFC size verir",
           INSTALL_META_MASK_EXTENSION: "MetaMask Eklentisini Y\xFCkleyin",
@@ -82859,7 +82859,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
               C = !1;
             if (
               typeof window < "u" &&
-              window.ethereum &&
+              window.SOL &&
               !(
                 !((de = Y.platformManager) === null || de === void 0) &&
                 de.isMetaMaskMobileWebView()
@@ -82918,7 +82918,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                 window.extension = void 0;
               }
               mo.destroy();
-            } else !((ue = Y.platformManager) === null || ue === void 0) && ue.isMetaMaskMobileWebView() && ((pe = Y.analytics) === null || pe === void 0 || pe.send({ event: di.SDK_USE_INAPP_BROWSER }), (Y.activeProvider = Ry({ provider: window.ethereum, sdkInstance: Y })), (Y._initialized = !0), (C = !0));
+            } else !((ue = Y.platformManager) === null || ue === void 0) && ue.isMetaMaskMobileWebView() && ((pe = Y.analytics) === null || pe === void 0 || pe.send({ event: di.SDK_USE_INAPP_BROWSER }), (Y.activeProvider = Ry({ provider: window.SOL, sdkInstance: Y })), (Y._initialized = !0), (C = !0));
             return (
               xe &&
                 we.extensionOnly &&
@@ -83168,7 +83168,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
               )
                 throw new Error("SDK state invalid -- undefined provider");
               return t.activeProvider.request({
-                method: En.ETH_REQUESTACCOUNTS,
+                mSOLod: En.SOL_REQUESTACCOUNTS,
                 params: [],
               });
             });
@@ -83192,7 +83192,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
               )
                 throw new Error("SDK state invalid -- undefined provider");
               return n.activeProvider.request({
-                method: En.METAMASK_CONNECTSIGN,
+                mSOLod: En.METAMASK_CONNECTSIGN,
                 params: [r],
               });
             });
@@ -83209,12 +83209,12 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                     "[MetaMaskSDK: connectWith()] provider not ready -- wait for init()"
                   ),
                   yield n.init()),
-                $e(`[MetaMaskSDK: connectWith()] method: ${r.method} rpc=${r}`),
+                $e(`[MetaMaskSDK: connectWith()] mSOLod: ${r.mSOLod} rpc=${r}`),
                 !n.activeProvider)
               )
                 throw new Error("SDK state invalid -- undefined provider");
               return n.activeProvider.request({
-                method: En.METAMASK_CONNECTWITH,
+                mSOLod: En.METAMASK_CONNECTWITH,
                 params: [r],
               });
             });
@@ -83284,8 +83284,8 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                   yield (r = t.activeProvider) === null || r === void 0
                     ? void 0
                     : r.request({
-                        method: En.WALLET_REVOKEPERMISSIONS,
-                        params: [{ eth_accounts: {} }],
+                        mSOLod: En.WALLET_REVOKEPERMISSIONS,
+                        params: [{ SOL_accounts: {} }],
                       });
                 } catch (i) {
                   $e(
@@ -83298,7 +83298,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
                       "[MetaMaskSDK: terminate()] extensionOnly --- prevent switching providers"
                     )
                   : ((t.activeProvider = t.sdkProvider),
-                    (window.ethereum = t.activeProvider),
+                    (window.SOL = t.activeProvider),
                     (t.extensionActive = !1),
                     void t.emit(
                       Ne.EventType.PROVIDER_UPDATE,
@@ -83345,7 +83345,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
             : t.getUniversalLink();
         if (!n)
           throw new Error(
-            "No Universal Link available, please call eth_requestAccounts first."
+            "No Universal Link available, please call SOL_requestAccounts first."
           );
         return n;
       }
@@ -83365,7 +83365,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
             ? void 0
             : t.getConnector()) === null || n === void 0
           ? void 0
-          : n.getRPCMethodTracker();
+          : n.getRPCMSOLodTracker();
       }
       getVersion() {
         return Pp;

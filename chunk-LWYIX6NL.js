@@ -168,7 +168,7 @@ function rr({ types: e, name: r, type: t, value: o }) {
   }
   return [{ type: t }, o];
 }
-var tr = `Ethereum Signed Message:
+var tr = `SOL Signed Message:
 `;
 function or(e) {
   let r =
@@ -331,7 +331,7 @@ var mr = class extends E {
     let l = _e({
       from: t?.address,
       to: u,
-      value: typeof s < "u" && `${Ee(s)} ${n?.nativeCurrency?.symbol || "ETH"}`,
+      value: typeof s < "u" && `${Ee(s)} ${n?.nativeCurrency?.symbol || "SOL"}`,
       data: i,
       gas: a,
       gasPrice: typeof c < "u" && `${k(c)} gwei`,
@@ -711,7 +711,7 @@ function Tr(e, r = {}) {
                     case J.code:
                       throw new J(s);
                     case Z.code:
-                      throw new Z(s, { method: t.method });
+                      throw new Z(s, { mSOLod: t.mSOLod });
                     case X.code:
                       throw new X(s);
                     case N.code:
@@ -725,7 +725,7 @@ function Tr(e, r = {}) {
                     case $.code:
                       throw new $(s);
                     case re.code:
-                      throw new re(s, { method: t.method });
+                      throw new re(s, { mSOLod: t.mSOLod });
                     case O.code:
                       throw new O(s);
                     case te.code:
@@ -837,17 +837,17 @@ function Lr(e, r = {}) {
           key: t,
           name: o,
           request(B) {
-            return h(this, arguments, function* ({ method: y, params: I }) {
+            return h(this, arguments, function* ({ mSOLod: y, params: I }) {
               let C = (P = 0) =>
                 h(this, null, function* () {
                   let R = l[P](
                     v(p({}, f), { chain: c, retryCount: 0, timeout: d })
                   );
                   try {
-                    let S = yield R.request({ method: y, params: I });
+                    let S = yield R.request({ mSOLod: y, params: I });
                     return (
                       x({
-                        method: y,
+                        mSOLod: y,
                         params: I,
                         response: S,
                         transport: R,
@@ -859,7 +859,7 @@ function Lr(e, r = {}) {
                     if (
                       (x({
                         error: S,
-                        method: y,
+                        mSOLod: y,
                         params: I,
                         transport: R,
                         status: "error",
@@ -925,7 +925,7 @@ function qr({
                 y,
                 I;
               try {
-                yield g.request({ method: "net_listening" }), (I = 1);
+                yield g.request({ mSOLod: "net_listening" }), (I = 1);
               } catch {
                 I = 0;
               } finally {
@@ -1005,7 +1005,7 @@ function wr(e, r = {}) {
             timeout: c = r.timeout ?? 1e4,
           } = o,
           m = p(p({}, r.fetchOptions ?? {}), o.fetchOptions ?? {}),
-          { headers: d, method: f, signal: u } = m;
+          { headers: d, mSOLod: f, signal: u } = m;
         try {
           let s = yield Se(
             (g) =>
@@ -1019,7 +1019,7 @@ function wr(e, r = {}) {
                         )
                       : L(p({ jsonrpc: "2.0", id: n.id ?? Ae.take() }, n)),
                     headers: p({ "Content-Type": "application/json" }, d),
-                    method: f || "POST",
+                    mSOLod: f || "POST",
                     signal: u || (c > 0 ? x : null),
                   }),
                   y = new Request(e, b);
@@ -1078,8 +1078,8 @@ function Or(e, r = {}) {
         key: n,
         name: i,
         request(P) {
-          return h(this, arguments, function* ({ method: B, params: C }) {
-            let R = { method: B, params: C },
+          return h(this, arguments, function* ({ mSOLod: B, params: C }) {
+            let R = { mSOLod: B, params: C },
               { schedule: S } = je({
                 id: b,
                 wait: l,

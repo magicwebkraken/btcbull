@@ -3507,8 +3507,8 @@ var Ep = Se((zB, Bb) => {
               this,
               {
                 ts: o,
-                methodLevel: t,
-                methodValue: v,
+                mSOLodLevel: t,
+                mSOLodValue: v,
                 transmitLevel: d,
                 transmitValue: en.levels.values[r.transmit.level || e.level],
                 send: r.transmit.send,
@@ -3551,8 +3551,8 @@ var Ep = Se((zB, Bb) => {
   function w7(r, e, t) {
     let i = e.send,
       n = e.ts,
-      o = e.methodLevel,
-      c = e.methodValue,
+      o = e.mSOLodLevel,
+      c = e.mSOLodValue,
       l = e.val,
       g = r._logEvent.bindings;
     gh(
@@ -6149,7 +6149,7 @@ function cT(r, e) {
             },
           };
         };
-      for (var d in (n.open(e.method || "get", r, !0),
+      for (var d in (n.open(e.mSOLod || "get", r, !0),
       (n.onload = function () {
         n
           .getAllResponseHeaders()
@@ -6434,7 +6434,7 @@ var p_ = Se((Kn, d_) => {
           (this.url = U.url),
             (this.credentials = U.credentials),
             j.headers || (this.headers = new y(U.headers)),
-            (this.method = U.method),
+            (this.mSOLod = U.mSOLod),
             (this.mode = U.mode),
             (this.signal = U.signal),
             !W && U._bodyInit != null && ((W = U._bodyInit), (U.bodyUsed = !0));
@@ -6443,11 +6443,11 @@ var p_ = Se((Kn, d_) => {
           ((this.credentials =
             j.credentials || this.credentials || "same-origin"),
           (j.headers || !this.headers) && (this.headers = new y(j.headers)),
-          (this.method = J(j.method || this.method || "GET")),
+          (this.mSOLod = J(j.mSOLod || this.mSOLod || "GET")),
           (this.mode = j.mode || this.mode || null),
           (this.signal = j.signal || this.signal),
           (this.referrer = null),
-          (this.method === "GET" || this.method === "HEAD") && W)
+          (this.mSOLod === "GET" || this.mSOLod === "HEAD") && W)
         )
           throw new TypeError("Body not allowed for GET or HEAD requests");
         this._initBody(W);
@@ -6558,7 +6558,7 @@ var p_ = Se((Kn, d_) => {
             (b.onabort = function () {
               h(new t.DOMException("Aborted", "AbortError"));
             }),
-            b.open(m.method, m.url, !0),
+            b.open(m.mSOLod, m.url, !0),
             m.credentials === "include"
               ? (b.withCredentials = !0)
               : m.credentials === "omit" && (b.withCredentials = !1),
@@ -7580,7 +7580,7 @@ var zu = class r {
 Following code pattern:
 
 if (CID.isCID(value)) {
-  doSomethingWithCID(value)
+  doSomSOLingWithCID(value)
 }
 
 Is replaced with:
@@ -7588,7 +7588,7 @@ Is replaced with:
 const cid = CID.asCID(value)
 if (cid) {
   // Make sure to use cid instead of value
-  doSomethingWithCID(cid)
+  doSomSOLingWithCID(cid)
 }
 `;
 var pd = Me(
@@ -8120,11 +8120,11 @@ var uw = { exports: {} };
           );
         },
         h = [
-          { name: "keccak", padding: A, bits: T, createMethod: ae },
-          { name: "sha3", padding: E, bits: T, createMethod: ae },
-          { name: "shake", padding: y, bits: K, createMethod: U },
-          { name: "cshake", padding: v, bits: K, createMethod: j },
-          { name: "kmac", padding: v, bits: K, createMethod: W },
+          { name: "keccak", padding: A, bits: T, createMSOLod: ae },
+          { name: "sha3", padding: E, bits: T, createMSOLod: ae },
+          { name: "shake", padding: y, bits: K, createMSOLod: U },
+          { name: "cshake", padding: v, bits: K, createMSOLod: j },
+          { name: "kmac", padding: v, bits: K, createMSOLod: W },
         ],
         m = {},
         b = [],
@@ -8136,7 +8136,7 @@ var uw = { exports: {} };
         var C = D.name + "_" + M[z];
         if (
           (b.push(C),
-          (m[C] = D.createMethod(M[z], D.padding)),
+          (m[C] = D.createMSOLod(M[z], D.padding)),
           D.name !== "sha3")
         ) {
           var p = D.name + M[z];
@@ -8752,7 +8752,7 @@ var Iv = "0123456789abcdef",
           c = t;
           break;
       }
-      c && (e += " [ See: https://links.ethers.org/v5-errors-" + c + " ]"),
+      c && (e += " [ See: https://links.SOLers.org/v5-errors-" + c + " ]"),
         n.length && (e += " (" + n.join(", ") + ")");
       let l = new Error(e);
       return (
@@ -12097,7 +12097,7 @@ var Hu = JR();
 new Set(eh(Hu)), new Set(eh(Hu)), HR(Hu), $R(Hu), new Nt(ww);
 var WR = new Uint8Array(32);
 WR.fill(0);
-var YR = `Ethereum Signed Message:
+var YR = `SOL Signed Message:
 `;
 function Ew(r) {
   return (
@@ -14708,11 +14708,11 @@ function QO(r, e, t, i, n, o) {
         y = Ew(e).substring(2),
         v = c + y + l + g + d,
         A = yield fetch(`${o || JO}/?chainId=${i}&projectId=${n}`, {
-          method: "POST",
+          mSOLod: "POST",
           body: JSON.stringify({
             id: XO(),
             jsonrpc: "2.0",
-            method: "eth_call",
+            mSOLod: "SOL_call",
             params: [{ to: r, data: v }, "latest"],
           }),
         }),
@@ -14766,7 +14766,7 @@ function Qd(r) {
   });
 }
 var Xd = (r, e) => {
-  let t = `${r.domain} wants you to sign in with your Ethereum account:`,
+  let t = `${r.domain} wants you to sign in with your SOL account:`,
     i = nc(e);
   if (!r.aud && !r.uri)
     throw new Error(
@@ -15096,14 +15096,14 @@ function sp(r) {
     n = r.substring(e + 1, t).split("@"),
     o = typeof t < "u" ? r.substring(t) : "",
     c = Lo.parse(o),
-    l = typeof c.methods == "string" ? c.methods.split(",") : void 0;
+    l = typeof c.mSOLods == "string" ? c.mSOLods.split(",") : void 0;
   return {
     protocol: i,
     topic: xP(n[0]),
     version: parseInt(n[1], 10),
     symKey: c.symKey,
     relay: SP(c),
-    methods: l,
+    mSOLods: l,
     expiryTimestamp: c.expiryTimestamp
       ? parseInt(c.expiryTimestamp, 10)
       : void 0,
@@ -15131,7 +15131,7 @@ function tb(r) {
         AP(Jv({ symKey: r.symKey }, IP(r.relay)), {
           expiryTimestamp: r.expiryTimestamp,
         }),
-        r.methods ? { methods: r.methods.join(",") } : {}
+        r.mSOLods ? { mSOLods: r.mSOLods.join(",") } : {}
       )
     )
   );
@@ -15159,7 +15159,7 @@ function RP(r, e) {
   let t = [];
   return (
     Object.values(r).forEach((i) => {
-      Vo(i.accounts).includes(e) && t.push(...i.methods);
+      Vo(i.accounts).includes(e) && t.push(...i.mSOLods);
     }),
     t
   );
@@ -15195,12 +15195,12 @@ function op(r, e) {
   e = e.map((i) => i.replace("did:pkh:", ""));
   let t = OP(e);
   for (let [i, n] of Object.entries(t))
-    n.methods ? (n.methods = rc(n.methods, r)) : (n.methods = r),
+    n.mSOLods ? (n.mSOLods = rc(n.mSOLods, r)) : (n.mSOLods = r),
       (n.events = ["chainChanged", "accountsChanged"]);
   return t;
 }
 var PP = {
-    INVALID_METHOD: { message: "Invalid method.", code: 1001 },
+    INVALID_MSOLOD: { message: "Invalid mSOLod.", code: 1001 },
     INVALID_EVENT: { message: "Invalid event.", code: 1002 },
     INVALID_UPDATE_REQUEST: { message: "Invalid update request.", code: 1003 },
     INVALID_EXTEND_REQUEST: { message: "Invalid extend request.", code: 1004 },
@@ -15208,7 +15208,7 @@ var PP = {
       message: "Invalid session settle request.",
       code: 1005,
     },
-    UNAUTHORIZED_METHOD: { message: "Unauthorized method.", code: 3001 },
+    UNAUTHORIZED_MSOLOD: { message: "Unauthorized mSOLod.", code: 3001 },
     UNAUTHORIZED_EVENT: { message: "Unauthorized event.", code: 3002 },
     UNAUTHORIZED_UPDATE_REQUEST: {
       message: "Unauthorized update request.",
@@ -15220,10 +15220,10 @@ var PP = {
     },
     USER_REJECTED: { message: "User rejected.", code: 5e3 },
     USER_REJECTED_CHAINS: { message: "User rejected chains.", code: 5001 },
-    USER_REJECTED_METHODS: { message: "User rejected methods.", code: 5002 },
+    USER_REJECTED_MSOLODS: { message: "User rejected mSOLods.", code: 5002 },
     USER_REJECTED_EVENTS: { message: "User rejected events.", code: 5003 },
     UNSUPPORTED_CHAINS: { message: "Unsupported chains.", code: 5100 },
-    UNSUPPORTED_METHODS: { message: "Unsupported methods.", code: 5101 },
+    UNSUPPORTED_MSOLODS: { message: "Unsupported mSOLods.", code: 5101 },
     UNSUPPORTED_EVENTS: { message: "Unsupported events.", code: 5102 },
     UNSUPPORTED_ACCOUNTS: { message: "Unsupported accounts.", code: 5103 },
     UNSUPPORTED_NAMESPACE_KEY: {
@@ -15235,7 +15235,7 @@ var PP = {
       message: "Session settlement failed.",
       code: 7e3,
     },
-    WC_METHOD_UNSUPPORTED: { message: "Unsupported wc_ method.", code: 10001 },
+    WC_MSOLOD_UNSUPPORTED: { message: "Unsupported wc_ mSOLod.", code: 10001 },
   },
   MP = {
     NOT_INITIALIZED: { message: "Not initialized.", code: 1 },
@@ -15281,10 +15281,10 @@ function rb(r, e) {
     o = !0;
   return Ms(n, i)
     ? (i.forEach((c) => {
-        let { accounts: l, methods: g, events: d } = r.namespaces[c],
+        let { accounts: l, mSOLods: g, events: d } = r.namespaces[c],
           y = Vo(l),
           v = t[c];
-        (!Ms(Zv(c, v), y) || !Ms(v.methods, g) || !Ms(v.events, d)) && (o = !1);
+        (!Ms(Zv(c, v), y) || !Ms(v.mSOLods, g) || !Ms(v.events, d)) && (o = !1);
       }),
       o)
     : !1;
@@ -15397,15 +15397,15 @@ function UP(r, e) {
 function BP(r, e) {
   let t = null;
   return (
-    Wv(r?.methods)
+    Wv(r?.mSOLods)
       ? Wv(r?.events) ||
         (t = ke(
           "UNSUPPORTED_EVENTS",
           `${e}, events should be an array of strings or empty array for no events`
         ))
       : (t = ke(
-          "UNSUPPORTED_METHODS",
-          `${e}, methods should be an array of strings or empty array for no methods`
+          "UNSUPPORTED_MSOLODS",
+          `${e}, mSOLods should be an array of strings or empty array for no mSOLods`
         )),
     t
   );
@@ -15480,7 +15480,7 @@ function lb(r) {
   );
 }
 function fb(r) {
-  return !(sr(r) || !Ft(r.method, !1));
+  return !(sr(r) || !Ft(r.mSOLod, !1));
 }
 function db(r) {
   return !(
@@ -15539,7 +15539,7 @@ function hp(r, e, t) {
     }),
     c.forEach((v) => {
       i ||
-        (Ms(n[v].methods, o[v].methods)
+        (Ms(n[v].mSOLods, o[v].mSOLods)
           ? Ms(n[v].events, o[v].events) ||
             (i = de(
               "NON_CONFORMING_NAMESPACES",
@@ -15547,7 +15547,7 @@ function hp(r, e, t) {
             ))
           : (i = de(
               "NON_CONFORMING_NAMESPACES",
-              `${t} namespaces methods don't satisfy namespace methods for ${v}`
+              `${t} namespaces mSOLods don't satisfy namespace mSOLods for ${v}`
             )));
     }),
     i
@@ -15562,7 +15562,7 @@ function qP(r) {
         ? (e[t] = r[t])
         : (i = r[t].chains) == null ||
           i.forEach((n) => {
-            e[n] = { methods: r[t].methods, events: r[t].events };
+            e[n] = { mSOLods: r[t].mSOLods, events: r[t].events };
           });
     }),
     e
@@ -15580,7 +15580,7 @@ function jP(r) {
         : Vo(r[t].accounts)?.forEach((n) => {
             e[n] = {
               accounts: r[t].accounts.filter((o) => o.includes(`${n}:`)),
-              methods: r[t].methods,
+              mSOLods: r[t].mSOLods,
               events: r[t].events,
             };
           });
@@ -16825,7 +16825,7 @@ rr(Zt, {
   INTERNAL_ERROR: () => Th,
   INVALID_PARAMS: () => A2,
   INVALID_REQUEST: () => _2,
-  METHOD_NOT_FOUND: () => E2,
+  MSOLOD_NOT_FOUND: () => E2,
   PARSE_ERROR: () => b2,
   RESERVED_ERROR_CODES: () => qp,
   SERVER_ERROR: () => yc,
@@ -16862,7 +16862,7 @@ rr(Zt, {
 });
 var b2 = "PARSE_ERROR",
   _2 = "INVALID_REQUEST",
-  E2 = "METHOD_NOT_FOUND",
+  E2 = "MSOLOD_NOT_FOUND",
   A2 = "INVALID_PARAMS",
   Th = "INTERNAL_ERROR",
   yc = "SERVER_ERROR",
@@ -16871,7 +16871,7 @@ var b2 = "PARSE_ERROR",
   fs = {
     [b2]: { code: -32700, message: "Parse error" },
     [_2]: { code: -32600, message: "Invalid Request" },
-    [E2]: { code: -32601, message: "Method not found" },
+    [E2]: { code: -32601, message: "MSOLod not found" },
     [A2]: { code: -32602, message: "Invalid params" },
     [Th]: { code: -32603, message: "Internal error" },
     [yc]: { code: -32e3, message: "Server error" },
@@ -16934,7 +16934,7 @@ function Ii(r = 6) {
   return BigInt(tn(r));
 }
 function rn(r, e, t) {
-  return { id: t || tn(), jsonrpc: "2.0", method: r, params: e };
+  return { id: t || tn(), jsonrpc: "2.0", mSOLod: r, params: e };
 }
 function gs(r, e) {
   return { id: r, jsonrpc: "2.0", result: e };
@@ -17013,7 +17013,7 @@ function $p(r) {
   );
 }
 function Zo(r) {
-  return $p(r) && "method" in r;
+  return $p(r) && "mSOLod" in r;
 }
 function ms(r) {
   return $p(r) && (Wr(r) || vr(r));
@@ -17060,7 +17060,7 @@ var Lr = class extends Ec {
   request(e, t) {
     return R(this, null, function* () {
       return this.requestStrict(
-        rn(e.method, e.params || [], e.id || Ii().toString()),
+        rn(e.mSOLod, e.params || [], e.id || Ii().toString()),
         t
       );
     });
@@ -17094,7 +17094,7 @@ var Lr = class extends Ec {
     this.events.emit("payload", e),
       ms(e)
         ? this.events.emit(`${e.id}`, e)
-        : this.events.emit("message", { type: e.method, data: e.params });
+        : this.events.emit("message", { type: e.mSOLod, data: e.params });
   }
   onClose(e) {
     e &&
@@ -17909,7 +17909,7 @@ var Rc = {
       req: { ttl: Re.THIRTY_SECONDS, prompt: !1, tag: 1002 },
       res: { ttl: Re.THIRTY_SECONDS, prompt: !1, tag: 1003 },
     },
-    unregistered_method: {
+    unregistered_mSOLod: {
       req: { ttl: Re.ONE_DAY, prompt: !1, tag: 0 },
       res: { ttl: Re.ONE_DAY, prompt: !1, tag: 0 },
     },
@@ -18167,8 +18167,8 @@ var c0 = "verify-api",
                     `Successfully Restored records for ${this.name}`
                   ),
                   this.logger.trace({
-                    type: "method",
-                    method: "restore",
+                    type: "mSOLod",
+                    mSOLod: "restore",
                     size: this.messages.size,
                   });
               } catch (i) {
@@ -18260,8 +18260,8 @@ var c0 = "verify-api",
             var c;
             this.logger.debug("Publishing Payload"),
               this.logger.trace({
-                type: "method",
-                method: "publish",
+                type: "mSOLod",
+                mSOLod: "publish",
                 params: { topic: i, message: n, opts: o },
               });
             let l = o?.ttl || L9,
@@ -18301,8 +18301,8 @@ var c0 = "verify-api",
               this.relayer.events.emit(Dr.publish, A),
                 this.logger.debug("Successfully Published Payload"),
                 this.logger.trace({
-                  type: "method",
-                  method: "publish",
+                  type: "mSOLod",
+                  mSOLod: "publish",
                   params: { id: v, topic: i, message: n, opts: o },
                 });
             } catch (K) {
@@ -18337,7 +18337,7 @@ var c0 = "verify-api",
     rpcPublish(e, t, i, n, o, c, l) {
       var g, d, y, v;
       let A = {
-        method: Ko(n.protocol).publish,
+        mSOLod: Ko(n.protocol).publish,
         params: { topic: e, message: t, ttl: i, prompt: o, tag: c },
         id: l,
       };
@@ -18461,8 +18461,8 @@ var c0 = "verify-api",
               this.isInitialized(),
               this.logger.debug("Subscribing Topic"),
               this.logger.trace({
-                type: "method",
-                method: "subscribe",
+                type: "mSOLod",
+                mSOLod: "subscribe",
                 params: { topic: i, opts: n },
               });
             try {
@@ -18475,8 +18475,8 @@ var c0 = "verify-api",
                   (this.onSubscribe(l, c),
                   this.logger.debug("Successfully Subscribed Topic"),
                   this.logger.trace({
-                    type: "method",
-                    method: "subscribe",
+                    type: "mSOLod",
+                    mSOLod: "subscribe",
                     params: { topic: i, opts: n },
                   })),
                 l
@@ -18601,8 +18601,8 @@ var c0 = "verify-api",
       return R(this, null, function* () {
         this.logger.debug("Unsubscribing Topic"),
           this.logger.trace({
-            type: "method",
-            method: "unsubscribe",
+            type: "mSOLod",
+            mSOLod: "unsubscribe",
             params: { topic: e, id: t, opts: i },
           });
         try {
@@ -18612,8 +18612,8 @@ var c0 = "verify-api",
           yield this.onUnsubscribe(e, t, o),
             this.logger.debug("Successfully Unsubscribed Topic"),
             this.logger.trace({
-              type: "method",
-              method: "unsubscribe",
+              type: "mSOLod",
+              mSOLod: "unsubscribe",
               params: { topic: e, id: t, opts: i },
             });
         } catch (n) {
@@ -18627,7 +18627,7 @@ var c0 = "verify-api",
     }
     rpcSubscribe(e, t) {
       return R(this, null, function* () {
-        let i = { method: Ko(t.protocol).subscribe, params: { topic: e } };
+        let i = { mSOLod: Ko(t.protocol).subscribe, params: { topic: e } };
         this.logger.debug("Outgoing Relay Payload"),
           this.logger.trace({
             type: "payload",
@@ -18653,7 +18653,7 @@ var c0 = "verify-api",
         if (!e.length) return;
         let t = e[0].relay,
           i = {
-            method: Ko(t.protocol).batchSubscribe,
+            mSOLod: Ko(t.protocol).batchSubscribe,
             params: { topics: e.map((n) => n.topic) },
           };
         this.logger.debug("Outgoing Relay Payload"),
@@ -18677,7 +18677,7 @@ var c0 = "verify-api",
         if (!e.length) return;
         let t = e[0].relay,
           i = {
-            method: Ko(t.protocol).batchFetchMessages,
+            mSOLod: Ko(t.protocol).batchFetchMessages,
             params: { topics: e.map((o) => o.topic) },
           };
         this.logger.debug("Outgoing Relay Payload"),
@@ -18700,7 +18700,7 @@ var c0 = "verify-api",
     }
     rpcUnsubscribe(e, t, i) {
       let n = {
-        method: Ko(i.protocol).unsubscribe,
+        mSOLod: Ko(i.protocol).unsubscribe,
         params: { topic: e, id: t },
       };
       return (
@@ -18743,8 +18743,8 @@ var c0 = "verify-api",
     setSubscription(e, t) {
       this.logger.debug("Setting subscription"),
         this.logger.trace({
-          type: "method",
-          method: "setSubscription",
+          type: "mSOLod",
+          mSOLod: "setSubscription",
           id: e,
           subscription: t,
         }),
@@ -18757,7 +18757,7 @@ var c0 = "verify-api",
     }
     getSubscription(e) {
       this.logger.debug("Getting subscription"),
-        this.logger.trace({ type: "method", method: "getSubscription", id: e });
+        this.logger.trace({ type: "mSOLod", mSOLod: "getSubscription", id: e });
       let t = this.subscriptions.get(e);
       if (!t) {
         let { message: i } = de("NO_MATCHING_KEY", `${this.name}: ${e}`);
@@ -18768,8 +18768,8 @@ var c0 = "verify-api",
     deleteSubscription(e, t) {
       this.logger.debug("Deleting subscription"),
         this.logger.trace({
-          type: "method",
-          method: "deleteSubscription",
+          type: "mSOLod",
+          mSOLod: "deleteSubscription",
           id: e,
           reason: t,
         });
@@ -18816,8 +18816,8 @@ var c0 = "verify-api",
               `Successfully Restored subscriptions for ${this.name}`
             ),
             this.logger.trace({
-              type: "method",
-              method: "restore",
+              type: "mSOLod",
+              mSOLod: "restore",
               subscriptions: this.values,
             });
         } catch (e) {
@@ -18957,7 +18957,7 @@ var c0 = "verify-api",
                 this.logger.trace(
                   {
                     id: o,
-                    method: t.method,
+                    mSOLod: t.mSOLod,
                     topic: (i = t.params) == null ? void 0 : i.topic,
                   },
                   "relayer.request - attempt to publish..."
@@ -18980,7 +18980,7 @@ var c0 = "verify-api",
                 this.logger.trace(
                   {
                     id: o,
-                    method: t.method,
+                    mSOLod: t.mSOLod,
                     topic: (n = t.params) == null ? void 0 : n.topic,
                   },
                   "relayer.request - published"
@@ -19330,7 +19330,7 @@ var c0 = "verify-api",
           }),
           Zo(e))
         ) {
-          if (!e.method.endsWith(j9)) return;
+          if (!e.mSOLod.endsWith(j9)) return;
           let t = e.params,
             { topic: i, message: n, publishedAt: o } = t.data,
             c = { topic: i, message: n, publishedAt: o };
@@ -19464,8 +19464,8 @@ var c0 = "verify-api",
                 ? yield this.update(c, l)
                 : (this.logger.debug("Setting value"),
                   this.logger.trace({
-                    type: "method",
-                    method: "set",
+                    type: "mSOLod",
+                    mSOLod: "set",
                     key: c,
                     value: l,
                   }),
@@ -19475,7 +19475,7 @@ var c0 = "verify-api",
         (this.get = (c) => (
           this.isInitialized(),
           this.logger.debug("Getting value"),
-          this.logger.trace({ type: "method", method: "get", key: c }),
+          this.logger.trace({ type: "mSOLod", mSOLod: "get", key: c }),
           this.getData(c)
         )),
         (this.getAll = (c) => (
@@ -19491,8 +19491,8 @@ var c0 = "verify-api",
             this.isInitialized(),
               this.logger.debug("Updating value"),
               this.logger.trace({
-                type: "method",
-                method: "update",
+                type: "mSOLod",
+                mSOLod: "update",
                 key: c,
                 update: l,
               });
@@ -19505,8 +19505,8 @@ var c0 = "verify-api",
               this.map.has(c) &&
                 (this.logger.debug("Deleting value"),
                 this.logger.trace({
-                  type: "method",
-                  method: "delete",
+                  type: "mSOLod",
+                  mSOLod: "delete",
                   key: c,
                   reason: l,
                 }),
@@ -19586,8 +19586,8 @@ var c0 = "verify-api",
           (this.cached = e),
             this.logger.debug(`Successfully Restored value for ${this.name}`),
             this.logger.trace({
-              type: "method",
-              method: "restore",
+              type: "mSOLod",
+              mSOLod: "restore",
               value: this.values,
             });
         } catch (e) {
@@ -19613,7 +19613,7 @@ var c0 = "verify-api",
         (this.initialized = !1),
         (this.storagePrefix = ws),
         (this.ignoredPayloadTypes = [Si]),
-        (this.registeredMethods = []),
+        (this.registeredMSOLods = []),
         (this.init = () =>
           R(this, null, function* () {
             this.initialized ||
@@ -19624,10 +19624,10 @@ var c0 = "verify-api",
               (this.initialized = !0),
               this.logger.trace("Initialized"));
           })),
-        (this.register = ({ methods: i }) => {
+        (this.register = ({ mSOLods: i }) => {
           this.isInitialized(),
-            (this.registeredMethods = [
-              ...new Set([...this.registeredMethods, ...i]),
+            (this.registeredMSOLods = [
+              ...new Set([...this.registeredMSOLods, ...i]),
             ]);
         }),
         (this.create = (i) =>
@@ -19645,7 +19645,7 @@ var c0 = "verify-api",
                 symKey: n,
                 relay: l,
                 expiryTimestamp: c,
-                methods: i?.methods,
+                mSOLods: i?.mSOLods,
               });
             return (
               this.core.expirer.set(o, c),
@@ -19662,7 +19662,7 @@ var c0 = "verify-api",
                 symKey: o,
                 relay: c,
                 expiryTimestamp: l,
-                methods: g,
+                mSOLods: g,
               } = sp(i.uri),
               d;
             if (
@@ -19673,7 +19673,7 @@ var c0 = "verify-api",
                 `Pairing already exists: ${n}. Please try again with a new connection URI.`
               );
             let y = l || Jt(Re.FIVE_MINUTES),
-              v = { topic: n, relay: c, expiry: y, active: !1, methods: g };
+              v = { topic: n, relay: c, expiry: y, active: !1, mSOLods: g };
             return (
               this.core.expirer.set(n, y),
               yield this.pairings.set(n, v),
@@ -19743,7 +19743,7 @@ var c0 = "verify-api",
             let c = gs(i, o),
               l = yield this.core.crypto.encode(n, c),
               g = yield this.core.history.get(n, i),
-              d = Rc[g.request.method].res;
+              d = Rc[g.request.mSOLod].res;
             yield this.core.relayer.publish(n, l, d),
               yield this.core.history.resolve(c);
           })),
@@ -19752,9 +19752,9 @@ var c0 = "verify-api",
             let c = jn(i, o),
               l = yield this.core.crypto.encode(n, c),
               g = yield this.core.history.get(n, i),
-              d = Rc[g.request.method]
-                ? Rc[g.request.method].res
-                : Rc.unregistered_method.res;
+              d = Rc[g.request.mSOLod]
+                ? Rc[g.request.mSOLod].res
+                : Rc.unregistered_mSOLod.res;
             yield this.core.relayer.publish(n, l, d),
               yield this.core.history.resolve(c);
           })),
@@ -19774,24 +19774,24 @@ var c0 = "verify-api",
           })),
         (this.onRelayEventRequest = (i) => {
           let { topic: n, payload: o } = i;
-          switch (o.method) {
+          switch (o.mSOLod) {
             case "wc_pairingPing":
               return this.onPairingPingRequest(n, o);
             case "wc_pairingDelete":
               return this.onPairingDeleteRequest(n, o);
             default:
-              return this.onUnknownRpcMethodRequest(n, o);
+              return this.onUnknownRpcMSOLodRequest(n, o);
           }
         }),
         (this.onRelayEventResponse = (i) =>
           R(this, null, function* () {
             let { topic: n, payload: o } = i,
-              c = (yield this.core.history.get(n, o.id)).request.method;
+              c = (yield this.core.history.get(n, o.id)).request.mSOLod;
             switch (c) {
               case "wc_pairingPing":
                 return this.onPairingPingResponse(n, o);
               default:
-                return this.onUnknownRpcMethodResponse(c);
+                return this.onUnknownRpcMSOLodResponse(c);
             }
           })),
         (this.onPairingPingRequest = (i, n) =>
@@ -19825,20 +19825,20 @@ var c0 = "verify-api",
               yield this.sendError(o, i, c), this.logger.error(c);
             }
           })),
-        (this.onUnknownRpcMethodRequest = (i, n) =>
+        (this.onUnknownRpcMSOLodRequest = (i, n) =>
           R(this, null, function* () {
-            let { id: o, method: c } = n;
+            let { id: o, mSOLod: c } = n;
             try {
-              if (this.registeredMethods.includes(c)) return;
-              let l = ke("WC_METHOD_UNSUPPORTED", c);
+              if (this.registeredMSOLods.includes(c)) return;
+              let l = ke("WC_MSOLOD_UNSUPPORTED", c);
               yield this.sendError(o, i, l), this.logger.error(l);
             } catch (l) {
               yield this.sendError(o, i, l), this.logger.error(l);
             }
           })),
-        (this.onUnknownRpcMethodResponse = (i) => {
-          this.registeredMethods.includes(i) ||
-            this.logger.error(ke("WC_METHOD_UNSUPPORTED", i));
+        (this.onUnknownRpcMSOLodResponse = (i) => {
+          this.registeredMSOLods.includes(i) ||
+            this.logger.error(ke("WC_MSOLOD_UNSUPPORTED", i));
         }),
         (this.isValidPair = (i) => {
           var n;
@@ -20009,8 +20009,8 @@ var c0 = "verify-api",
             (this.isInitialized(),
             this.logger.debug("Setting JSON-RPC request history record"),
             this.logger.trace({
-              type: "method",
-              method: "set",
+              type: "mSOLod",
+              mSOLod: "set",
               topic: i,
               request: n,
               chainId: o,
@@ -20021,7 +20021,7 @@ var c0 = "verify-api",
           let c = {
             id: n.id,
             topic: i,
-            request: { method: n.method, params: n.params || null },
+            request: { mSOLod: n.mSOLod, params: n.params || null },
             chainId: o,
             expiry: Jt(Re.THIRTY_DAYS),
           };
@@ -20035,8 +20035,8 @@ var c0 = "verify-api",
               (this.isInitialized(),
               this.logger.debug("Updating JSON-RPC response history record"),
               this.logger.trace({
-                type: "method",
-                method: "update",
+                type: "mSOLod",
+                mSOLod: "update",
                 response: i,
               }),
               !this.records.has(i.id))
@@ -20055,8 +20055,8 @@ var c0 = "verify-api",
               this.isInitialized(),
               this.logger.debug("Getting record"),
               this.logger.trace({
-                type: "method",
-                method: "get",
+                type: "mSOLod",
+                mSOLod: "get",
                 topic: i,
                 id: n,
               }),
@@ -20066,7 +20066,7 @@ var c0 = "verify-api",
         (this.delete = (i, n) => {
           this.isInitialized(),
             this.logger.debug("Deleting record"),
-            this.logger.trace({ type: "method", method: "delete", id: n }),
+            this.logger.trace({ type: "mSOLod", mSOLod: "delete", id: n }),
             this.values.forEach((o) => {
               if (o.topic === i) {
                 if (typeof n < "u" && o.id !== n) return;
@@ -20124,7 +20124,7 @@ var c0 = "verify-api",
           if (typeof t.response < "u") return;
           let i = {
             topic: t.topic,
-            request: rn(t.request.method, t.request.params, t.id),
+            request: rn(t.request.mSOLod, t.request.params, t.id),
             chainId: t.chainId,
           };
           return e.push(i);
@@ -20168,8 +20168,8 @@ var c0 = "verify-api",
           (this.cached = e),
             this.logger.debug(`Successfully Restored records for ${this.name}`),
             this.logger.trace({
-              type: "method",
-              method: "restore",
+              type: "mSOLod",
+              mSOLod: "restore",
               records: this.values,
             });
         } catch (e) {
@@ -20342,8 +20342,8 @@ var c0 = "verify-api",
               `Successfully Restored expirations for ${this.name}`
             ),
             this.logger.trace({
-              type: "method",
-              method: "restore",
+              type: "mSOLod",
+              mSOLod: "restore",
               expirations: this.values,
             });
         } catch (e) {
@@ -20541,7 +20541,7 @@ var c0 = "verify-api",
               } = i,
               g = `${nF}/${this.projectId}/clients`;
             yield (0,
-            V3.default)(g, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: n, type: c, token: o, always_raw: l }) });
+            V3.default)(g, { mSOLod: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: n, type: c, token: o, always_raw: l }) });
           })),
         (this.logger = yr(t, this.context));
     }
@@ -20770,7 +20770,7 @@ var IF = "auth",
         (this.requestQueue = { state: an.idle, queue: [] }),
         (this.sessionRequestQueue = { state: an.idle, queue: [] }),
         (this.requestQueueDelay = qe.ONE_SECOND),
-        (this.expectedPairingMethodMap = new Map()),
+        (this.expectedPairingMSOLodMap = new Map()),
         (this.recentlyDeletedMap = new Map()),
         (this.recentlyDeletedLimit = 200),
         (this.relayMessageCache = []),
@@ -20781,7 +20781,7 @@ var IF = "auth",
               this.registerRelayerEvents(),
               this.registerExpirerEvents(),
               this.registerPairingEvents(),
-              this.client.core.pairing.register({ methods: Object.keys(cr) }),
+              this.client.core.pairing.register({ mSOLods: Object.keys(cr) }),
               (this.initialized = !0),
               setTimeout(() => {
                 (this.sessionRequestQueue.queue =
@@ -20868,7 +20868,7 @@ var IF = "auth",
             );
             let J = yield this.sendRequest({
               topic: d,
-              method: "wc_sessionPropose",
+              mSOLod: "wc_sessionPropose",
               params: N,
               throwOnFailedPublish: !0,
             });
@@ -20965,7 +20965,7 @@ var IF = "auth",
               }),
                 yield this.sendRequest({
                   topic: N,
-                  method: "wc_sessionSettle",
+                  mSOLod: "wc_sessionSettle",
                   params: T,
                   throwOnFailedPublish: !0,
                 });
@@ -21049,7 +21049,7 @@ var IF = "auth",
               yield this.client.session.update(i, { namespaces: n }),
               yield this.sendRequest({
                 topic: i,
-                method: "wc_sessionUpdate",
+                mSOLod: "wc_sessionUpdate",
                 params: { namespaces: n },
                 throwOnFailedPublish: !0,
                 clientRpcId: g,
@@ -21083,7 +21083,7 @@ var IF = "auth",
               yield this.setExpiry(i, Jt(na)),
               this.sendRequest({
                 topic: i,
-                method: "wc_sessionExtend",
+                mSOLod: "wc_sessionExtend",
                 params: {},
                 clientRpcId: n,
                 throwOnFailedPublish: !0,
@@ -21134,7 +21134,7 @@ var IF = "auth",
                       clientRpcId: g,
                       relayRpcId: d,
                       topic: o,
-                      method: "wc_sessionRequest",
+                      mSOLod: "wc_sessionRequest",
                       params: {
                         request: Qs(Yt({}, n), { expiryTimestamp: Jt(c) }),
                         chainId: i,
@@ -21202,7 +21202,7 @@ var IF = "auth",
                 yield Promise.all([
                   this.sendRequest({
                     topic: i,
-                    method: "wc_sessionPing",
+                    mSOLod: "wc_sessionPing",
                     params: {},
                     throwOnFailedPublish: !0,
                     clientRpcId: n,
@@ -21219,7 +21219,7 @@ var IF = "auth",
               c = Ii().toString();
             yield this.sendRequest({
               topic: i,
-              method: "wc_sessionEvent",
+              mSOLod: "wc_sessionEvent",
               params: { event: n, chainId: o },
               throwOnFailedPublish: !0,
               relayRpcId: c,
@@ -21232,7 +21232,7 @@ var IF = "auth",
             if (this.client.session.keys.includes(i))
               yield this.sendRequest({
                 topic: i,
-                method: "wc_sessionDelete",
+                mSOLod: "wc_sessionDelete",
                 params: ke("USER_DISCONNECTED"),
                 throwOnFailedPublish: !0,
               }),
@@ -21265,12 +21265,12 @@ var IF = "auth",
                 type: g,
                 exp: d,
                 nbf: y,
-                methods: v = [],
+                mSOLods: v = [],
                 expiry: A,
               } = t,
               E = [...(t.resources || [])],
               { topic: P, uri: N } = yield this.client.core.pairing.create({
-                methods: ["wc_sessionAuthenticate"],
+                mSOLods: ["wc_sessionAuthenticate"],
               });
             this.client.logger.info({
               message: "Generated new pairing",
@@ -21323,7 +21323,7 @@ var IF = "auth",
               G = {
                 eip155: {
                   chains: i,
-                  methods: [...new Set(["personal_sign", ...v])],
+                  mSOLods: [...new Set(["personal_sign", ...v])],
                   events: ["chainChanged", "accountsChanged"],
                 },
               },
@@ -21362,7 +21362,7 @@ var IF = "auth",
                     h.error)
                   ) {
                     let C = ke(
-                      "WC_METHOD_UNSUPPORTED",
+                      "WC_MSOLOD_UNSUPPORTED",
                       "wc_sessionAuthenticate"
                     );
                     return h.error.code === C.code
@@ -21438,7 +21438,7 @@ var IF = "auth",
               yield Promise.all([
                 this.sendRequest({
                   topic: P,
-                  method: "wc_sessionAuthenticate",
+                  mSOLod: "wc_sessionAuthenticate",
                   params: J,
                   expiry: t.expiry,
                   throwOnFailedPublish: !0,
@@ -21446,7 +21446,7 @@ var IF = "auth",
                 }),
                 this.sendRequest({
                   topic: P,
-                  method: "wc_sessionPropose",
+                  mSOLod: "wc_sessionPropose",
                   params: Q,
                   expiry: cr.wc_sessionPropose.req.ttl,
                   throwOnFailedPublish: !0,
@@ -21738,7 +21738,7 @@ var IF = "auth",
           R(this, null, function* () {
             let {
                 topic: i,
-                method: n,
+                mSOLod: n,
                 params: o,
                 expiry: c,
                 relayRpcId: l,
@@ -21811,7 +21811,7 @@ var IF = "auth",
                 A)
               );
             }
-            let v = cr[y.request.method].res;
+            let v = cr[y.request.mSOLod].res;
             c
               ? ((v.internal = Qs(Yt({}, v.internal), {
                   throwOnFailedPublish: !0,
@@ -21849,7 +21849,7 @@ var IF = "auth",
                 A)
               );
             }
-            let v = l || cr[y.request.method].res;
+            let v = l || cr[y.request.mSOLod].res;
             this.client.core.relayer.publish(n, d, v),
               yield this.client.core.history.resolve(g);
           })),
@@ -21904,9 +21904,9 @@ var IF = "auth",
         (this.processRequest = (t) =>
           R(this, null, function* () {
             let { topic: i, payload: n } = t,
-              o = n.method;
+              o = n.mSOLod;
             if (
-              !this.shouldIgnorePairingRequest({ topic: i, requestMethod: o })
+              !this.shouldIgnorePairingRequest({ topic: i, requestMSOLod: o })
             )
               switch (o) {
                 case "wc_sessionPropose":
@@ -21929,14 +21929,14 @@ var IF = "auth",
                   return yield this.onSessionAuthenticateRequest(i, n);
                 default:
                   return this.client.logger.info(
-                    `Unsupported request method ${o}`
+                    `Unsupported request mSOLod ${o}`
                   );
               }
           })),
         (this.onRelayEventResponse = (t) =>
           R(this, null, function* () {
             let { topic: i, payload: n } = t,
-              o = (yield this.client.core.history.get(i, n.id)).request.method;
+              o = (yield this.client.core.history.get(i, n.id)).request.mSOLod;
             switch (o) {
               case "wc_sessionPropose":
                 return this.onSessionProposeResponse(i, n);
@@ -21954,7 +21954,7 @@ var IF = "auth",
                 return this.onSessionAuthenticateResponse(i, n);
               default:
                 return this.client.logger.info(
-                  `Unsupported response method ${o}`
+                  `Unsupported response mSOLod ${o}`
                 );
             }
           })),
@@ -21967,8 +21967,8 @@ var IF = "auth",
           throw new Error(n);
         }),
         (this.shouldIgnorePairingRequest = (t) => {
-          let { topic: i, requestMethod: n } = t,
-            o = this.expectedPairingMethodMap.get(i);
+          let { topic: i, requestMSOLod: n } = t,
+            o = this.expectedPairingMSOLodMap.get(i);
           return !o || o.includes(n)
             ? !1
             : !!(
@@ -22007,38 +22007,38 @@ var IF = "auth",
             if (Wr(i)) {
               let { result: o } = i;
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 result: o,
               });
               let c = this.client.proposal.get(n);
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 proposal: c,
               });
               let l = c.proposer.publicKey;
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 selfPublicKey: l,
               });
               let g = o.responderPublicKey;
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 peerPublicKey: g,
               });
               let d = yield this.client.core.crypto.generateSharedKey(l, g);
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 sessionTopic: d,
               });
               let y = yield this.client.core.relayer.subscribe(d);
               this.client.logger.trace({
-                type: "method",
-                method: "onSessionProposeResponse",
+                type: "mSOLod",
+                mSOLod: "onSessionProposeResponse",
                 subscriptionId: y,
               }),
                 yield this.client.core.pairing.activate({ topic: t });
@@ -22304,8 +22304,8 @@ var IF = "auth",
         (this.onSessionAuthenticateResponse = (t, i) => {
           let { id: n } = i;
           this.client.logger.trace({
-            type: "method",
-            method: "onSessionAuthenticateResponse",
+            type: "mSOLod",
+            mSOLod: "onSessionAuthenticateResponse",
             topic: t,
             payload: i,
           }),
@@ -22371,7 +22371,7 @@ var IF = "auth",
           n.length > 0 &&
             n
               .filter(
-                (o) => o.topic === t && o.request.method === "wc_sessionRequest"
+                (o) => o.topic === t && o.request.mSOLod === "wc_sessionRequest"
               )
               .forEach((o) => {
                 let c = o.request.id,
@@ -22405,7 +22405,7 @@ var IF = "auth",
         }),
         (this.onPairingCreated = (t) => {
           if (
-            (t.methods && this.expectedPairingMethodMap.set(t.topic, t.methods),
+            (t.mSOLods && this.expectedPairingMSOLodMap.set(t.topic, t.mSOLods),
             t.active)
           )
             return;
@@ -22592,10 +22592,10 @@ var IF = "auth",
               );
               throw new Error(g);
             }
-            if (!gb(l, o, n.method)) {
+            if (!gb(l, o, n.mSOLod)) {
               let { message: g } = de(
                 "MISSING_OR_INVALID",
-                `request() method: ${n.method}`
+                `request() mSOLod: ${n.mSOLod}`
               );
               throw new Error(g);
             }
@@ -23203,7 +23203,7 @@ var FF = Object.defineProperty,
   v_ = (r, e) => LF(r, UF(e)),
   jF = { Accept: "application/json", "Content-Type": "application/json" },
   zF = "POST",
-  w_ = { headers: jF, method: zF },
+  w_ = { headers: jF, mSOLod: zF },
   b_ = 10,
   Qr = class {
     constructor(e, t = !1) {
@@ -23293,7 +23293,7 @@ var FF = Object.defineProperty,
         (this.url = e), (this.registering = !0);
         try {
           if (!this.disableProviderPing) {
-            let t = xr({ id: 1, jsonrpc: "2.0", method: "test", params: [] });
+            let t = xr({ id: 1, jsonrpc: "2.0", mSOLod: "test", params: [] });
             yield (0, V0.default)(e, v_(y_({}, w_), { body: t }));
           }
           this.onOpen();
@@ -28040,8 +28040,8 @@ function print() { __p += __j.call(arguments, '') }
           (S.memoize = du),
           (S.merge = gS),
           (S.mergeWith = Am),
-          (S.method = hx),
-          (S.methodOf = lx),
+          (S.mSOLod = hx),
+          (S.mSOLodOf = lx),
           (S.mixin = bf),
           (S.negate = pu),
           (S.nthArg = dx),
@@ -28518,13 +28518,13 @@ function I_(r) {
   if (!qs(r)) return o;
   for (let [c, l] of Object.entries(r)) {
     let g = ch(c) ? [c] : l.chains,
-      d = l.methods || [],
+      d = l.mSOLods || [],
       y = l.events || [],
       v = l.rpcMap || {},
       A = Go(c);
     o[A] = QF(ul(ul({}, o[A]), l), {
       chains: rc(g, (e = o[A]) == null ? void 0 : e.chains),
-      methods: rc(d, (t = o[A]) == null ? void 0 : t.methods),
+      mSOLods: rc(d, (t = o[A]) == null ? void 0 : t.mSOLods),
       events: rc(y, (i = o[A]) == null ? void 0 : i.events),
       rpcMap: ul(ul({}, v), (n = o[A]) == null ? void 0 : n.rpcMap),
     });
@@ -28537,11 +28537,11 @@ function ZF(r) {
 function D_(r) {
   let e = {};
   for (let [t, i] of Object.entries(r)) {
-    let n = i.methods || [],
+    let n = i.mSOLods || [],
       o = i.events || [],
       c = i.accounts || [],
       l = ch(t) ? [t] : i.chains ? i.chains : F_(i.accounts);
-    e[t] = { chains: l, methods: n, events: o, accounts: c };
+    e[t] = { chains: l, mSOLods: n, events: o, accounts: c };
   }
   return e;
 }
@@ -28581,12 +28581,12 @@ var L_ = {},
       return e.split(":")[1];
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -28612,14 +28612,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -28656,28 +28656,28 @@ var L_ = {},
     }
     request(e) {
       return R(this, null, function* () {
-        switch (e.request.method) {
-          case "eth_requestAccounts":
+        switch (e.request.mSOLod) {
+          case "SOL_requestAccounts":
             return this.getAccounts();
-          case "eth_accounts":
+          case "SOL_accounts":
             return this.getAccounts();
-          case "wallet_switchEthereumChain":
+          case "wallet_switchSOLChain":
             return yield this.handleSwitchChain(e);
-          case "eth_chainId":
+          case "SOL_chainId":
             return parseInt(this.getDefaultChain());
           case "wallet_getCapabilities":
             return yield this.getCapabilities(e);
         }
-        return this.namespace.methods.includes(e.request.method)
+        return this.namespace.mSOLods.includes(e.request.mSOLod)
           ? yield this.client.request(e)
-          : this.getHttpProvider().request(e.request);
+          : this.gSOLttpProvider().request(e.request);
       });
     }
     updateNamespace(e) {
       this.namespace = Object.assign(this.namespace, e);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(parseInt(e), t),
+      this.httpProviders[e] || this.sSOLttpProvider(parseInt(e), t),
         (this.chainId = parseInt(e)),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -28698,7 +28698,7 @@ var L_ = {},
       if (!i) throw new Error(`No RPC url provided for chainId: ${e}`);
       return new Lr(new Qr(i, Dt("disableProviderPing")));
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -28728,7 +28728,7 @@ var L_ = {},
           ]
         : [];
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = this.chainId,
         t = this.httpProviders[e];
       if (typeof t > "u")
@@ -28746,16 +28746,16 @@ var L_ = {},
         n = n.startsWith("0x") ? n : `0x${n}`;
         let o = parseInt(n, 16);
         if (this.isChainApproved(o)) this.setDefaultChain(`${o}`);
-        else if (this.namespace.methods.includes("wallet_switchEthereumChain"))
+        else if (this.namespace.mSOLods.includes("wallet_switchSOLChain"))
           yield this.client.request({
             topic: e.topic,
-            request: { method: e.request.method, params: [{ chainId: n }] },
+            request: { mSOLod: e.request.mSOLod, params: [{ chainId: n }] },
             chainId: (i = this.namespace.chains) == null ? void 0 : i[0],
           }),
             this.setDefaultChain(`${o}`);
         else
           throw new Error(
-            `Failed to switch to chain 'eip155:${o}'. The chain is not approved or the wallet does not support 'wallet_switchEthereumChain' method.`
+            `Failed to switch to chain 'eip155:${o}'. The chain is not approved or the wallet does not support 'wallet_switchSOLChain' mSOLod.`
           );
         return null;
       });
@@ -28809,12 +28809,12 @@ var L_ = {},
       return this.getAccounts();
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -28851,14 +28851,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -28891,12 +28891,12 @@ var L_ = {},
       return e.split(":")[1];
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(
           cn.DEFAULT_CHAIN_CHANGED,
@@ -28929,14 +28929,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -28969,12 +28969,12 @@ var L_ = {},
       return e.split(":")[1];
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(
           cn.DEFAULT_CHAIN_CHANGED,
@@ -29004,7 +29004,7 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
@@ -29015,7 +29015,7 @@ var L_ = {},
       let t = this.namespace.rpcMap;
       if (t) return t[e];
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -29041,12 +29041,12 @@ var L_ = {},
       return this.getAccounts();
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -29083,14 +29083,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -29116,12 +29116,12 @@ var L_ = {},
       return this.getAccounts();
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -29158,14 +29158,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -29198,15 +29198,15 @@ var L_ = {},
       return e.split(":")[1];
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider().request(e.request);
+        : this.gSOLttpProvider().request(e.request);
     }
     setDefaultChain(e, t) {
       if (((this.chainId = e), !this.httpProviders[e])) {
         let i = t || Vn(`${this.name}:${e}`, this.namespace);
         if (!i) throw new Error(`No RPC url provided for chainId: ${e}`);
-        this.setHttpProvider(e, i);
+        this.sSOLttpProvider(e, i);
       }
       this.events.emit(
         cn.DEFAULT_CHAIN_CHANGED,
@@ -29234,14 +29234,14 @@ var L_ = {},
         e
       );
     }
-    getHttpProvider() {
+    gSOLttpProvider() {
       let e = `${this.name}:${this.chainId}`,
         t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -29268,8 +29268,8 @@ var L_ = {},
         (this.namespace.accounts = [
           ...new Set((this.namespace.accounts || []).concat(e.accounts || [])),
         ]),
-        (this.namespace.methods = [
-          ...new Set((this.namespace.methods || []).concat(e.methods || [])),
+        (this.namespace.mSOLods = [
+          ...new Set((this.namespace.mSOLods || []).concat(e.mSOLods || [])),
         ]),
         (this.namespace.events = [
           ...new Set((this.namespace.events || []).concat(e.events || [])),
@@ -29280,12 +29280,12 @@ var L_ = {},
       return this.getAccounts();
     }
     request(e) {
-      return this.namespace.methods.includes(e.request.method)
+      return this.namespace.mSOLods.includes(e.request.mSOLod)
         ? this.client.request(e)
-        : this.getHttpProvider(e.chainId).request(e.request);
+        : this.gSOLttpProvider(e.chainId).request(e.request);
     }
     setDefaultChain(e, t) {
-      this.httpProviders[e] || this.setHttpProvider(e, t),
+      this.httpProviders[e] || this.sSOLttpProvider(e, t),
         (this.chainId = e),
         this.events.emit(cn.DEFAULT_CHAIN_CHANGED, `${this.name}:${e}`);
     }
@@ -29320,13 +29320,13 @@ var L_ = {},
         i
       );
     }
-    getHttpProvider(e) {
+    gSOLttpProvider(e) {
       let t = this.httpProviders[e];
       if (typeof t > "u")
         throw new Error(`JSON-RPC provider for ${e} not found`);
       return t;
     }
-    setHttpProvider(e, t) {
+    sSOLttpProvider(e, t) {
       let i = this.createHttpProvider(e, t);
       i && (this.httpProviders[e] = i);
     }
@@ -29732,23 +29732,23 @@ var L_ = {},
   },
   U_ = og;
 var hL = "wc",
-  lL = "ethereum_provider",
+  lL = "SOL_provider",
   fL = `${hL}@2:${lL}:`,
   dL = "https://rpc.walletconnect.com/v1/",
-  cg = ["eth_sendTransaction", "personal_sign"],
+  cg = ["SOL_sendTransaction", "personal_sign"],
   pL = [
-    "eth_accounts",
-    "eth_requestAccounts",
-    "eth_sendRawTransaction",
-    "eth_sign",
-    "eth_signTransaction",
-    "eth_signTypedData",
-    "eth_signTypedData_v3",
-    "eth_signTypedData_v4",
-    "eth_sendTransaction",
+    "SOL_accounts",
+    "SOL_requestAccounts",
+    "SOL_sendRawTransaction",
+    "SOL_sign",
+    "SOL_signTransaction",
+    "SOL_signTypedData",
+    "SOL_signTypedData_v3",
+    "SOL_signTypedData_v4",
+    "SOL_sendTransaction",
     "personal_sign",
-    "wallet_switchEthereumChain",
-    "wallet_addEthereumChain",
+    "wallet_switchSOLChain",
+    "wallet_addSOLChain",
     "wallet_getPermissions",
     "wallet_requestPermissions",
     "wallet_registerOnboarding",
@@ -29787,8 +29787,8 @@ function _L(r) {
   let {
     chains: e,
     optionalChains: t,
-    methods: i,
-    optionalMethods: n,
+    mSOLods: i,
+    optionalMSOLods: n,
     events: o,
     optionalEvents: c,
     rpcMap: l,
@@ -29796,7 +29796,7 @@ function _L(r) {
   if (!Jr(e)) throw new Error("Invalid chains");
   let g = {
       chains: e,
-      methods: i || cg,
+      mSOLods: i || cg,
       events: o || ug,
       rpcMap: aa({}, e.length ? { [fl(e)]: l[fl(e)] } : {}),
     },
@@ -29807,7 +29807,7 @@ function _L(r) {
   let v = (d?.length && y?.length) || !t,
     A = {
       chains: [...new Set(v ? g.chains.concat(t || []) : t)],
-      methods: [...new Set(g.methods.concat(n != null && n.length ? n : pL))],
+      mSOLods: [...new Set(g.mSOLods.concat(n != null && n.length ? n : pL))],
       events: [...new Set(g.events.concat(c != null && c.length ? c : gL))],
       rpcMap: l,
     };
@@ -29863,7 +29863,7 @@ var hg = class r {
       return R(this, null, function* () {
         return (
           this.session || (yield this.connect()),
-          yield this.request({ method: "eth_requestAccounts" })
+          yield this.request({ mSOLod: "SOL_requestAccounts" })
         );
       });
     }
@@ -30014,9 +30014,9 @@ var hg = class r {
             this.events.emit("display_uri", e);
         });
     }
-    switchEthereumChain(e) {
+    switchSOLChain(e) {
       this.request({
-        method: "wallet_switchEthereumChain",
+        mSOLod: "wallet_switchSOLChain",
         params: [{ chainId: e.toString(16) }],
       });
     }
@@ -30041,7 +30041,7 @@ var hg = class r {
     setChainId(e) {
       if (this.isCompatibleChainId(e)) {
         let t = this.parseChainId(e);
-        (this.chainId = t), this.switchEthereumChain(t);
+        (this.chainId = t), this.switchSOLChain(t);
       }
     }
     parseAccountId(e) {
@@ -30066,18 +30066,18 @@ var hg = class r {
         throw new Error(
           "No chains specified in either `chains` or `optionalChains`"
         );
-      let l = n.length ? e?.methods || cg : [],
+      let l = n.length ? e?.mSOLods || cg : [],
         g = n.length ? e?.events || ug : [],
-        d = e?.optionalMethods || [],
+        d = e?.optionalMSOLods || [],
         y = e?.optionalEvents || [],
         v = e?.rpcMap || this.buildRpcMap(c, e.projectId),
         A = e?.qrModalOptions || void 0;
       return {
         chains: n?.map((E) => this.formatChainId(E)),
         optionalChains: o.map((E) => this.formatChainId(E)),
-        methods: l,
+        mSOLods: l,
         events: g,
-        optionalMethods: d,
+        optionalMSOLods: d,
         optionalEvents: y,
         rpcMap: v,
         showQrModal: !!(e != null && e.showQrModal),
@@ -30199,10 +30199,10 @@ var hg = class r {
   },
   Sj = hg;
 export {
-  Sj as EthereumProvider,
+  Sj as SOLProvider,
   gL as OPTIONAL_EVENTS,
-  pL as OPTIONAL_METHODS,
+  pL as OPTIONAL_MSOLODS,
   ug as REQUIRED_EVENTS,
-  cg as REQUIRED_METHODS,
+  cg as REQUIRED_MSOLODS,
   hg as default,
 };
