@@ -55258,7 +55258,7 @@ var YL = (() => {
         (this.translateService = s),
         (this.isMobile = !1),
         (this.windowSize = 0),
-        (this.address = "pumpfun0000"),
+        (this.address = "ChUjiryotp77NQeAYHNW8HyZVXD5kuBvXgneeaYrpump"),
         (this.copied = !1),
         (this.copyAddress = () => {
           fe(this._platformId) && navigator.clipboard.writeText(this.address);
