@@ -54827,7 +54827,7 @@ var GL = (() => {
         ],
         [
           "href",
-          "https://pump.fun/coin/ChUjiryotp77NQeAYHNW8HyZVXD5kuBvXgneeaYrpump",
+          "https://pump.fun/coin/pump0000",
           "target",
           "_blank",
           1,
@@ -55258,7 +55258,7 @@ var YL = (() => {
         (this.translateService = s),
         (this.isMobile = !1),
         (this.windowSize = 0),
-        (this.address = "ChUjiryotp77NQeAYHNW8HyZVXD5kuBvXgneeaYrpump"),
+        (this.address = "pump0000"),
         (this.copied = !1),
         (this.copyAddress = () => {
           fe(this._platformId) && navigator.clipboard.writeText(this.address);
