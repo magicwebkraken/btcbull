@@ -54827,7 +54827,7 @@ var GL = (() => {
         ],
         [
           "href",
-          "https://pump.fun/coin/Pumpfun000",
+          "https://pump.fun/coin/ChUjiryotp77NQeAYHNW8HyZVXD5kuBvXgneeaYrpump",
           "target",
           "_blank",
           1,
